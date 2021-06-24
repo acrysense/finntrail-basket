@@ -80,21 +80,45 @@
                             </div>
                         </div>
                     </div>
-                    <!--<div class="cart-product__inner cart-product__inner--between">
+                    <div class="cart-product__inner cart-product__inner--between">
                         <div class="cart-product__group">
                             <span class="cart-product__help">Размер:</span>
-                            <select class="form-join__select" id="select-residence">
-                                <option value="0" disabled selected>Residence*</option>
-                                <option value="1">Residence <div class="s">21312312</div></option>
-                                <option value="2">Residence 2</option>
-                                <option value="3">Residence 3</option>
-                            </select>
+                            <div class="select-box">
+                                <div class="select-box__container">
+                                    <div class="select-box__option">
+                                        <input type="radio" class="select-box__radio" id="size-s" name="sizes">
+                                        <label for="size-s" class="select-box__label">S</label>
+                                    </div>
+                                    <div class="select-box__option">
+                                        <input type="radio" class="select-box__radio" id="size-m" name="sizes">
+                                        <label for="size-m" class="select-box__label">M</label>
+                                    </div>
+                                    <div class="select-box__option">
+                                        <input type="radio" class="select-box__radio" id="size-l" name="sizes">
+                                        <label for="size-l" class="select-box__label">L</label>
+                                    </div>
+                                    <div class="select-box__option">
+                                        <input type="radio" class="select-box__radio" id="size-xl" name="sizes">
+                                        <label for="size-xl" class="select-box__label">XL <span>Заканчивается</span></label>
+                                    </div>
+                                    <div class="select-box__option select-box__option--disabled">
+                                        <input type="radio" class="select-box__radio" id="size-xxl" name="sizes" disabled>
+                                        <label for="size-xxl" class="select-box__label">XXL <span>Нет в наличии</span></label>
+                                    </div>
+                                    <div class="select-box__option">
+                                        <input type="radio" class="select-box__radio" id="size-xxxl" name="sizes">
+                                        <label for="size-xxxl" class="select-box__label">XXXL</label>
+                                    </div>
+                                </div>
+                                <span class="select-box__selected">S</span> 
+                            </div>
+                            <span class="cart-product__status"></span>
                         </div>
                         <div class="cart-product__group">
                             <span class="cart-product__help">Количество:</span>
                             <div class="quantity">
                                 <button class="quantity__minus">-</button>
-                                <input type="number" value="1" class="quantity__number" min="1">
+                                <input type="number" value="1" class="quantity__number" min="1" inputmode="numeric">
                                 <button class="quantity__plus">+</button>
                             </div>
                         </div>
@@ -102,7 +126,150 @@
                             <span class="cart-product__help"></span>
                             <button class="cart-product__trash" aria-label="Удалить"></button>
                         </div>
-                    </div>-->
+                    </div>
+                </div>
+                <div class="cart-product__item">
+                    <div class="cart-product__body">
+                        <div class="cart-product__img">
+                            <img src="img/dist/cart-img-01.png" alt="">
+                        </div>
+                        <div class="cart-product__content">
+                            <span class="cart-product__help">Артикул: 45657768</span>
+                            <div class="cart-product__text">Термобельё ALL SEASON</div>
+                            <div class="cart-product__inner">
+                                <span class="cart-product__help">Цвет: Чёрный</span>
+                                <span class="cart-product__color" style="background: #000000;"></span>
+                            </div>
+                            <div class="cart-product__prices">
+                                <span class="cart-product__price cart-product__price--new">4 990 ₽</span>
+                                <span class="cart-product__price cart-product__price--old">7 200 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-product__inner cart-product__inner--between">
+                        <div class="cart-product__group">
+                            <span class="cart-product__help">Размер:</span>
+                            <div class="select-box">
+                                <div class="select-box__container">
+                                    <div class="select-box__option">
+                                        <input type="radio" class="select-box__radio" id="size-s" name="sizes">
+                                        <label for="size-s" class="select-box__label">S</label>
+                                    </div>
+                                    <div class="select-box__option">
+                                        <input type="radio" class="select-box__radio" id="size-m" name="sizes">
+                                        <label for="size-m" class="select-box__label">M</label>
+                                    </div>
+                                    <div class="select-box__option">
+                                        <input type="radio" class="select-box__radio" id="size-l" name="sizes">
+                                        <label for="size-l" class="select-box__label">L</label>
+                                    </div>
+                                    <div class="select-box__option">
+                                        <input type="radio" class="select-box__radio" id="size-xl" name="sizes">
+                                        <label for="size-xl" class="select-box__label">XL <span>Заканчивается</span></label>
+                                    </div>
+                                    <div class="select-box__option select-box__option--disabled">
+                                        <input type="radio" class="select-box__radio" id="size-xxl" name="sizes" disabled>
+                                        <label for="size-xxl" class="select-box__label">XXL <span>Нет в наличии</span></label>
+                                    </div>
+                                    <div class="select-box__option">
+                                        <input type="radio" class="select-box__radio" id="size-xxxl" name="sizes">
+                                        <label for="size-xxxl" class="select-box__label">XXXL</label>
+                                    </div>
+                                </div>
+                                <span class="select-box__selected">S</span> 
+                            </div>
+                            <span class="cart-product__status"></span>
+                        </div>
+                        <div class="cart-product__group">
+                            <span class="cart-product__help">Количество:</span>
+                            <div class="quantity">
+                                <button class="quantity__minus">-</button>
+                                <input type="number" value="1" class="quantity__number" min="1" inputmode="numeric">
+                                <button class="quantity__plus">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-product__group">
+                            <span class="cart-product__help"></span>
+                            <button class="cart-product__trash" aria-label="Удалить"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-product__item">
+                    <div class="cart-product__body">
+                        <div class="cart-product__img">
+                            <img src="img/dist/cart-img-01.png" alt="">
+                        </div>
+                        <div class="cart-product__content">
+                            <span class="cart-product__help">Артикул: 45657768</span>
+                            <div class="cart-product__text">Термобельё ALL SEASON</div>
+                            <div class="cart-product__inner">
+                                <span class="cart-product__help">Цвет: Чёрный</span>
+                                <span class="cart-product__color" style="background: #000000;"></span>
+                            </div>
+                            <div class="cart-product__prices">
+                                <span class="cart-product__price cart-product__price--new">4 990 ₽</span>
+                                <span class="cart-product__price cart-product__price--old">7 200 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-product__inner cart-product__inner--between">
+                        <div class="cart-product__group">
+                            <span class="cart-product__help">Размер:</span>
+                            <div class="select-box">
+                                <div class="select-box__container">
+                                    <div class="select-box__option">
+                                        <input type="radio" class="select-box__radio" id="size-s" name="sizes">
+                                        <label for="size-s" class="select-box__label">S</label>
+                                    </div>
+                                    <div class="select-box__option">
+                                        <input type="radio" class="select-box__radio" id="size-m" name="sizes">
+                                        <label for="size-m" class="select-box__label">M</label>
+                                    </div>
+                                    <div class="select-box__option">
+                                        <input type="radio" class="select-box__radio" id="size-l" name="sizes">
+                                        <label for="size-l" class="select-box__label">L</label>
+                                    </div>
+                                    <div class="select-box__option">
+                                        <input type="radio" class="select-box__radio" id="size-xl" name="sizes">
+                                        <label for="size-xl" class="select-box__label">XL <span>Заканчивается</span></label>
+                                    </div>
+                                    <div class="select-box__option select-box__option--disabled">
+                                        <input type="radio" class="select-box__radio" id="size-xxl" name="sizes" disabled>
+                                        <label for="size-xxl" class="select-box__label">XXL <span>Нет в наличии</span></label>
+                                    </div>
+                                    <div class="select-box__option">
+                                        <input type="radio" class="select-box__radio" id="size-xxxl" name="sizes">
+                                        <label for="size-xxxl" class="select-box__label">XXXL</label>
+                                    </div>
+                                </div>
+                                <span class="select-box__selected">S</span> 
+                            </div>
+                            <span class="cart-product__status"></span>
+                        </div>
+                        <div class="cart-product__group">
+                            <span class="cart-product__help">Количество:</span>
+                            <div class="quantity">
+                                <button class="quantity__minus">-</button>
+                                <input type="number" value="1" class="quantity__number" min="1" inputmode="numeric">
+                                <button class="quantity__plus">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-product__group">
+                            <span class="cart-product__help"></span>
+                            <button class="cart-product__trash" aria-label="Удалить"></button>
+                        </div>
+                    </div>
+                    <div class="gift">
+                        <div class="gift__img">
+                            <img src="img/dist/gift.png" alt="dsadas">
+                        </div>
+                        <div class="gift__content">
+                            <div class="gift__body">
+                                <h4 class="gift__title">бесплатно в комплекте <span>2 700 ₽</span></h4>
+                                <span class="gift__text">Герморюкзак TARGET 20L Camo</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="useful-items">
@@ -178,11 +345,13 @@
                     <div class="input-group__underline"></div>
                     <label for="input-email" class="input-group__label">Email*</label>
                 </div>
-                <div class="input-group basket-cart__input-group">
+
+                <!-- Temp remove -->
+                <!--<div class="input-group basket-cart__input-group">
                     <input type="text" class="input-group__input basket-cart__input" id="input-delivery-city" placeholder="Город доставки" required>
                     <div class="input-group__underline"></div>
                     <label for="input-delivery-city" class="input-group__label">Город доставки</label>
-                </div>
+                </div>-->
 
                 <div class="promocode">
                     <a href="#" class="promocode__trigger">Я знаю промокод</a>
