@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINNTRAIL</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                </button>
+                <a href="index.html" class="logotype">
+                    <img src="img/dist/logotype-finntrail.svg" alt="">
+                </a>
+                <button class="basket-btn" aria-label="Корзина">
+                    <span class="basket-btn__count">4</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- End of header -->
+    <!-- Advantages -->
+    <div class="advantages-cart">
+        <div class="container">
+            <div class="advantages-cart__wrapper">
+                <div class="advantages-cart__item">
+                    <div class="advantages-cart__icon">
+                        <img src="img/dist/sprite.svg#icon-delivery" alt="Бесплатная доставка">
+                    </div>
+                    <h3 class="advantages-cart__title">Бесплатная доставка</h3>
+                    <p class="advantages-cart__description">По России, РБ и КЗ</p>
+                </div>
+                <div class="advantages-cart__item">
+                    <div class="advantages-cart__icon">
+                        <img src="img/dist/sprite.svg#icon-warranty" alt="Гарантия и бесплатный сервис">
+                    </div>
+                    <h3 class="advantages-cart__title">Гарантия и бесплатный сервис</h3>
+                    <p class="advantages-cart__description">В течение 1 года</p>
+                </div>
+                <div class="advantages-cart__item">
+                    <div class="advantages-cart__icon">
+                        <img src="img/dist/sprite.svg#icon-change" alt="Бесплатный обмен и возврат">
+                    </div>
+                    <h3 class="advantages-cart__title">Бесплатный обмен и возврат</h3>
+                    <p class="advantages-cart__description">В течение 21 дня</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of advantages -->
+    <!-- Basket cart -->
+    <div class="basket-cart">
+        <div class="container">
+            <h3 class="basket-cart__title">Корзина: <span>4</span> товара</h3>
+            <div class="cart-product">
+                <div class="cart-product__item">
+                    <div class="cart-product__body">
+                        <div class="cart-product__img">
+                            <img src="img/dist/cart-img-01.png" alt="">
+                        </div>
+                        <div class="cart-product__content">
+                            <span class="cart-product__help">Артикул: 45657768</span>
+                            <div class="cart-product__text">Термобельё ALL SEASON</div>
+                            <div class="cart-product__inner">
+                                <span class="cart-product__help">Цвет: Чёрный</span>
+                                <span class="cart-product__color" style="background: #000000;"></span>
+                            </div>
+                            <div class="cart-product__prices">
+                                <span class="cart-product__price cart-product__price--new">4 990 ₽</span>
+                                <span class="cart-product__price cart-product__price--old">7 200 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="cart-product__inner cart-product__inner--between">
+                        <div class="cart-product__group">
+                            <span class="cart-product__help">Размер:</span>
+                            <select class="form-join__select" id="select-residence">
+                                <option value="0" disabled selected>Residence*</option>
+                                <option value="1">Residence <div class="s">21312312</div></option>
+                                <option value="2">Residence 2</option>
+                                <option value="3">Residence 3</option>
+                            </select>
+                        </div>
+                        <div class="cart-product__group">
+                            <span class="cart-product__help">Количество:</span>
+                            <div class="quantity">
+                                <button class="quantity__minus">-</button>
+                                <input type="number" value="1" class="quantity__number" min="1">
+                                <button class="quantity__plus">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-product__group">
+                            <span class="cart-product__help"></span>
+                            <button class="cart-product__trash" aria-label="Удалить"></button>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+            <div class="useful-items">
+                <h3 class="useful-items__title">Вам может пригодиться</h3>
+                <div class="useful-items__wrapper">
+                    <div class="useful-items__item">
+                        <a href="#" class="useful-items__img">
+                            <img src="img/dist/cart-img-01.png" alt="Перчатки ENDURO">
+                        </a>
+                        <h4 class="useful-items__name">Перчатки ENDURO</h4>
+                        <div class="useful-items__group">
+                            <span class="useful-items__price useful-items__price--new">1 590 ₽</span>
+                            <span class="useful-items__price useful-items__price--old">2 200 ₽</span>
+                        </div>
+                        <button class="useful-items__btn btn">Добавить</button>
+                    </div>
+                    <div class="useful-items__item">
+                        <a href="#" class="useful-items__img">
+                            <img src="img/dist/cart-img-01.png" alt="Гермосумка BEL">
+                        </a>
+                        <h4 class="useful-items__name">Гермосумка BEL</h4>
+                        <div class="useful-items__group">
+                            <span class="useful-items__price useful-items__price--new">1 590 ₽</span>
+                            <span class="useful-items__price useful-items__price--old">2 200 ₽</span>
+                        </div>
+                        <button class="useful-items__btn btn">Добавить</button>
+                    </div>
+                    <div class="useful-items__item">
+                        <a href="#" class="useful-items__img">
+                            <img src="img/dist/cart-img-01.png" alt="Подшлемник TU">
+                        </a>
+                        <h4 class="useful-items__name">Подшлемник TU...</h4>
+                        <div class="useful-items__group">
+                            <span class="useful-items__price useful-items__price--new">1 590 ₽</span>
+                            <span class="useful-items__price useful-items__price--old">2 200 ₽</span>
+                        </div>
+                        <button class="useful-items__btn btn">Добавить</button>
+                    </div>
+                    <div class="useful-items__item">
+                        <a href="#" class="useful-items__img">
+                            <img src="img/dist/cart-img-01.png" alt="Перчатки ENDURO">
+                        </a>
+                        <h4 class="useful-items__name">Перчатки ENDURO</h4>
+                        <div class="useful-items__group">
+                            <span class="useful-items__price useful-items__price--new">1 590 ₽</span>
+                            <span class="useful-items__price useful-items__price--old">2 200 ₽</span>
+                        </div>
+                        <button class="useful-items__btn btn">Добавить</button>
+                    </div>
+                </div>
+            </div>
+            <h3 class="basket-cart__title">Оформление заказа</h3>
+            <form action="#" class="basket-cart__form">
+                <!-- If error -> added class input-group--error -->
+                <!--<div class="input-group input-group--error basket-cart__input-group">
+                    <input type="email" class="input-group__input basket-cart__input" id="input-email" placeholder="Email" required>
+                    <div class="input-group__underline"></div>
+                    <label for="input-email" class="input-group__label">Email*</label>
+                </div>-->
+
+                <div class="input-group basket-cart__input-group">
+                    <input type="text" class="input-group__input basket-cart__input" id="input-name" placeholder="Имя" required>
+                    <div class="input-group__underline"></div>
+                    <label for="input-name" class="input-group__label">Имя*</label>
+                </div>
+                <div class="input-group basket-cart__input-group">
+                    <input type="tel" class="input-group__input basket-cart__input" id="input-phone" placeholder="Телефон" data-inputmask="'mask': '+7 (999) 999 99 99'" inputmode="tel" required>
+                    <div class="input-group__underline"></div>
+                    <label for="input-phone" class="input-group__label">Телефон*</label>
+                </div>
+                <div class="input-group basket-cart__input-group">
+                    <input type="email" class="input-group__input basket-cart__input" id="input-email" placeholder="Email" required>
+                    <div class="input-group__underline"></div>
+                    <label for="input-email" class="input-group__label">Email*</label>
+                </div>
+                <div class="input-group basket-cart__input-group">
+                    <input type="text" class="input-group__input basket-cart__input" id="input-delivery-city" placeholder="Город доставки" required>
+                    <div class="input-group__underline"></div>
+                    <label for="input-delivery-city" class="input-group__label">Город доставки</label>
+                </div>
+
+                <div class="promocode">
+                    <a href="#" class="promocode__trigger">Я знаю промокод</a>
+                    <div class="promocode__wrapper">
+                        <input type="text" class="promocode__input" placeholder="Промокод">
+                        <div class="promocode__underline"></div>
+                        <button class="promocode__btn">Применить</button>
+                    </div>
+
+                    <!-- If error -> input added class promocode__input--error -->
+                    <!--<div class="promocode__wrapper">
+                        <input type="text" class="promocode__input promocode__input--error">
+                        <div class="promocode__underline"></div>
+                        <button class="promocode__btn">Применить</button>
+                    </div>
+                    <span class="promocode__error-message">Промокод не найден</span>-->
+
+                    <!-- If success -->
+                    <!--<div class="promocode__wrapper">
+                        <input type="text" class="promocode__input">
+                        <div class="promocode__underline"></div>
+                        <button class="promocode__btn promocode__btn--hidden">Применить</button>
+                        <span class="promocode__success">Применен</span>
+                    </div>-->
+                </div>
+            </form>
+            <h3 class="basket-cart__title">Итого:</h3>
+            <div class="basket-cart__inner">
+                <span class="basket-cart__elem">Товары (4):</span>
+                <span class="basket-cart__elem">22 460 ₽</span>
+            </div>
+            <div class="basket-cart__inner">
+                <span class="basket-cart__elem basket-cart__elem--red">Вы экономите:</span>
+                <span class="basket-cart__elem basket-cart__elem--red">4 420 ₽</span>
+            </div>
+            <div class="basket-cart__inner">
+                <span class="basket-cart__elem">Доставка:</span>
+                <div class="basket-cart__group">
+                    <span class="basket-cart__elem basket-cart__elem--through">400 ₽</span>
+                    <span class="basket-cart__elem basket-cart__elem--red">0 ₽</span>
+                </div>
+            </div>
+            <div class="basket-cart__inner basket-cart__inner--help">
+                <span class="basket-cart__elem"></span>
+                <span class="basket-cart__elem basket-cart__elem--red basket-cart__elem--sm">До Бесплатной доставки – 3 540 ₽</span>
+            </div>
+            <div class="basket-cart__inner basket-cart__inner--accent">
+                <span class="basket-cart__elem">Общая стоимость:</span>
+                <div class="basket-cart__group">
+                    <span class="basket-cart__elem basket-cart__elem--through">22 460 ₽</span>
+                    <span class="basket-cart__elem">18 040 ₽</span>
+                </div>
+            </div>
+            <button class="basket-cart__btn btn">Оформить заказ</button>
+            <p class="basket-cart__help">Нажимая на кнопку "Оформить заказ" Вы даете согласие на обработку своих персональных данных и выражаете согласие с <a href="#">политикой конфиденциальности</a></p>
+        </div>
+    </div>
+    <!-- End of basket cart -->
+    <!-- Feedback -->
+    <div class="feedback">
+        <div class="container">
+            <h3 class="feedback__title">Возникли вопросы по доставке или оплате?</h3>
+            <a href="tel:88127704940" class="feedback__phone">8 812 770-49-40</a>
+        </div>
+    </div>
+    <!-- End of feedback -->
+    <!-- Scripts -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>
