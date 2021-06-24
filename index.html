@@ -272,7 +272,7 @@
                     </div>
                 </div>
             </div>
-            <div class="useful-items">
+            <!--<div class="useful-items">
                 <h3 class="useful-items__title">Вам может пригодиться</h3>
                 <div class="useful-items__wrapper">
                     <div class="useful-items__item">
@@ -320,8 +320,8 @@
                         <button class="useful-items__btn btn">Добавить</button>
                     </div>
                 </div>
-            </div>
-            <h3 class="basket-cart__title">Оформление заказа</h3>
+            </div>-->
+            <h3 class="basket-cart__title" id="ordering">Оформление заказа</h3>
             <form action="#" class="basket-cart__form">
                 <!-- If error -> added class input-group--error -->
                 <!--<div class="input-group input-group--error basket-cart__input-group">
@@ -418,6 +418,16 @@
         </div>
     </div>
     <!-- End of feedback -->
+    <div class="scroll-total">
+        <div class="scroll-total__inner">
+            <h3 class="scroll-total__title">Итого:</h3>
+            <div class="scroll-total__prices">
+                <span class="scroll-total__price scroll-total__price--old">22 460 ₽</span>
+                <span class="scroll-total__price">18 040 ₽</span>
+            </div>
+        </div>
+        <a href="#ordering" class="scroll-total__btn btn">Перейти к оформлению</a>
+    </div>
     <!-- Scripts -->
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>
