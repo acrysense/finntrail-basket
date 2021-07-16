@@ -1,0 +1,25 @@
+// FONTS LOAD SECTION
+@mixin font($fname, $fstyle, $fweight, $furl1, $furl2, $furl3) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		font-display: swap;
+        src: local($fname), url($furl1) format('woff2'), url($furl2) format('woff'), url($furl3) format('embedded-opentype');
+    }
+}
+
+@include font('ProximaNova', normal, 300, '../fonts/ProximaNova/ProximaNova-Light.woff2', '../fonts/ProximaNova/ProximaNova-Light.woff', '../fonts/ProximaNova/ProximaNova-Light.eot');
+@include font('ProximaNova', normal, 400, '../fonts/ProximaNova/ProximaNova-Regular.woff2', '../fonts/ProximaNova/ProximaNova-Regular.woff', '../fonts/ProximaNova/ProximaNova-Regular.eot');
+@include font('ProximaNova', normal, 600, '../fonts/ProximaNova/ProximaNova-Semibold.woff2', '../fonts/ProximaNova/ProximaNova-Semibold.woff', '../fonts/ProximaNova/ProximaNova-Semibold.eot');
+@include font('ProximaNova', normal, 700, '../fonts/ProximaNova/ProximaNova-Bold.woff2', '../fonts/ProximaNova/ProximaNova-Bold.woff', '../fonts/ProximaNova/ProximaNova-Bold.eot');
+@include font('ProximaNova', normal, 800, '../fonts/ProximaNova/ProximaNova-Extrabold.woff2', '../fonts/ProximaNova/ProximaNova-Extrabold.woff', '../fonts/ProximaNova/ProximaNova-Extrabold.eot');
+
+@include font('RussoOne', normal, 400, '../fonts/RussoOne/RussoOne-Regular.woff2', '../fonts/RussoOne/RussoOne-Regular.woff', '../fonts/RussoOne/RussoOne-Regular.eot');
+
+// GOOGLE FONTS LOAD SECTION
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+// IMPORT SECTION
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
+@import 'node_modules/slim-select/dist/slimselect' // Slim Select

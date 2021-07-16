@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINNTRAIL</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                </button>
+                <a href="index.html" class="logotype">
+                    <img src="img/dist/logotype-finntrail.svg" alt="">
+                </a>
+                <button class="basket-btn" aria-label="Корзина">
+                    <span class="basket-btn__count">4</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- End of header -->
+    <!-- Back button -->
+    <div class="back-button">
+        <div class="container">
+            <button class="back-button__btn">Доставка и оплата</button>
+        </div>
+    </div>
+    <!-- End of back button -->
+    <!-- Delivery -->
+    <div class="delivery-cart" id="delivery-cart">
+        <div class="container">
+            <h3 class="delivery-cart__title">Доставка</h3>
+            <div class="delivery-cart__notification">
+                <p class="delivery-cart__description">Бесплатная доставка до ПВЗ только по Мск и СПб — при покупке от 3 000 р. по&nbsp;России&nbsp;—&nbsp;от 7 000 р</p>
+                <p class="delivery-cart__description">Бесплатная доставка по Беларуси и Казахстану — при покупке от 7 000 р</p>
+            </div>
+            <div class="delivery-cart__wrapper">
+                <div class="delivery-cart__item">
+                    <button class="delivery-cart__trigger">
+                        <span>Доставка по <span style="background-image: url(img/dist/flag-russia.svg);">России</span> (кроме&nbsp;Москвы&nbsp;и&nbsp;Санкт-Петербурга)</span>
+                    </button>
+                    <div class="delivery-cart__content">
+                        <p class="delivery-cart__description">Доставка осуществляется бесплатно при покупке от 3000р.!</p>
+                        <p class="delivery-cart__description">Доставка по Москве в пределах МКАД - 1-2 рабочих дня, не включая день отправки.</p>
+                    </div>
+                </div>
+                <div class="delivery-cart__item">
+                    <button class="delivery-cart__trigger">
+                        <span>Доставка по Москве</span>
+                    </button>
+                    <div class="delivery-cart__content">
+                        <p class="delivery-cart__description">Доставка осуществляется бесплатно при покупке от 3000р.!</p>
+                        <p class="delivery-cart__description">Доставка по Москве в пределах МКАД - 1-2 рабочих дня, не включая день отправки.</p>
+                    </div>
+                </div>
+                <div class="delivery-cart__item">
+                    <button class="delivery-cart__trigger">
+                        <span>Доставка по Санкт-Петербургу</span>
+                    </button>
+                    <div class="delivery-cart__content">
+                        <p class="delivery-cart__description">Доставка осуществляется бесплатно при покупке от 3000р.!</p>
+                        <p class="delivery-cart__description">Доставка по Москве в пределах МКАД - 1-2 рабочих дня, не включая день отправки.</p>
+                    </div>
+                </div>
+                <div class="delivery-cart__item">
+                    <button class="delivery-cart__trigger">
+                        <span>Доставка до пункта выдачи СДЭК или&nbsp;отделения почты</span>
+                    </button>
+                    <div class="delivery-cart__content">
+                        <p class="delivery-cart__description">Доставка осуществляется бесплатно при покупке от 3000р.!</p>
+                        <p class="delivery-cart__description">Доставка по Москве в пределах МКАД - 1-2 рабочих дня, не включая день отправки.</p>
+                    </div>
+                </div>
+                <div class="delivery-cart__item">
+                    <button class="delivery-cart__trigger">
+                        <span>Доставка по <span style="background-image: url(img/dist/flag-belarus.svg);">Беларуси</span></span>
+                    </button>
+                    <div class="delivery-cart__content">
+                        <p class="delivery-cart__description">Доставка осуществляется бесплатно при покупке от 3000р.!</p>
+                        <p class="delivery-cart__description">Доставка по Москве в пределах МКАД - 1-2 рабочих дня, не включая день отправки.</p>
+                    </div>
+                </div>
+                <div class="delivery-cart__item">
+                    <button class="delivery-cart__trigger">
+                        <span>Доставка по <span style="background-image: url(img/dist/flag-kazakhstan.svg);">Казахстану</span></span>
+                    </button>
+                    <div class="delivery-cart__content">
+                        <p class="delivery-cart__description">Доставка осуществляется бесплатно при покупке от 3000р.!</p>
+                        <p class="delivery-cart__description">Доставка по Москве в пределах МКАД - 1-2 рабочих дня, не включая день отправки.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="delivery-cart__title">Способы оплаты</h3>
+            <div class="delivery-cart__notification">
+                <p class="delivery-cart__description">Безопасная оплата любым способом</p>
+            </div>
+            <div class="delivery-cart__wrapper">
+                <div class="delivery-cart__item">
+                    <button class="delivery-cart__trigger">
+                        <span>Наличными и банковской картой</span>
+                    </button>
+                    <div class="delivery-cart__content">
+                        <p class="delivery-cart__description">Доставка осуществляется бесплатно при покупке от 3000р.!</p>
+                        <p class="delivery-cart__description">Доставка по Москве в пределах МКАД - 1-2 рабочих дня, не включая день отправки.</p>
+                    </div>
+                </div>
+                <div class="delivery-cart__item">
+                    <button class="delivery-cart__trigger">
+                        <span>Online оплата</span>
+                    </button>
+                    <div class="delivery-cart__content">
+                        <p class="delivery-cart__description">Доставка осуществляется бесплатно при покупке от 3000р.!</p>
+                        <p class="delivery-cart__description">Доставка по Москве в пределах МКАД - 1-2 рабочих дня, не включая день отправки.</p>
+                    </div>
+                </div>
+                <div class="delivery-cart__item">
+                    <button class="delivery-cart__trigger">
+                        <span>Оплата по счету</span>
+                    </button>
+                    <div class="delivery-cart__content">
+                        <p class="delivery-cart__description">Доставка осуществляется бесплатно при покупке от 3000р.!</p>
+                        <p class="delivery-cart__description">Доставка по Москве в пределах МКАД - 1-2 рабочих дня, не включая день отправки.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="delivery-cart__title">Проверка и примерка</h3>
+            <div class="delivery-cart__notification">
+                <p class="delivery-cart__description">Оплата только после проверки и примерки</p>
+            </div>
+            <div class="delivery-cart__info">
+                <p class="delivery-cart__description">Перед оплатой, вы можете проверить или примерить заказанные товары в пункте выдачи заказов СДЭК, либо на месте при доставке курьером по адресу.</p>
+                <p class="delivery-cart__description">Все пункты выдачи заказов курьерской службы СДЭК оборудованы примерочными.</p>
+                <p class="delivery-cart__description">Примерка в отделении Почты России временно невозможна.</p>
+            </div>
+        </div>
+    </div>
+    <!-- End of delivery -->
+    <!-- Scripts -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
