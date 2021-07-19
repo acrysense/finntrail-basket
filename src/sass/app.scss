@@ -686,8 +686,9 @@
     }
 }
 
-// delivery
-.delivery-cart {
+// accordion's
+.accordion-cart {
+    padding-bottom: 20px;
     &__title {
         padding: 24px 0 20px;
         font-family: $russo-one;
@@ -709,9 +710,10 @@
     }
     &__item {
         overflow: hidden;
+        max-height: 16px;
         transition: all 0.3s ease-in-out;
         &--active {
-            .delivery-cart__trigger {
+            .accordion-cart__trigger {
                 &::after {
                     transform: rotate(180deg);
                 }
@@ -741,8 +743,10 @@
             content: '';
             display: block;
             margin-left: 26px;
-            width: 18px;
-            height: 6px;
+            min-width: 18px;
+            min-height: 6px;
+            max-width: 18px;
+            max-height: 6px;
             background-image: url(../img/dist/sprite.svg#icon-dropdown);
             background-repeat: no-repeat;
             background-size: cover;
@@ -761,5 +765,82 @@
     &__content {
         padding: 24px 16px;
         background: $grey-color;
+    }
+}
+
+// thanks
+.thanks {
+    margin: 35px 0 30px;
+    &__wrapper {
+        text-align: center;
+    }
+    &__icon {
+        margin: 0 auto 30px;
+        width: 126px;
+        height: 78px;
+        background-image: url(../img/dist/sprite.svg#icon-success);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    &__title {
+        font-family: $russo-one;
+        font-size: 22px;
+        font-weight: normal;
+    }
+    &__description {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    &__notification {
+        padding: 10px 20px;
+        margin-top: 20px;
+        font-size: 14px;
+        text-align: center;
+        color: $finntrail-red-color;
+        background: rgba($finntrail-red-color, 0.08);
+        border-radius: 4px;
+    }
+    &__btn {
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+
+// social media
+.social-media {
+    padding: 20px 0;
+    border-top: 1px solid rgba($primary-color, 0.05);
+    &__wrapper + &__wrapper {
+        margin-top: 30px;
+    }
+    &__title {
+        font-family: $russo-one;
+        font-size: 16px;
+        font-weight: normal;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-right: 34px;
+    }
+    &__icon {
+        margin-right: 12px;
+        min-width: 22px;
+        min-height: 22px;
+        max-width: 22px;
+        max-height: 22px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    &__link {
+        font-size: 14px;
+        border-bottom: 1px dashed $primary-color;
     }
 }

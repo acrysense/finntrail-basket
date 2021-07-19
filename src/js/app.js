@@ -214,28 +214,28 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     // DELIVERY ACCORDION
-    const deliveryTrigger = document.querySelectorAll('.delivery-cart__trigger')
+    const accordionTrigger = document.querySelectorAll('.accordion-cart__trigger')
 
-    if (deliveryTrigger) {
-        deliveryTrigger.forEach(item => { item.parentNode.style.setProperty('max-height', `${item.getBoundingClientRect().height}px`) })
+    if (accordionTrigger) {
+        accordionTrigger.forEach(item => {
+            setTimeout(() => item.parentNode.style.setProperty('max-height', `${item.getBoundingClientRect().height}px`), 100)
 
-        deliveryTrigger.forEach(item => {
             item.addEventListener('click', (event) => {
                 event.preventDefault()
                 
                 let heightTrigger = item.getBoundingClientRect().height;
                 let heightContent = item.nextElementSibling.clientHeight;
                 
-                if (!item.parentNode.classList.contains('delivery-cart__item--active')) {
-                    deliveryTrigger.forEach(child => {
+                if (!item.parentNode.classList.contains('accordion-cart__item--active')) {
+                    accordionTrigger.forEach(child => {
                         child.parentNode.style.setProperty('max-height', `${child.getBoundingClientRect().height}px`)
-                        child.parentNode.classList.remove('delivery-cart__item--active')
+                        child.parentNode.classList.remove('accordion-cart__item--active')
                     })
 
-                    item.parentNode.classList.add('delivery-cart__item--active')
+                    item.parentNode.classList.add('accordion-cart__item--active')
                     item.parentNode.style.setProperty('max-height', `${heightTrigger + heightContent}px`)
                 } else {
-                    item.parentNode.classList.remove('delivery-cart__item--active')
+                    item.parentNode.classList.remove('accordion-cart__item--active')
                     item.parentNode.style.setProperty('max-height', `${heightTrigger}px`)
                 }
             })
