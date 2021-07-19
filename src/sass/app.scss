@@ -216,6 +216,25 @@
 
 .promocode {
     margin-top: 20px;
+    &--error {
+        .promocode__underline {
+            background: $finntrail-red-color;
+        }
+        .promocode__input:focus ~ .promocode__underline {
+            background: $finntrail-red-color;
+        }
+        .promocode__error-message {
+            display: block;
+        }
+    }
+    &--success {
+        .promocode__btn {
+            display: none;
+        }
+        .promocode__success {
+            display: block;
+        }
+    }
     &__trigger {
         display: block;
         padding: 0;
@@ -253,14 +272,6 @@
                 background: $primary-color;
             }
         }
-        &--error {
-            & ~ .promocode__underline {
-                background: $finntrail-red-color;
-            }
-            &:focus ~ .promocode__underline {
-                background: $finntrail-red-color;
-            }
-        }
     }
     &__underline {
         position: absolute;
@@ -271,7 +282,7 @@
         transition: background 0.4s;
     }
     &__error-message {
-        display: block;
+        display: none;
         margin-top: 6px;
         font-size: 14px;
         color: $finntrail-red-color
@@ -284,12 +295,15 @@
         text-align: center;
         background: transparent;
         border: 0;
+        &:focus {
+            outline: none;
+        }
         &--hidden {
             display: none;
         }
     }
     &__success {
-        display: block;
+        display: none;
         width: 50%;
         font-size: 18px;
         font-weight: 600;

@@ -85,6 +85,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // PROMOCODE
     const promocodeTrigger = document.querySelector('.promocode__trigger')
+    const promocodeInput = document.querySelector('.promocode__input')
+    const promocodeBtn = document.querySelector('.promocode__btn')
 
     if (promocodeTrigger) {
         promocodeTrigger.addEventListener('click', (event) => {
@@ -92,6 +94,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
             promocodeTrigger.classList.add('promocode__trigger--hidden')
             promocodeTrigger.nextElementSibling.classList.add('promocode__wrapper--active')
+        })
+    }
+
+    if (promocodeBtn) {
+        promocodeBtn.addEventListener('click', (event) => {
+            event.preventDefault()
+
+            if (promocodeInput.value.length < 1) {
+                promocodeInput.parentNode.parentNode.classList.add('promocode--error')
+            } else {
+                if (promocodeInput.parentNode.parentNode.classList.contains('promocode--error')) {
+                    promocodeInput.parentNode.parentNode.classList.remove('promocode--error')
+                }
+
+                promocodeInput.parentNode.parentNode.classList.add('promocode--success')
+            }
+        })
+    }
+
+    if (promocodeInput) {
+        promocodeInput.addEventListener('input', () => {
+            if (promocodeInput.parentNode.parentNode.classList.contains('promocode--success')) {
+                promocodeInput.parentNode.parentNode.classList.remove('promocode--success')
+            }
         })
     }
 
