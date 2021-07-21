@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
-    // DELIVERY ACCORDION
+    // ACCORDIONS
     const accordionTrigger = document.querySelectorAll('.accordion-cart__trigger')
 
     if (accordionTrigger) {
