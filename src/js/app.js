@@ -83,6 +83,87 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function debounce(f, ms) {
+        let isCooldown = false;
+        
+        return function() {
+            if (isCooldown) return;
+        
+            f.apply(this, arguments);
+        
+            isCooldown = true;
+        
+            setTimeout(() => isCooldown = false, ms);
+        };
+    }
+
+    // SLIDE UP
+    let slideUpQna = (target, duration = 400) => {
+        target.style.transitionProperty = 'height, margin, padding';
+        target.style.transitionDuration = duration + 'ms';
+        target.style.height = target.offsetHeight + 'px';
+        target.offsetHeight;
+        target.style.overflow = 'hidden';
+        target.style.height = 0;
+        target.style.paddingTop = 0;
+        target.style.paddingBottom = 0;
+        target.style.marginTop = 0;
+        target.style.marginBottom = 0;
+        target.previousElementSibling.style.pointerEvents = 'none';
+        window.setTimeout(() => {
+            target.style.display = 'none';
+            target.style.removeProperty('height');
+            target.style.removeProperty('padding-top');
+            target.style.removeProperty('padding-bottom');
+            target.style.removeProperty('margin-top');
+            target.style.removeProperty('margin-bottom');
+            target.style.removeProperty('overflow');
+            target.style.removeProperty('transition-duration');
+            target.style.removeProperty('transition-property');
+            target.previousElementSibling.style.pointerEvents = 'auto';
+        }, duration);
+        target.parentNode.classList.remove('is--open');
+    }
+    // SLIDE DOWN
+    let slideDownQna = (target, duration = 400) => {
+        target.style.removeProperty('display');
+        let display = window.getComputedStyle(target).display;
+        if (display === 'none') display = 'block';
+        target.style.display = display;
+        let height = target.offsetHeight;
+        target.style.overflow = 'hidden';
+        target.style.height = 0;
+        target.style.paddingTop = 0;
+        target.style.paddingBottom = 0;
+        target.style.marginTop = 0;
+        target.style.marginBottom = 0;
+        target.offsetHeight;
+        target.style.transitionProperty = "height, margin, padding";
+        target.style.transitionDuration = duration + 'ms';
+        target.style.height = height + 'px';
+        target.style.removeProperty('padding-top');
+        target.style.removeProperty('padding-bottom');
+        target.style.removeProperty('margin-top');
+        target.style.removeProperty('margin-bottom');
+        target.previousElementSibling.style.pointerEvents = 'none';
+        window.setTimeout(() => {
+            target.style.removeProperty('height');
+            target.style.removeProperty('overflow');
+            target.style.removeProperty('transition-duration');
+            target.style.removeProperty('transition-property');
+            target.previousElementSibling.style.pointerEvents = 'auto';
+        }, duration);
+        target.parentNode.classList.add('is--open');
+    }
+    // SLIDE TOGGLE
+    let slideToggleQna = (target, duration = 400) => {
+        if (window.getComputedStyle(target).display === 'none') {
+            return slideDownQna(target, duration);
+        } else {
+            return slideUpQna(target, duration);
+        }
+    }
+
     // PROMOCODE
     const promocodeTrigger = document.querySelector('.promocode__trigger')
     const promocodeInput = document.querySelector('.promocode__input')
@@ -244,26 +325,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (accordionTrigger) {
         accordionTrigger.forEach(item => {
-            setTimeout(() => item.parentNode.style.setProperty('max-height', `${item.getBoundingClientRect().height}px`), 100)
+            //setTimeout(() => item.parentNode.style.setProperty('max-height', `${item.getBoundingClientRect().height}px`), 100)
 
             item.addEventListener('click', (event) => {
                 event.preventDefault()
-                
-                let heightTrigger = item.getBoundingClientRect().height;
-                let heightContent = item.nextElementSibling.clientHeight;
-                
-                if (!item.parentNode.classList.contains('accordion-cart__item--active')) {
-                    accordionTrigger.forEach(child => {
-                        child.parentNode.style.setProperty('max-height', `${child.getBoundingClientRect().height}px`)
-                        child.parentNode.classList.remove('accordion-cart__item--active')
-                    })
 
-                    item.parentNode.classList.add('accordion-cart__item--active')
-                    item.parentNode.style.setProperty('max-height', `${heightTrigger + heightContent}px`)
-                } else {
-                    item.parentNode.classList.remove('accordion-cart__item--active')
-                    item.parentNode.style.setProperty('max-height', `${heightTrigger}px`)
-                }
+                slideToggleQna(item.nextElementSibling)
+                
+                //let heightTrigger = item.getBoundingClientRect().height;
+                //let heightContent = item.nextElementSibling.clientHeight;
+                
+                //if (!item.parentNode.classList.contains('accordion-cart__item--active')) {
+                //    accordionTrigger.forEach(child => {
+                //        child.parentNode.style.setProperty('max-height', `${child.getBoundingClientRect().height}px`)
+                //        child.parentNode.classList.remove('accordion-cart__item--active')
+                //    })
+
+                //    item.parentNode.classList.add('accordion-cart__item--active')
+                //    item.parentNode.style.setProperty('max-height', `${heightTrigger + heightContent}px`)
+                //} else {
+                //    item.parentNode.classList.remove('accordion-cart__item--active')
+                //    item.parentNode.style.setProperty('max-height', `${heightTrigger}px`)
+                //}
             })
         })
     }
