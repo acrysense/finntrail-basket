@@ -325,28 +325,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (accordionTrigger) {
         accordionTrigger.forEach(item => {
-            //setTimeout(() => item.parentNode.style.setProperty('max-height', `${item.getBoundingClientRect().height}px`), 100)
-
             item.addEventListener('click', (event) => {
                 event.preventDefault()
 
-                slideToggleQna(item.nextElementSibling)
-                
-                //let heightTrigger = item.getBoundingClientRect().height;
-                //let heightContent = item.nextElementSibling.clientHeight;
-                
-                //if (!item.parentNode.classList.contains('accordion-cart__item--active')) {
-                //    accordionTrigger.forEach(child => {
-                //        child.parentNode.style.setProperty('max-height', `${child.getBoundingClientRect().height}px`)
-                //        child.parentNode.classList.remove('accordion-cart__item--active')
-                //    })
-
-                //    item.parentNode.classList.add('accordion-cart__item--active')
-                //    item.parentNode.style.setProperty('max-height', `${heightTrigger + heightContent}px`)
-                //} else {
-                //    item.parentNode.classList.remove('accordion-cart__item--active')
-                //    item.parentNode.style.setProperty('max-height', `${heightTrigger}px`)
-                //}
+                if (!item.parentNode.classList.contains('is--open')) {
+                    if (document.querySelector('.accordion-cart__item.is--open')) {
+                        let test = document.querySelector('.accordion-cart__item.is--open')
+                        slideUpQna(test.childNodes[test.childNodes.length - 1].previousElementSibling)
+                    }
+                    slideDownQna(item.nextElementSibling)
+                } else {
+                    slideUpQna(item.nextElementSibling)
+                }
             })
         })
     }
