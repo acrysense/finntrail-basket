@@ -737,6 +737,7 @@
         border-top: 2px solid $grey-color;
     }
     &__trigger {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -765,6 +766,19 @@
             background-position: center center;
             transition: all 0.3s ease-in-out;
         }
+        &--icon {
+            position: absolute;
+            left: 0;
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-size: initial;
+            background-position: center center;
+        }
+        &--icon + span {
+            margin-left: 34px;
+        }
         span > span {
             display: inline;
             padding-right: 16px;
@@ -778,6 +792,27 @@
         display: none;
         padding: 24px 16px;
         background: $grey-color;
+        h4 {
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        h4 + p {
+            margin-top: 12px;
+        }
+        p + h4 {
+            margin-top: 30px;
+        }
+        p {
+            font-size: 16px;
+        }
+        p + p {
+            margin-top: 8px;
+        }
+        a {
+            font-size: 16px;
+            text-decoration: underline;
+        }
     }
 }
 
