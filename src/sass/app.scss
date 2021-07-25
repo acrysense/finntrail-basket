@@ -656,18 +656,39 @@
         position: absolute;
         left: 0;
         bottom: -4px;
+        z-index: 100;
         transform: translateY(100%);
         display: none;
         padding: 12px;
         max-width: 208px;
         min-width: 208px;
         width: 100%;
-        font-size: 12px;
-        font-weight: 400;
         text-align: left;
         background: $white-color;
         border-radius: 4px;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1)
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        p {
+            font-size: 12px;
+            font-weight: 400;
+        }
+        span {
+            display: block;
+            font-size: 12px;
+            color: $gray-color;
+        }
+        * + * {
+            margin-top: 8px;
+        }
+    }
+    &__wrapper {
+        &--full {
+            padding: 20px 26px 20px 12px;
+            max-width: 100%;
+            min-width: 100%;
+            p {
+                font-size: 14px;
+            }
+        }
     }
 }
 
