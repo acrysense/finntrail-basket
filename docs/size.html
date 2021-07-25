@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINNTRAIL - Подобрать размер</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                </button>
+                <a href="index.html" class="logotype">
+                    <img src="img/dist/logotype-finntrail.svg" alt="">
+                </a>
+                <button class="basket-btn" aria-label="Корзина">
+                    <span class="basket-btn__count">4</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- End of header -->
+    <!-- Back button -->
+    <div class="back-button">
+        <div class="container">
+            <button class="back-button__btn">Подобрать размер</button>
+        </div>
+    </div>
+    <!-- End of back button -->
+    <!-- Policy -->
+    <div class="size" id="size">
+        <div class="container">
+            <h2 class="size__title">ТАБЛИЦА РАЗМЕРОВ</h2>
+            <p class="size__description">Воспользуйтесь кнопками ниже, чтобы перейти к таблице и найти наиболее подходящий размер по вашим параметрам</p>
+            <div class="size__wrapper">
+                <a href="#" class="size__item">
+                    <div class="size__img">
+                        <img src="img/dist/img-01.png" alt="Обувь">
+                    </div>
+                    <span class="size__name">Обувь</span>
+                </a>
+                <a href="#" class="size__item">
+                    <div class="size__img">
+                        <img src="img/dist/img-02.png" alt="Вейдерсы">
+                    </div>
+                    <span class="size__name">Вейдерсы</span>
+                </a>
+                <a href="#" class="size__item">
+                    <div class="size__img">
+                        <img src="img/dist/img-03.png" alt="Куртка, Костюм">
+                    </div>
+                    <span class="size__name">Куртка, Костюм</span>
+                </a>
+                <a href="#" class="size__item">
+                    <div class="size__img">
+                        <img src="img/dist/img-04.png" alt="Перчатки">
+                    </div>
+                    <span class="size__name">Перчатки</span>
+                </a>
+                <a href="#" class="size__item">
+                    <div class="size__img">
+                        <img src="img/dist/img-05.png" alt="Термоодежда">
+                    </div>
+                    <span class="size__name">Термоодежда</span>
+                </a>
+                <a href="#" class="size__item">
+                    <div class="size__img">
+                        <img src="img/dist/img-06.png" alt="Снегоходная экипировка">
+                    </div>
+                    <span class="size__name">Снегоходная экипировка</span>
+                </a>
+            </div>
+            <h2 class="size__title">КАЛЬКУЛЯТОР РАЗМЕРОВ</h3>
+            <p class="size__description">Введите свои параметры для мгновенного определения размера</p>
+            <div class="size__calculation">
+                <div class="size__group">
+                    <h3 class="size__subtitle">РОСТ</h3>
+                    <div class="input-size">
+                        <input type="number" class="input-size__input" min="0" max="100" value="50">
+                        <input type="range" class="input-size__range" min="0" max="100" value="50">
+                    </div>
+                </div>
+                <div class="size__group">
+                    <h3 class="size__subtitle">ВЕС</h3>
+                    <div class="input-size">
+                        <input type="number" class="input-size__input" min="0" max="100" value="50">
+                        <input type="range" class="input-size__range" min="0" max="100" value="50">
+                    </div>
+                </div>
+                <div class="size__group">
+                    <h3 class="size__subtitle">ДЛИНА СТОПЫ</h3>
+                    <div class="input-size">
+                        <input type="number" class="input-size__input" min="0" max="100" value="50">
+                        <input type="range" class="input-size__range" min="0" max="100" value="50">
+                    </div>
+                </div>
+                <div class="size__group">
+                    <h3 class="size__subtitle">ОБХВАТ ЛАДОНИ</h3>
+                    <div class="input-size">
+                        <input type="number" class="input-size__input" min="0" max="100" value="50">
+                        <input type="range" class="input-size__range" min="0" max="100" value="50">
+                    </div>
+                </div>
+            </div>
+            <div class="size__info">
+                <div class="size__group">
+                    <h3 class="size__subtitle">ВЕЙДЕРСЫ</h3>
+                    <span class="size__value">L</span>
+                </div>
+                <div class="size__group">
+                    <h3 class="size__subtitle">ВЕЙДЕРСЫ С САПОГАМИ</h3>
+                    <span class="size__value">L43</span>
+                </div>
+                <div class="size__group">
+                    <h3 class="size__subtitle">КУРТКА, КОСТЮМ</h3>
+                    <span class="size__value">L</span>
+                </div>
+                <div class="size__group">
+                    <h3 class="size__subtitle">ОБУВЬ</h3>
+                    <span class="size__value">43</span>
+                </div>
+                <div class="size__group">
+                    <h3 class="size__subtitle">ТЕРМООДЕЖА</h3>
+                    <span class="size__value">L</span>
+                </div>
+                <div class="size__group">
+                    <h3 class="size__subtitle">ПЕРЧАТКИ</h3>
+                    <span class="size__value size__value--empty">НЕ ОПРЕДЕЛЁН</span>
+                </div>
+            </div>
+            <a href="#" class="size__go-to btn btn--red">Перейти в каталог</a>
+            <h2 class="size__title">КАК ПРАВИЛЬНО ПОДОБРАТЬ РАЗМЕР?</h3>
+            <div class="size-info">
+                <div class="size-info__wrapper">
+                    <div class="size-info__item">
+                        <div class="size-info__top">
+                            <div class="size-info__img">
+                                <img src="img/dist/size-info-01.png" alt="РАЗМЕР ВЕЙДЕРСОВ">
+                            </div>
+                            <h3 class="size-info__title">РАЗМЕР<br> ВЕЙДЕРСОВ</h3>
+                        </div>
+                        <div class="size-info__table">
+                            <div class="size-info__column">
+                                <div class="size-info__elem">Размеры <br>(INT)</div>
+                                <div class="size-info__elem">Россия <br>(RUS)</div>
+                                <div class="size-info__elem">Европа <br>(EUR)</div>
+                                <div class="size-info__elem">Рост, см</div>
+                                <div class="size-info__elem">Обхват бедер или талии (см)</div>
+                                <div class="size-info__elem">Длина внутреннего шва (см)</div>
+                            </div>
+                            <div class="size-info__wrap">
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">XXS</div>
+                                    <div class="size-info__elem">40-42</div>
+                                    <div class="size-info__elem">34-36</div>
+                                    <div class="size-info__elem">155-163</div>
+                                    <div class="size-info__elem">82-90</div>
+                                    <div class="size-info__elem">68-74</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">XS</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">S</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">M</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">L</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">XL</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size-info__item">
+                        <div class="size-info__top">
+                            <div class="size-info__img">
+                                <img src="img/dist/size-info-02.png" alt="РАЗМЕР КУРТКИ, КОСТЮМА И ТЕРМОБЕЛЬЯ">
+                            </div>
+                            <h3 class="size-info__title">РАЗМЕР<br> КУРТКИ,<br> КОСТЮМА <br>И&nbsp;ТЕРМОБЕЛЬЯ</h3>
+                        </div>
+                        <div class="size-info__table">
+                            <div class="size-info__column">
+                                <div class="size-info__elem">Размеры <br>(INT)</div>
+                                <div class="size-info__elem">Россия <br>(RUS)</div>
+                                <div class="size-info__elem">Европа <br>(EUR)</div>
+                                <div class="size-info__elem">Рост, см</div>
+                                <div class="size-info__elem">Обхват груди (см)</div>
+                                <div class="size-info__elem">Обхват талии (см)</div>
+                                <div class="size-info__elem">Обхват бедер (см)</div>
+                                <div class="size-info__elem">Длина внутренней поверхности ноги (см)</div>
+                                <div class="size-info__elem">Длина руки (см)</div>
+                            </div>
+                            <div class="size-info__wrap">
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">XXS</div>
+                                    <div class="size-info__elem">40-42</div>
+                                    <div class="size-info__elem">34-36</div>
+                                    <div class="size-info__elem">155-163</div>
+                                    <div class="size-info__elem">82-90</div>
+                                    <div class="size-info__elem">68-74</div>
+                                    <div class="size-info__elem">68-74</div>
+                                    <div class="size-info__elem">68-74</div>
+                                    <div class="size-info__elem">68-74</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">XS</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">S</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">M</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">L</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">XL</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size-info__item">
+                        <div class="size-info__top">
+                            <div class="size-info__img">
+                                <img src="img/dist/size-info-03.png" alt="РАЗМЕР СНЕГОХОДНОЙ ЭКИПИРОВКИ">
+                            </div>
+                            <h3 class="size-info__title">РАЗМЕР<br> СНЕГОХОДНОЙ <br>ЭКИПИРОВКИ</h3>
+                        </div>
+                        <div class="size-info__table">
+                            <div class="size-info__column">
+                                <div class="size-info__elem">Размеры <br>(INT)</div>
+                                <div class="size-info__elem">Россия <br>(RUS)</div>
+                                <div class="size-info__elem">Европа <br>(EUR)</div>
+                                <div class="size-info__elem">Рост, см</div>
+                                <div class="size-info__elem">Обхват груди (см)</div>
+                                <div class="size-info__elem">Обхват талии (см)</div>
+                                <div class="size-info__elem">Обхват бедер (см)</div>
+                                <div class="size-info__elem">Длина внутренней поверхности ноги (см)</div>
+                                <div class="size-info__elem">Длина руки (см)</div>
+                            </div>
+                            <div class="size-info__wrap">
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">XXS</div>
+                                    <div class="size-info__elem">40-42</div>
+                                    <div class="size-info__elem">34-36</div>
+                                    <div class="size-info__elem">155-163</div>
+                                    <div class="size-info__elem">82-90</div>
+                                    <div class="size-info__elem">68-74</div>
+                                    <div class="size-info__elem">68-74</div>
+                                    <div class="size-info__elem">68-74</div>
+                                    <div class="size-info__elem">68-74</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">XS</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">S</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">M</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">L</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">XL</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size-info__item">
+                        <div class="size-info__top">
+                            <div class="size-info__img">
+                                <img src="img/dist/size-info-04.png" alt="РАЗМЕР ЖЕНСКОЙ СНЕГОХОДНОЙ ЭКИПИРОВКИ">
+                            </div>
+                            <h3 class="size-info__title">РАЗМЕР <br>ЖЕНСКОЙ <br>СНЕГОХОДНОЙ <br>ЭКИПИРОВКИ</h3>
+                        </div>
+                        <div class="size-info__table">
+                            <div class="size-info__column">
+                                <div class="size-info__elem">Размеры <br>(INT)</div>
+                                <div class="size-info__elem">Россия <br>(RUS)</div>
+                                <div class="size-info__elem">Европа <br>(EUR)</div>
+                                <div class="size-info__elem">Рост (см)</div>
+                                <div class="size-info__elem">Обхват груди (см)</div>
+                                <div class="size-info__elem">Обхват талии (см)</div>
+                                <div class="size-info__elem">Обхват бедер (см)</div>
+                                <div class="size-info__elem">Длина внутреннего шва (см)</div>
+                                <div class="size-info__elem">Длина руки (см)</div>
+                            </div>
+                            <div class="size-info__wrap">
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">XXS</div>
+                                    <div class="size-info__elem">40-42</div>
+                                    <div class="size-info__elem">34-36</div>
+                                    <div class="size-info__elem">155-163</div>
+                                    <div class="size-info__elem">82-90</div>
+                                    <div class="size-info__elem">68-74</div>
+                                    <div class="size-info__elem">68-74</div>
+                                    <div class="size-info__elem">68-74</div>
+                                    <div class="size-info__elem">68-74</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">XS</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">S</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">M</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">L</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                                <div class="size-info__column">
+                                    <div class="size-info__elem">XL</div>
+                                    <div class="size-info__elem">42-44</div>
+                                    <div class="size-info__elem">36-38</div>
+                                    <div class="size-info__elem">160-168</div>
+                                    <div class="size-info__elem">86-96</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                    <div class="size-info__elem">71-77</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size-info__item">
+                        <div class="size-info__top">
+                            <div class="size-info__img">
+                                <img src="img/dist/size-info-05.png" alt="РАЗМЕР ОБУВИ">
+                            </div>
+                            <h3 class="size-info__title">РАЗМЕР <br>ОБУВИ</h3>
+                        </div>
+                        <div class="size-info__table">
+                            <div class="size-info__column size-info__column--last">
+                                <div class="size-info__elem">Размеры <br>(EUR)</div>
+                                <div class="size-info__elem">США <br>(USA)</div>
+                                <div class="size-info__elem">Рост, см</div>
+                            </div>
+                            <div class="size-info__wrap">
+                                <div class="size-info__column size-info__column--last">
+                                    <div class="size-info__elem">39</div>
+                                    <div class="size-info__elem">6</div>
+                                    <div class="size-info__elem">24</div>
+                                </div>
+                                <div class="size-info__column size-info__column--last">
+                                    <div class="size-info__elem">39</div>
+                                    <div class="size-info__elem">6</div>
+                                    <div class="size-info__elem">24</div>
+                                </div>
+                                <div class="size-info__column size-info__column--last">
+                                    <div class="size-info__elem">39</div>
+                                    <div class="size-info__elem">6</div>
+                                    <div class="size-info__elem">24</div>
+                                </div>
+                                <div class="size-info__column size-info__column--last">
+                                    <div class="size-info__elem">39</div>
+                                    <div class="size-info__elem">6</div>
+                                    <div class="size-info__elem">24</div>
+                                </div>
+                                <div class="size-info__column size-info__column--last">
+                                    <div class="size-info__elem">39</div>
+                                    <div class="size-info__elem">6</div>
+                                    <div class="size-info__elem">24</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size-info__item">
+                        <div class="size-info__top">
+                            <div class="size-info__img">
+                                <img src="img/dist/size-info-06.png" alt="РАЗМЕР ПЕРЧАТОК">
+                            </div>
+                            <h3 class="size-info__title">РАЗМЕР <br>ПЕРЧАТОК</h3>
+                        </div>
+                        <div class="size-info__table">
+                            <div class="size-info__column size-info__column--last">
+                                <div class="size-info__elem">Размеры <br>(INT)</div>
+                                <div class="size-info__elem">Обхват ладони (см)</div>
+                            </div>
+                            <div class="size-info__wrap">
+                                <div class="size-info__column size-info__column--last">
+                                    <div class="size-info__elem">M</div>
+                                    <div class="size-info__elem">24</div>
+                                </div>
+                                <div class="size-info__column size-info__column--last">
+                                    <div class="size-info__elem">M</div>
+                                    <div class="size-info__elem">24</div>
+                                </div>
+                                <div class="size-info__column size-info__column--last">
+                                    <div class="size-info__elem">M</div>
+                                    <div class="size-info__elem">24</div>
+                                </div>
+                                <div class="size-info__column size-info__column--last">
+                                    <div class="size-info__elem">M</div>
+                                    <div class="size-info__elem">24</div>
+                                </div>
+                                <div class="size-info__column size-info__column--last">
+                                    <div class="size-info__elem">M</div>
+                                    <div class="size-info__elem">24</div>
+                                </div>
+                                <div class="size-info__column size-info__column--last">
+                                    <div class="size-info__elem">M</div>
+                                    <div class="size-info__elem">24</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of policy -->
+    <!-- Scripts -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>

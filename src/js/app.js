@@ -340,4 +340,24 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         })
     }
+
+    // RANGE
+    const inputSizeRange = document.querySelectorAll('.input-size__range');
+    const inputSizeField = document.querySelectorAll('.input-size__input');
+
+    if (inputSizeRange) {
+        inputSizeRange.forEach((item) => {
+            item.addEventListener('input', (event) => {
+                item.previousElementSibling.value = event.target.value;
+            });
+        })
+    }
+
+    if (inputSizeField) {
+        inputSizeField.forEach((item) => {
+            item.addEventListener('input', (event) => {
+                item.nextElementSibling.value = event.target.value;
+            });
+        })
+    }
 });
