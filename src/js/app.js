@@ -360,4 +360,18 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         })
     }
+
+    // SWIPER
+    const reviewsSlider = document.querySelectorAll('.reviews__slider .swiper-container')
+
+    reviewsSlider.forEach(slider => {
+        const mySwiperReviews = new Swiper(slider, {
+            slidesPerView: 1,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        })
+    })
 });

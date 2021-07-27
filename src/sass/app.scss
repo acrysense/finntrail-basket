@@ -993,6 +993,9 @@
 
 .subscribe-form {
     margin-top: 20px;
+    &__checkbox {
+        margin-left: 14px;
+    }
     &__checkbox + &__checkbox {
         margin-top: 20px;
     }
@@ -1374,5 +1377,91 @@
         &::-ms-ticks-before {
             display: none;
         }
+    }
+}
+
+// reviews
+.reviews {
+    padding-bottom: 20px;
+    &__title {
+        padding: 24px 0 30px;
+        font-family: $russo-one;
+        font-size: 22px;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+    &__subtitle {
+        font-family: $russo-one;
+        font-size: 20px;
+        font-weight: normal;
+        &--black {
+            color: $black-color;
+        }
+    }
+    &__wrapper {
+        padding: 20px;
+        text-align: center;
+        background: $grey-color;
+    }
+    &__wrapper + &__wrapper {
+        margin-top: 30px;
+    }
+    &__slider {
+        margin-top: 30px;
+        .swiper-pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            height: 8px;
+        }
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background: $dark-gray-color;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+        .swiper-pagination-bullet + .swiper-pagination-bullet {
+            margin-left: 10px;
+        }
+        .swiper-pagination-bullet-active {
+            background: $finntrail-red-color;
+        }
+    }
+    &__item {
+        width: 100%;
+    }
+    &__img {
+        overflow: hidden;
+        margin: 0 auto 24px;
+        max-width: 86px;
+        max-height: 86px;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        img {
+            width: 86px;
+            height: 86px;
+            object-fit: cover;
+        }
+    }
+    &__name {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    &__name + &__description {
+        margin-top: 12px;
+    }
+    &__status {
+        display: block;
+        margin-top: 4px;
+        font-size: 14px;
+    }
+    &__status + &__description {
+        margin-top: 24px;
+    }
+    &__description {
+        font-size: 14px;
     }
 }
