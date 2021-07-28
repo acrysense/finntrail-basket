@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function smoothScroll(eID) {
         let startY = currentYPosition();
-        let stopY = elmYPosition(eID) - 12;
+        let stopY = elmYPosition(eID);
         let distance = stopY > startY ? stopY - startY : startY - stopY;
         if (distance < 100) {
             scrollTo(0, stopY); return;
