@@ -506,11 +506,19 @@
 
 // gift
 .gift {
-    display: flex;
-    align-items: center;
-    padding: 12px;
+    //display: flex;
+    //align-items: center;
+    //padding: 12px;
     margin-top: 12px;
-    border: 1px dashed $grey-line;
+    margin-bottom: -12px;
+    //border: 1px dashed $grey-line;
+    &__image {
+        width: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
     &__icon {
         width: 18px;
     }
