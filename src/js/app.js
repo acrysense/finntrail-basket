@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function smoothScroll(eID) {
         let startY = currentYPosition();
-        let stopY = elmYPosition(eID);
+        let stopY = elmYPosition(eID) - 12;
         let distance = stopY > startY ? stopY - startY : startY - stopY;
         if (distance < 100) {
             scrollTo(0, stopY); return;
@@ -83,18 +83,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    function debounce(f, ms) {
-        let isCooldown = false;
+    const allLinks = document.querySelectorAll('a[href^="#"]')
+
+    if (allLinks) {
+        allLinks.forEach(item => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault()
         
-        return function() {
-            if (isCooldown) return;
-        
-            f.apply(this, arguments);
-        
-            isCooldown = true;
-        
-            setTimeout(() => isCooldown = false, ms);
-        };
+                if (item.getAttribute('href').length > 1) {
+                    smoothScroll(item.getAttribute('href').slice(1))
+                }
+            })
+        })
     }
 
     // SLIDE UP
@@ -320,7 +320,31 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
-    // ACCORDIONS
+    // TOOLTIPs
+    const tooltip = document.querySelectorAll('.tooltip')
+
+    if (tooltip) {
+        tooltip.forEach((item) => {
+            const close = () => {
+                document.querySelectorAll('.tooltip__wrapper').forEach((child) => child.classList.remove('tooltip__wrapper--active'))
+            }
+            const itemChecker = useItemChecker([item], close)
+
+            item.addEventListener('click', (event) => {
+                event.preventDefault()
+
+                if (item.querySelector('.tooltip__wrapper').classList.contains('tooltip__wrapper--active')) {
+                    item.querySelector('.tooltip__wrapper').classList.remove('tooltip__wrapper--active')
+                } else {
+                    document.querySelectorAll('.tooltip__wrapper').forEach((child) => child.classList.remove('tooltip__wrapper--active'))
+                    item.querySelector('.tooltip__wrapper').classList.add('tooltip__wrapper--active')
+                    itemChecker.setBodyChecker()
+                }
+            })
+        })
+    }
+
+    // ACCORDIONs
     const accordionTrigger = document.querySelectorAll('.accordion-cart__trigger')
 
     if (accordionTrigger) {

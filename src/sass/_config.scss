@@ -77,6 +77,15 @@ svg line {
     max-width: 100%;
 }
 
+.section-heading {
+    padding: 22px 0;
+    &__title {
+        font-family: $russo-one;
+        font-size: 22px;
+        font-weight: normal;
+    }
+}
+
 .input-group {
     position: relative;
     &--error {
