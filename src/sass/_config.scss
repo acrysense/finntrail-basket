@@ -232,6 +232,16 @@ svg line {
             outline: none;
             border: 1px solid $finntrail-red-color;
         }
+        &--error ~ .input-shell__underline {
+            background: $finntrail-red-color;
+        }
+    }
+    &__underline {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        transition: background 0.4s;
     }
 }
 

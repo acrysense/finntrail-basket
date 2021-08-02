@@ -2,38 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // INPUTMASK
     Inputmask().mask(document.querySelectorAll('input'));
 
-    // FORM VALIDATE
-    const formValidate = document.querySelector('.form-validate');
-
-    if (formValidate) {
-        const formInput = formValidate.querySelectorAll('.input-group__input');
-        
-        formValidate.addEventListener('submit', (event) => {
-            let validateCounter = formInput.length
-    
-            for (let input of formInput) {
-                const inputError = input.parentNode.nextElementSibling
-    
-                if (input.validity.valid === false) {
-                    inputError.className = 'input-group__error input-group__error--active';
-                    inputError.textContent = 'Значение введено неверно';
-                } else {
-                    validateCounter -= 1
-                    inputError.className = 'input-group__error';
-                    inputError.textContent = '';
-                }
-            }
-    
-            if (validateCounter < 1) {
-                for (let input of formInput) {
-                    input.value = ''
-                }
-            } else {
-                event.preventDefault()
-            }
-        });
-    }
-
     // SMOOTH SCROLL
     function currentYPosition() {
         // Firefox, Chrome, Opera, Safari
@@ -83,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // ALL LINKS SMOOTH SCROLL
     const allLinks = document.querySelectorAll('a[href^="#"]')
 
     if (allLinks) {
@@ -94,6 +63,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     smoothScroll(item.getAttribute('href').slice(1))
                 }
             })
+        })
+    }
+
+    // BACK TO TOP
+    const backToTop = document.querySelector('.go-top')
+
+    if (backToTop) {
+        backToTop.addEventListener('click', (event) => {
+            event.preventDefault()
+    
+            smoothScroll('header')
         })
     }
 
@@ -162,6 +142,63 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             return slideUpQna(target, duration);
         }
+    }
+
+    // FORM VALIDATE
+    const formValidate = document.querySelector('.form-validate');
+
+    if (formValidate) {
+        const formInput = formValidate.querySelectorAll('.input-group__input');
+        
+        formValidate.addEventListener('submit', (event) => {
+            let validateCounter = formInput.length
+    
+            for (let input of formInput) {
+                const inputError = input.parentNode.nextElementSibling
+    
+                if (input.validity.valid === false) {
+                    inputError.className = 'input-group__error input-group__error--active';
+                    inputError.textContent = 'Значение введено неверно';
+                } else {
+                    validateCounter -= 1
+                    inputError.className = 'input-group__error';
+                    inputError.textContent = '';
+                }
+            }
+    
+            if (validateCounter < 1) {
+                for (let input of formInput) {
+                    input.value = ''
+                }
+            } else {
+                event.preventDefault()
+            }
+        });
+    }
+
+    const subscribeFormValidate = document.querySelector('.subscribe-form');
+
+    if (subscribeFormValidate) {
+        const subscribeFormInput = subscribeFormValidate.querySelector('.input-shell__input');
+        
+        subscribeFormValidate.addEventListener('submit', (event) => {
+            const radioButton = document.querySelectorAll('.circle-checkbox__input')
+            let radioChecked = 0
+
+            for (let radio of radioButton) {
+                if (radio.checked) {
+                    radioChecked = 1
+                }
+            }
+
+            if (radioChecked === 1 && subscribeFormInput.value.length > 5) {
+                subscribeFormInput.classList.remove('input-shell__input--error')
+                subscribeFormInput.value = ''
+            } else {
+                event.preventDefault()
+                subscribeFormInput.classList.add('input-shell__input--error')
+            }
+        });
     }
 
     // PROMOCODE
@@ -373,6 +410,14 @@ document.addEventListener('DOMContentLoaded', function () {
         inputSizeRange.forEach((item) => {
             item.addEventListener('input', (event) => {
                 item.previousElementSibling.value = event.target.value;
+                
+                if (item.value === item.max) {
+                    item.previousElementSibling.previousElementSibling.innerHTML = '>'
+                } else if (item.value === item.min) {
+                    item.previousElementSibling.previousElementSibling.innerHTML = '<'
+                } else {
+                    item.previousElementSibling.previousElementSibling.innerHTML = ''
+                }
             });
         })
     }
@@ -381,6 +426,14 @@ document.addEventListener('DOMContentLoaded', function () {
         inputSizeField.forEach((item) => {
             item.addEventListener('input', (event) => {
                 item.nextElementSibling.value = event.target.value;
+
+                if (item.value === item.max) {
+                    item.previousElementSibling.innerHTML = '>'
+                } else if (item.value === item.min) {
+                    item.previousElementSibling.innerHTML = '<'
+                } else {
+                    item.previousElementSibling.innerHTML = ''
+                }
             });
         })
     }
@@ -397,5 +450,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 type: 'bullets',
             },
         })
+    })
+
+    const aboutSlider = document.querySelector('.about__slider .swiper-container')
+
+    const mySwiperReviews = new Swiper(aboutSlider, {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
     })
 });

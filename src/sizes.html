@@ -42,7 +42,8 @@
     <div class="size" id="size">
         <div class="container">
             <h2 class="size__title">ТАБЛИЦА РАЗМЕРОВ</h2>
-            <p class="size__description">Воспользуйтесь кнопками ниже, чтобы перейти к таблице и найти наиболее подходящий размер по вашим параметрам</p>
+            <!--<p class="size__description">Воспользуйтесь кнопками ниже, чтобы перейти к&nbsp;таблице&nbsp;и&nbsp;найти&nbsp;наиболее подходящий размер по&nbsp;вашим&nbsp;параметрам</p>-->
+            <p class="size__description">Перейти <br>к таблице и найти наиболее подходящий <br>размер по вашим параметрам</p>
             <div class="size__wrapper">
                 <a href="#size-5" class="size__item">
                     <div class="size__img">
@@ -87,27 +88,31 @@
                 <div class="size__group">
                     <h3 class="size__subtitle">РОСТ</h3>
                     <div class="input-size">
-                        <input type="number" class="input-size__input" min="165" max="195" value="180">
-                        <input type="range" class="input-size__range" min="165" max="195" value="180">
+                        <span class="input-size__arrow"></span>
+                        <input type="number" class="input-size__input" min="165" max="195" value="186">
+                        <input type="range" class="input-size__range" min="165" max="195" value="186">
                     </div>
                 </div>
                 <div class="size__group">
                     <h3 class="size__subtitle">ВЕС</h3>
                     <div class="input-size">
-                        <input type="number" class="input-size__input" min="55" max="135" value="95">
-                        <input type="range" class="input-size__range" min="55" max="135" value="95">
+                        <span class="input-size__arrow"></span>
+                        <input type="number" class="input-size__input" min="55" max="135" value="80">
+                        <input type="range" class="input-size__range" min="55" max="135" value="80">
                     </div>
                 </div>
                 <div class="size__group">
                     <h3 class="size__subtitle">ДЛИНА СТОПЫ</h3>
                     <div class="input-size">
-                        <input type="number" class="input-size__input" min="35" max="45" value="40">
-                        <input type="range" class="input-size__range" min="35" max="45" value="40">
+                        <span class="input-size__arrow"></span>
+                        <input type="number" class="input-size__input" min="35" max="45" value="42">
+                        <input type="range" class="input-size__range" min="35" max="45" value="42">
                     </div>
                 </div>
                 <div class="size__group">
                     <h3 class="size__subtitle">ОБХВАТ ЛАДОНИ</h3>
                     <div class="input-size">
+                        <span class="input-size__arrow"></span>
                         <input type="number" class="input-size__input" min="20" max="24" value="22">
                         <input type="range" class="input-size__range" min="20" max="24" value="22">
                     </div>
@@ -608,11 +613,14 @@
         </div>
     </div>
     <!-- End of size -->
+    <!-- Back to top -->
+    <a href="#header" class="go-top">Наверх</a>
+    <!-- End of back to top -->
     <!-- Subscribe -->
     <div class="subscribe" id="subscribe">
         <div class="container">
             <h2 class="subscribe__title">🔥 ПОДПИШИСЬ НА СКИДКИ!</h2>
-            <form action="#" class="subscribe-form">
+            <form action="#" class="subscribe-form" novalidate>
                 <label for="subscribe-radio-01" class="circle-checkbox subscribe-form__checkbox">
                     <input type="radio" class="circle-checkbox__input" name="subscribe" id="subscribe-radio-01">
                     <span class="circle-checkbox__icon"></span>
@@ -636,6 +644,7 @@
                 <label for="subscribe-email" class="input-shell subscribe-form__input-shell">
                     <span class="input-shell__icon" style="background-image: url(img/dist/sprite.svg#icon-email);"></span>
                     <input type="email" id="subscribe-email" class="input-shell__input" placeholder="E-mail">
+                    <div class="input-shell__underline"></div>
                 </label>
                 <button class="subscribe-form__btn btn">Подписаться</button>
             </form>
