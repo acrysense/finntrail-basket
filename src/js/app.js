@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function smoothScroll(eID) {
         let startY = currentYPosition();
-        let stopY = elmYPosition(eID);
+        let stopY = elmYPosition(eID) - Number(document.querySelector('.header').clientHeight);
         let distance = stopY > startY ? stopY - startY : startY - stopY;
         if (distance < 100) {
             scrollTo(0, stopY); return;
@@ -413,10 +413,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 
                 if (item.value === item.max) {
                     item.previousElementSibling.previousElementSibling.innerHTML = '>'
+                    item.previousElementSibling.previousElementSibling.classList.add('input-size__arrow--max')
                 } else if (item.value === item.min) {
                     item.previousElementSibling.previousElementSibling.innerHTML = '<'
+                    item.previousElementSibling.previousElementSibling.classList.add('input-size__arrow--min')
                 } else {
                     item.previousElementSibling.previousElementSibling.innerHTML = ''
+                    item.previousElementSibling.previousElementSibling.classList.remove('input-size__arrow--max')
+                    item.previousElementSibling.previousElementSibling.classList.remove('input-size__arrow--min')
                 }
             });
         })
@@ -429,10 +433,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (item.value === item.max) {
                     item.previousElementSibling.innerHTML = '>'
+                    item.previousElementSibling.classList.add('input-size__arrow--max')
                 } else if (item.value === item.min) {
                     item.previousElementSibling.innerHTML = '<'
+                    item.previousElementSibling.classList.add('input-size__arrow--min')
                 } else {
                     item.previousElementSibling.innerHTML = ''
+                    item.previousElementSibling.classList.remove('input-size__arrow--max')
+                    item.previousElementSibling.classList.remove('input-size__arrow--min')
                 }
             });
         })

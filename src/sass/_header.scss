@@ -1,7 +1,10 @@
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     padding: 8px 0;
     color: $white-color;
-    background: $primary-color;
+    background: #000000;
     &__wrapper {
         display: flex;
         align-items: center;
