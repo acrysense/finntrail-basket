@@ -230,10 +230,13 @@ svg line {
         }
         &:focus {
             outline: none;
-            border: 1px solid $finntrail-red-color;
         }
-        &--error ~ .input-shell__underline {
+        &:focus ~ .input-shell__underline,
+        &:hover ~ .input-shell__underline {
             background: $finntrail-red-color;
+        }
+        &--error {
+            border: 1px solid $finntrail-red-color;
         }
     }
     &__underline {
@@ -412,4 +415,44 @@ svg line {
         color: $white-color;
         user-select: none;
     }
+}
+
+// RANGE
+.noUi-target {
+    margin-top: -1px;
+    height: 2px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+.noUi-connects {
+    border-radius: 0;
+}
+.noUi-connect {
+    background: $finntrail-red-color;
+}
+.noUi-handle {
+    background: $primary-color;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: none;
+}
+.noUi-horizontal .noUi-handle {
+    top: -9px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+}
+.noUi-handle:before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: $white-color;
+    border-radius: 50%;
+}
+.noUi-handle:after {
+    display: none;
 }
