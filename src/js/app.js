@@ -50,6 +50,30 @@ document.addEventListener('DOMContentLoaded', function () {
             leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
         }
     }
+    
+    function smoothScrollCoord(coord) {
+        let startY = currentYPosition();
+        let stopY = coord;
+        let distance = stopY > startY ? stopY - startY : startY - stopY;
+        if (distance < 100) {
+            scrollTo(0, stopY); return;
+        }
+        let speed = Math.round(distance / 100);
+        if (speed >= 20) speed = 20;
+        let step = Math.round(distance / 25);
+        let leapY = stopY > startY ? startY + step : startY - step;
+        let timer = 0;
+        if (stopY > startY) {
+            for (let i = startY; i < stopY; i += step ) {
+                setTimeout('window.scrollTo(0, ' + leapY + ')', timer * speed);
+                leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+            } return;
+        }
+        for (let i = startY; i > stopY; i -= step ) {
+            setTimeout('window.scrollTo(0, ' + leapY + ')', timer * speed);
+            leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+        }
+    }
 
     // ALL LINKS SMOOTH SCROLL
     const allLinks = document.querySelectorAll('a[href^="#"]')
@@ -73,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
         backToTop.addEventListener('click', (event) => {
             event.preventDefault()
     
-            smoothScroll('header')
+            smoothScrollCoord(0)
         })
     }
 
