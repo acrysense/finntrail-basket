@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINNTRAIL - Карточка товара</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                </button>
+                <a href="index.html" class="logotype">
+                    <img src="img/dist/logotype-finntrail.svg" alt="">
+                </a>
+                <button class="basket-btn" aria-label="Корзина">
+                    <span class="basket-btn__count">4</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- End of header -->
+    <div class="utp">
+        <div class="utp__item">
+            <div class="utp__icon" style="background-image: url(img/dist/sprite.svg#icon-utp-delivery);"></div>
+            <div class="utp__content">
+                <h3 class="utp__title tooltip">
+                    <span class="tooltip__icon">Бесплатная доставка</span>
+                    <div class="tooltip__wrapper">
+                        <p>
+                            Бесплатная доставка при заказе:<br>
+                            от 3 000 р. - по СПб и Мск<br>
+                            от 7 000 р. - по всей РФ, КЗ и РБ
+                        </p>
+                    </div>
+                </h3>
+                <span class="utp__info">по России, Беларуси и Казахстану</span>
+            </div>
+        </div>
+        <div class="utp__item">
+            <div class="utp__icon" style="background-image: url(img/dist/sprite.svg#icon-utp-money);"></div>
+            <div class="utp__content">
+                <h3 class="utp__title">Оплата после проверки и примерки</h3>
+                <span class="utp__info">безопасно</span>
+            </div>
+        </div>
+        <div class="utp__item">
+            <div class="utp__icon" style="background-image: url(img/dist/sprite.svg#icon-utp-change);"></div>
+            <div class="utp__content">
+                <h3 class="utp__title">Бесплатный обмен и возврат</h3>
+                <span class="utp__info">в течение 21 дня</span>
+            </div>
+        </div>
+        <div class="utp__item">
+            <div class="utp__icon" style="background-image: url(img/dist/sprite.svg#icon-utp-warranty);"></div>
+            <div class="utp__content">
+                <h3 class="utp__title">Бесплатный сервис и гарантия</h3>
+                <span class="utp__info">в течение 1 года</span>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>
