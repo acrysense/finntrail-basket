@@ -1262,20 +1262,21 @@
             }
         }
     }
+    &__scroll {
+        max-width: calc(100% - 102px);
+        width: 100%;
+        .simplebar-content-wrapper {
+            &::-webkit-scrollbar {
+                display: none!important;
+                appearance: none;
+            }
+        }
+    }
     &__wrap {
         display: flex;
         flex-wrap: nowrap;
-        max-width: calc(100% - 102px);
-        width: 100%;
         .size-info__elem {
             align-items: center;
-        }
-        .simplebar-content-wrapper::-webkit-scrollbar {
-            display: none!important;
-        }
-        .simplebar-content {
-            display: flex;
-            flex-wrap: nowrap;
         }
     }
     &__column {
