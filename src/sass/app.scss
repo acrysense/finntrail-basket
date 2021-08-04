@@ -1,5 +1,6 @@
 @import "config"; // Always at the beginning
 @import "header";
+@import "scrollbar";
 
 // advantages
 .advantages-cart {
@@ -902,7 +903,7 @@
     border-top: 1px solid rgba($primary-color, 0.05);
     &__title {
         font-family: $russo-one;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: normal;
         text-align: center;
     }
@@ -920,7 +921,7 @@
     &__subtitle {
         margin: 0 auto;
         width: fit-content;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: normal;
         text-align: center;
         border-bottom: 1px dashed $primary-color;
@@ -929,20 +930,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 24px;
     }
     &__item {
         display: flex;
         align-items: center;
     }
     &__item + &__item {
-        margin-left: 14px;
+        margin-left: 24px;
     }
     &__icon {
-        min-width: 29px;
-        min-height: 29px;
-        max-width: 29px;
-        max-height: 29px;
+        min-width: 30px;
+        min-height: 30px;
+        max-width: 30px;
+        max-height: 30px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -1283,6 +1284,14 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        &--heading {
+            .size-info__elem {
+                border: 1px solid transparent;
+                &--active {
+                    border: 1px solid $finntrail-red-color;
+                }
+            }
+        }
         &--last {
             .size-info__elem:last-child {
                 color: $primary-color;
@@ -1300,59 +1309,37 @@
         font-size: 14px;
         font-weight: bold;
         text-align: left;
+        border: 2px solid transparent;
+        cursor: pointer;
         &:first-child {
-            min-height: 62px;
+            min-height: 66px;
             font-family: $russo-one;
             font-size: 16px;
             font-weight: normal;
-            color: $white-color;
-            background: $primary-color;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            min-height: 74px;
         }
         &:nth-child(even) {
             background: $grey-color;
         }
-        &:nth-child(2),
-        &:nth-child(3) {
-            min-height: 62px;
+        &--black {
             color: $white-color;
-            background: $gray-color;
+            background: $primary-color!important;
+            border: 1px solid transparent;
+        }
+        &--gray {
+            color: $white-color;
+            background: $gray-color!important;
+        }
+        &--active {
+            border: 6px solid $finntrail-red-color;
+        }
+        &--black.size-info__elem--active {
+            border: 1px solid $finntrail-red-color;
         }
     }
-}
-
-//.simplebar-content {
-//    display: flex;
-//    flex-wrap: nowrap;
-//    &::-webkit-scrollbar {
-//        display: none;
-//    }
-//}
-.simplebar-track.simplebar-horizontal {
-    height: 5px;
-    background: transparent;
-    background-clip: content-box;
-}
-.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
-    top: 0;
-    height: 5px;
-}
-.simplebar-scrollbar {
-    &::before {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: 1;
-        background: $finntrail-red-color;
-        border-radius: 4px;
-    }
-}
-.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
-    top: 0;
-    bottom: 0;
-}
-.simplebar-scrollbar.simplebar-visible::before {
-    opacity: 1;
 }
 
 // input size

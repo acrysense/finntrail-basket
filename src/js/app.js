@@ -596,6 +596,29 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
+    // SIZE ELEM
+    const sizeElem = document.querySelectorAll('.size-info__column:not(.size-info__column--heading) .size-info__elem:not(.size-info__elem--gray, .size-info__elem--black')
+    const sizeElemHeading = document.querySelectorAll('.size-info__column--heading .size-info__elem')
+
+    if (sizeElem) {
+        sizeElem.forEach((item, i) => {
+            item.addEventListener('mouseover', (event) => {
+                event.preventDefault()
+
+                item.classList.add('size-info__elem--active')
+                item.parentNode.querySelector('.size-info__elem--black').classList.add('size-info__elem--active')
+                item.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.previousElementSibling.querySelectorAll('.size-info__elem')[item.getAttribute('data-index')].classList.add('size-info__elem--active')
+            })
+            item.addEventListener('mouseout', (event) => {
+                event.preventDefault()
+
+                item.classList.remove('size-info__elem--active')
+                item.parentNode.querySelector('.size-info__elem--black').classList.remove('size-info__elem--active')
+                item.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.previousElementSibling.querySelectorAll('.size-info__elem')[item.getAttribute('data-index')].classList.remove('size-info__elem--active')
+            })
+        })
+    }
+
     // SWIPER
     const reviewsSlider = document.querySelectorAll('.reviews__slider .swiper-container')
 
