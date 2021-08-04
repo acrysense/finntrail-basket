@@ -2,6 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // INPUTMASK
     Inputmask().mask(document.querySelectorAll('input'));
 
+    // SIMPLEBAR
+    new SimpleBar(document.getElementById('test-sd'), {
+        autoHide: false,
+        forceVisible: true
+    });
+
     // SMOOTH SCROLL
     function currentYPosition() {
         // Firefox, Chrome, Opera, Safari
