@@ -711,22 +711,25 @@
 
 // back button
 .back-button {
-    padding: 12px 0;
+    padding: 15px 0;
     background: $grey-color;
     &__wrapper {
+        position: relative;
         display: flex;
         align-items: center;
+        justify-content: center;
         h1 {
             font-family: $proximanova;
             font-size: 16px;
             font-weight: 600;
             line-height: 100%;
-            text-align: left;
             text-transform: none;
             color: $primary-color;
         }
     }
     &__arrow {
+        position: absolute;
+        left: 0;
         display: block;
         padding: 0;
         margin-right: 8px;
@@ -952,6 +955,7 @@
 
 // techno
 .techno {
+    padding-top: 16px;
     padding-bottom: 40px;
     &__title {
         padding: 36px 0 32px;
@@ -1046,6 +1050,7 @@
 
 // policy
 .policy {
+    padding-top: 16px;
     padding-bottom: 40px;
     &__title {
         padding: 24px 0;
@@ -1397,6 +1402,7 @@
 
 // reviews
 .reviews {
+    padding-top: 16px;
     padding-bottom: 20px;
     &__subtitle {
         font-family: $russo-one;
