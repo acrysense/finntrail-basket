@@ -1270,6 +1270,9 @@
         .size-info__elem {
             align-items: center;
         }
+        .simplebar-content-wrapper::-webkit-scrollbar {
+            display: none!important;
+        }
         .simplebar-content {
             display: flex;
             flex-wrap: nowrap;

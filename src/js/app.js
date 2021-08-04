@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // SIMPLEBAR
     new SimpleBar(document.getElementById('test-sd'), {
         autoHide: false,
-        forceVisible: true
+        forceVisible: 'x'
     });
 
     // SMOOTH SCROLL
