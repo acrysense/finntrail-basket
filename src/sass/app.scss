@@ -1,5 +1,6 @@
 @import "config"; // Always at the beginning
 @import "header";
+@import "footer";
 @import "scrollbar";
 
 // advantages
@@ -904,6 +905,13 @@
 .social-media {
     padding: 24px 0;
     border-top: 1px solid rgba($primary-color, 0.05);
+    &--dark {
+        .social-media__block {
+            padding: 24px 0;
+            background: $light-black-color;
+            border-radius: 4px;
+        }
+    }
     &__title {
         font-family: $russo-one;
         font-size: 20px;
@@ -916,6 +924,7 @@
         margin-top: 20px;
     }
     &__block {
+        width: 100%;
         text-align: center;
     }
     &__block + &__block {
@@ -1537,6 +1546,41 @@
         font-size: 14px;
         font-weight: normal;
         color: $gray-color;
+    }
+}
+
+// payment
+.payment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+    &__item {
+        width: fit-content;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        &--visa {
+            width: 44px;
+            height: 14px;
+        }
+        &--mastercard {
+            width: 32px;
+            height: 25px;
+        }
+        &--mir {
+            width: 47px;
+            height: 14px;
+        }
+        &--sber {
+            width: 116px;
+            height: 20px;
+        }
     }
 }
 

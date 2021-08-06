@@ -643,4 +643,25 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'bullets',
         },
     })
+
+    // FOOTER ACCORDIONs
+    const footerTrigger = document.querySelectorAll('.footer__trigger')
+
+    if (footerTrigger) {
+        footerTrigger.forEach(item => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault()
+
+                if (!item.parentNode.classList.contains('is--open')) {
+                    if (document.querySelector('.footer__accordion.is--open')) {
+                        let test = document.querySelector('.footer__accordion.is--open')
+                        slideUpQna(test.childNodes[test.childNodes.length - 1].previousElementSibling)
+                    }
+                    slideDownQna(item.nextElementSibling)
+                } else {
+                    slideUpQna(item.nextElementSibling)
+                }
+            })
+        })
+    }
 });

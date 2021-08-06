@@ -4,11 +4,14 @@ $russo-one: 'RussoOne', sans-serif; // Russo One Regular
 $primary-font-size: 16px; // Body font-size
 $primary-line-height: 1.2; // Body line-height
 $primary-color: #202020;
+$strong-black-color: #000000;
 $black-color: #3F3F3F;
+$light-black-color: #181818;
 $white-color: #FFFFFF;
 $grey-color: #F4F4F4;
 $gray-color: #969696;
 $dark-gray-color: #B9B9B9;
+$copyright-color: #676767;
 $grey-line: #E8E8E8;
 $green-color: #27AA06;
 $finntrail-red-color: #D61635;
@@ -414,6 +417,24 @@ svg line {
         text-align: left;
         color: $white-color;
         user-select: none;
+    }
+}
+
+.communication-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    color: $white-color;
+    background: $light-black-color;
+    svg + span {
+        margin-left: 8px;
+    }
+    span {
+        display: block;
     }
 }
 
