@@ -75,23 +75,6 @@
         .footer__link {
             text-decoration: underline;
         }
-        //.footer__link + .footer__link {
-        //    position: relative;
-        //    &::before {
-        //        content: '';
-        //        position: absolute;
-        //        top: 50%;
-        //        left: -50%;
-        //        transform: translate(100%, -50%);
-        //        display: block;
-        //        min-width: 3px;
-        //        min-height: 3px;
-        //        max-width: 3px;
-        //        max-height: 3px;
-        //        background: $gray-color;
-        //        border-radius: 50%;
-        //    }
-        //}
     }
     &__title {
         font-size: 16px;
@@ -128,6 +111,15 @@
         font-size: 12px;
         font-weight: normal;
         color: $gray-color;
+    }
+    &__delimiter {
+        display: block;
+        min-width: 3px;
+        min-height: 3px;
+        max-width: 3px;
+        max-height: 3px;
+        background: $gray-color;
+        border-radius: 50%;
     }
     &__communication-btn {
         margin-top: 12px;
