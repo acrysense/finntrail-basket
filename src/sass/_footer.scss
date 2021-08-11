@@ -20,7 +20,7 @@
         &.is--open {
             .footer__trigger {
                 &::after {
-                    transform: translateY(-50%) rotate(0deg);
+                    transform: translateY(-50%) rotate(180deg);
                 }
             }
         }
@@ -44,7 +44,7 @@
             position: absolute;
             top: 50%;
             right: 0;
-            transform: translateY(-50%) rotate(180deg);
+            transform: translateY(-50%) rotate(0);
             display: block;
             margin-left: 24px;
             min-width: 18px;
@@ -73,6 +73,7 @@
         align-items: center;
         justify-content: space-between;
         .footer__link {
+            font-size: 12px;
             text-decoration: underline;
         }
     }
@@ -108,18 +109,9 @@
         margin-top: 32px;
     }
     &__link {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: normal;
         color: $gray-color;
-    }
-    &__delimiter {
-        display: block;
-        min-width: 3px;
-        min-height: 3px;
-        max-width: 3px;
-        max-height: 3px;
-        background: $gray-color;
-        border-radius: 50%;
     }
     &__communication-btn {
         margin-top: 12px;
