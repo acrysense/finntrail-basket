@@ -62,17 +62,23 @@
         display: none;
     }
     &__item {
-        padding: 4px 0;
         line-height: 1;
     }
     &__item + &__item {
         margin-top: 4px;
+    }
+    &__link {
+        padding: 8px 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: $gray-color;
     }
     &__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         .footer__link {
+            padding: 0;
             font-size: 12px;
             text-decoration: underline;
         }
@@ -107,11 +113,6 @@
     }
     &__copyright + &__title {
         margin-top: 32px;
-    }
-    &__link {
-        font-size: 14px;
-        font-weight: normal;
-        color: $gray-color;
     }
     &__communication-btn {
         margin-top: 12px;
