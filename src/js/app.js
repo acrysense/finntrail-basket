@@ -644,6 +644,17 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     })
 
+    const productSlider = document.querySelector('.product__slider .swiper-container')
+
+    const mySwiperProduct = new Swiper(productSlider, {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+    })
+
     // FOOTER ACCORDIONs
     const footerTrigger = document.querySelectorAll('.footer__trigger')
 

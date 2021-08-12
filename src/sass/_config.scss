@@ -270,6 +270,12 @@ svg line {
         color: $white-color;
         background: rgba($finntrail-red-color, 0.86);
     }
+    &--transparent {
+        padding: 17px 18px;
+        color: $primary-color;
+        background: transparent;
+        border: 1px solid $grey-line;
+    }
 }
 
 .btn[disabled] {
@@ -408,7 +414,7 @@ svg line {
         background-color: $white-color;
         border: 5px solid transparent;
         border-radius: 50%;
-        transition: all 0.4s;
+        transition: all 0.25s;
     }
     &__label {
         display: block;
@@ -417,6 +423,85 @@ svg line {
         text-align: left;
         color: $white-color;
         user-select: none;
+    }
+}
+
+.color-checkbox {
+    display: block;
+    margin: 0;
+    cursor: pointer;
+    &__input {
+        display: none;
+        &:checked ~ .color-checkbox__icon {
+            border: 1px solid $primary-color;
+        }
+    }
+    &__icon {
+        position: relative;
+        display: block;
+        min-width: 36px;
+        min-height: 36px;
+        max-width: 36px;
+        max-height: 36px;
+        background-repeat: no-repeat;
+        background-size: 42px;
+        background-position: center center;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        transition: all 0.25s;
+    }
+}
+
+.size-checkbox {
+    position: relative;
+    display: block;
+    margin: 0;
+    cursor: pointer;
+    &__input {
+        display: none;
+        &:checked {
+            & ~ .size-checkbox__help {
+                top: -8px;
+                opacity: 1;
+                background: $black-color;
+            }
+            & ~ .size-checkbox__icon {
+                color: $white-color;
+                background: $black-color;
+            }
+        }
+    }
+    &__help {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 1;
+        transform: translateX(-50%);
+        display: block;
+        padding: 1px 8px;
+        width: fit-content;
+        font-size: 12px;
+        font-weight: normal;
+        white-space: nowrap;
+        opacity: 0;
+        color: $white-color;
+        background: $grey-color;
+        border-radius: 25px;
+        transition: all 0.25s ease-in-out;
+    }
+    &__icon {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 56px;
+        min-height: 56px;
+        max-height: 56px;
+        font-family: $russo-one;
+        font-size: 14px;
+        font-weight: normal;
+        background: $grey-color;
+        transition: all 0.25s ease-in-out;
     }
 }
 

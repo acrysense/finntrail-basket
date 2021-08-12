@@ -1446,7 +1446,7 @@
             transition: background 0.3s;
         }
         .swiper-pagination-bullet + .swiper-pagination-bullet {
-            margin-left: 10px;
+            margin-left: 8px;
         }
         .swiper-pagination-bullet-active {
             background: $finntrail-red-color;
@@ -1582,6 +1582,186 @@
             width: 88px;
             height: 20px;
         }
+    }
+}
+
+// product cart
+.product {
+    &__slider {
+        position: relative;
+        margin: 0 -12px;
+        .swiper-pagination {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 8px 12px 0;
+            height: 3px;
+        }
+        .swiper-pagination-bullet {
+            position: relative;
+            width: 100%;
+            height: 3px;
+            background: rgba($primary-color, 0.16);
+            transition: background 0.3s;
+        }
+        .swiper-pagination-bullet + .swiper-pagination-bullet {
+            margin-left: 4px;
+        }
+        .swiper-pagination-bullet-active {
+            background: $finntrail-red-color;
+        }
+    }
+    &__back {
+        position: absolute;
+        top: 16px;
+        left: 12px;
+        z-index: 10;
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url(../img/dist/sprite.svg#icon-arrow-back);
+        background-repeat: no-repeat;
+        background-size: 26px;
+        background-position: center center;
+    }
+    &__controls {
+        position: absolute;
+        top: 16px;
+        right: 12px;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__share {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url(../img/dist/sprite.svg#icon-share);
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: center center;
+    }
+    &__share + &__status {
+        margin-top: 8px;
+    }
+    &__status {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    &__status + &__status {
+        margin-top: 12px;
+    }
+    &__discount {
+        position: absolute;
+        bottom: 23px;
+        left: 12px;
+        z-index: 10;
+        display: block;
+        font-size: 16px;
+        padding: 4px 8px;
+        font-weight: 800;
+        color: $white-color;
+        background: $green-color;
+        border-radius: 4px;
+    }
+    &__title {
+        margin-top: 20px;
+        font-family: $russo-one;
+        font-size: 20px;
+        font-weight: normal;
+    }
+    &__block {
+        margin-top: 20px;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        margin-top: 12px;
+        width: 100%;
+        &--between {
+            justify-content: space-between;
+        }
+    }
+    &__text {
+        display: block;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    &__help {
+        display: block;
+        font-size: 14px;
+        text-decoration: underline;
+        color: $gray-color;
+        &:hover {
+            color: $gray-color;
+        }
+    }
+    &__sizes {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 16px;
+    }
+    &__size-checkbox + &__size-checkbox {
+        margin-left: 1.25%;
+    }
+    &__size-checkbox {
+        width: 19%;
+        &:nth-child(5n + 1) {
+            margin-left: 0;
+        }
+        &:nth-child(n + 6) {
+            margin-top: 12px;
+        }
+    }
+    &__color-checkbox + &__color-checkbox {
+        margin-left: 8px;
+    }
+    &__prices {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+    &__price {
+        display: block;
+        font-weight: bold;
+        &--new {
+            font-size: 18px;
+            color: $finntrail-red-color;
+        }
+        &--old {
+            margin-top: 2px;
+            margin-left: 4px;
+            font-size: 16px;
+            color: $gray-color;
+        }
+    }
+    &__save {
+        display: block;
+        padding: 2px 6px;
+        margin-left: 4px;
+        font-size: 14px;
+        font-weight: normal;
+        color: $white-color;
+        background: $finntrail-red-color;
+    }
+    &__buying {
+        display: block;
+        margin-top: 16px;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+        color: $green-color;
+    }
+    &__btn {
+        width: 100%;
+    }
+    &__comparison {
+        margin-left: 12px;
     }
 }
 

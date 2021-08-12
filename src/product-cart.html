@@ -28,45 +28,222 @@
         </div>
     </header>
     <!-- End of header -->
-    <div class="utp">
-        <div class="utp__item">
-            <div class="utp__icon" style="background-image: url(img/dist/sprite.svg#icon-utp-delivery);"></div>
-            <div class="utp__content">
-                <h3 class="utp__title tooltip">
-                    <span class="tooltip__icon">Бесплатная доставка</span>
-                    <div class="tooltip__wrapper">
-                        <p>
-                            Бесплатная доставка при заказе:<br>
-                            от 3 000 р. - по СПб и Мск<br>
-                            от 7 000 р. - по всей РФ, КЗ и РБ
-                        </p>
+    <!-- Product cart -->
+    <div class="product" id="product">
+        <div class="container">
+            <div class="product__slider">
+                <a href="index.html" class="product__back" aria-label="Назад"></a>
+                <div class="product__controls">
+                    <a href="#" class="product__share" aria-label="Поделиться"></a>
+                    <div class="product__status" style="background-image: url(img/dist/sprite.svg#icon-hit);"></div>
+                    <div class="product__status" style="background-image: url(img/dist/sprite.svg#icon-new);"></div>
+                </div>
+                <span class="product__discount">-30%</span>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/dist/product-cart-img.png" alt="Вейдерсы Finntrail WADEMAN Grey">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/dist/product-cart-img.png" alt="Вейдерсы Finntrail WADEMAN Grey">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/dist/product-cart-img.png" alt="Вейдерсы Finntrail WADEMAN Grey">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/dist/product-cart-img.png" alt="Вейдерсы Finntrail WADEMAN Grey">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/dist/product-cart-img.png" alt="Вейдерсы Finntrail WADEMAN Grey">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/dist/product-cart-img.png" alt="Вейдерсы Finntrail WADEMAN Grey">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/dist/product-cart-img.png" alt="Вейдерсы Finntrail WADEMAN Grey">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/dist/product-cart-img.png" alt="Вейдерсы Finntrail WADEMAN Grey">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/dist/product-cart-img.png" alt="Вейдерсы Finntrail WADEMAN Grey">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/dist/product-cart-img.png" alt="Вейдерсы Finntrail WADEMAN Grey">
+                        </div>
                     </div>
-                </h3>
-                <span class="utp__info">по России, Беларуси и Казахстану</span>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
-        </div>
-        <div class="utp__item">
-            <div class="utp__icon" style="background-image: url(img/dist/sprite.svg#icon-utp-money);"></div>
-            <div class="utp__content">
-                <h3 class="utp__title">Безопасная оплата</h3>
-                <span class="utp__info">после проверки и примерки</span>
+            <h2 class="product__title">Вейдерсы Finntrail WADEMAN Grey</h2>
+            <div class="product__inner">
+                <span class="product__text">Артикул: 1524</span>
             </div>
-        </div>
-        <div class="utp__item">
-            <div class="utp__icon" style="background-image: url(img/dist/sprite.svg#icon-utp-change);"></div>
-            <div class="utp__content">
-                <h3 class="utp__title">Бесплатный обмен и возврат</h3>
-                <span class="utp__info">в течение 21 дня</span>
+            <div class="product__prices">
+                <span class="product__price product__price--new">14 990 ₽</span>
+                <span class="product__price product__price--old">17 200 ₽</span>
+                <span class="product__save">Экономия 2 210 ₽</span>
             </div>
-        </div>
-        <div class="utp__item">
-            <div class="utp__icon" style="background-image: url(img/dist/sprite.svg#icon-utp-warranty);"></div>
-            <div class="utp__content">
-                <h3 class="utp__title">Бесплатный сервис и гарантия</h3>
-                <span class="utp__info">в течение 1 года</span>
+            <div class="product__block">
+                <span class="product__text">Доступные цвета:</span>
+                <div class="product__inner">
+                    <label for="color-radio-01" class="color-checkbox product__color-checkbox">
+                        <input type="radio" class="color-checkbox__input" name="color" id="color-radio-01">
+                        <span class="color-checkbox__icon" style="background-image: url(img/dist/sprite.svg#color-grey);"></span>
+                    </label>
+                    <label for="color-radio-02" class="color-checkbox product__color-checkbox">
+                        <input type="radio" class="color-checkbox__input" name="color" id="color-radio-02">
+                        <span class="color-checkbox__icon" style="background-image: url(img/dist/sprite.svg#color-green);"></span>
+                    </label>
+                    <label for="color-radio-03" class="color-checkbox product__color-checkbox">
+                        <input type="radio" class="color-checkbox__input" name="color" id="color-radio-03">
+                        <span class="color-checkbox__icon" style="background-image: url(img/dist/sprite.svg#color-red);"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="product__block">
+                <div class="product__inner product__inner--between">
+                    <span class="product__text">Выберите размер:</span>
+                    <a href="#" class="product__help">Как выбрать размер?</a>
+                </div>
+                <div class="product__sizes">
+                    <label for="size-radio-01" class="size-checkbox product__size-checkbox">
+                        <input type="radio" class="size-checkbox__input" name="size" id="size-radio-01">
+                        <span class="size-checkbox__help">182-190</span>
+                        <span class="size-checkbox__icon">XXS</span>
+                    </label>
+                    <label for="size-radio-02" class="size-checkbox product__size-checkbox">
+                        <input type="radio" class="size-checkbox__input" name="size" id="size-radio-02">
+                        <span class="size-checkbox__help">182-190</span>
+                        <span class="size-checkbox__icon">XS</span>
+                    </label>
+                    <label for="size-radio-03" class="size-checkbox product__size-checkbox">
+                        <input type="radio" class="size-checkbox__input" name="size" id="size-radio-03">
+                        <span class="size-checkbox__help">182-190</span>
+                        <span class="size-checkbox__icon">S</span>
+                    </label>
+                    <label for="size-radio-04" class="size-checkbox product__size-checkbox">
+                        <input type="radio" class="size-checkbox__input" name="size" id="size-radio-04">
+                        <span class="size-checkbox__help">182-190</span>
+                        <span class="size-checkbox__icon">M</span>
+                    </label>
+                    <label for="size-radio-05" class="size-checkbox product__size-checkbox">
+                        <input type="radio" class="size-checkbox__input" name="size" id="size-radio-05">
+                        <span class="size-checkbox__help">182-190</span>
+                        <span class="size-checkbox__icon">ML</span>
+                    </label>
+                    <label for="size-radio-06" class="size-checkbox product__size-checkbox">
+                        <input type="radio" class="size-checkbox__input" name="size" id="size-radio-06">
+                        <span class="size-checkbox__help">182-190</span>
+                        <span class="size-checkbox__icon">MK</span>
+                    </label>
+                    <label for="size-radio-07" class="size-checkbox product__size-checkbox">
+                        <input type="radio" class="size-checkbox__input" name="size" id="size-radio-07">
+                        <span class="size-checkbox__help">182-190</span>
+                        <span class="size-checkbox__icon">L</span>
+                    </label>
+                    <label for="size-radio-08" class="size-checkbox product__size-checkbox">
+                        <input type="radio" class="size-checkbox__input" name="size" id="size-radio-08">
+                        <span class="size-checkbox__help">182-190</span>
+                        <span class="size-checkbox__icon">LL</span>
+                    </label>
+                    <label for="size-radio-09" class="size-checkbox product__size-checkbox">
+                        <input type="radio" class="size-checkbox__input" name="size" id="size-radio-09">
+                        <span class="size-checkbox__help">182-190</span>
+                        <span class="size-checkbox__icon">LK</span>
+                    </label>
+                    <label for="size-radio-10" class="size-checkbox product__size-checkbox">
+                        <input type="radio" class="size-checkbox__input" name="size" id="size-radio-10">
+                        <span class="size-checkbox__help">182-190</span>
+                        <span class="size-checkbox__icon">XL</span>
+                    </label>
+                    <label for="size-radio-11" class="size-checkbox product__size-checkbox">
+                        <input type="radio" class="size-checkbox__input" name="size" id="size-radio-11">
+                        <span class="size-checkbox__help">182-190</span>
+                        <span class="size-checkbox__icon">XLL</span>
+                    </label>
+                    <label for="size-radio-12" class="size-checkbox product__size-checkbox">
+                        <input type="radio" class="size-checkbox__input" name="size" id="size-radio-12">
+                        <span class="size-checkbox__help">182-190</span>
+                        <span class="size-checkbox__icon">XLK</span>
+                    </label>
+                    <label for="size-radio-13" class="size-checkbox product__size-checkbox">
+                        <input type="radio" class="size-checkbox__input" name="size" id="size-radio-13">
+                        <span class="size-checkbox__help">182-190</span>
+                        <span class="size-checkbox__icon">XXL</span>
+                    </label>
+                    <label for="size-radio-14" class="size-checkbox product__size-checkbox">
+                        <input type="radio" class="size-checkbox__input" name="size" id="size-radio-14">
+                        <span class="size-checkbox__help">182-190</span>
+                        <span class="size-checkbox__icon">XXLK</span>
+                    </label>
+                    <label for="size-radio-15" class="size-checkbox product__size-checkbox">
+                        <input type="radio" class="size-checkbox__input" name="size" id="size-radio-15">
+                        <span class="size-checkbox__help">182-190</span>
+                        <span class="size-checkbox__icon">XXXL</span>
+                    </label>
+                </div>
+                <div class="product__inner">
+                    <a href="#" class="product__help">Нет моего размера</a>
+                </div>
+            </div>
+            <div class="product__block">
+                <a href="#" class="product__btn btn">Добавить в корзину</a>
+                <div class="product__inner">
+                    <a href="#" class="product__btn btn btn--transparent">Купить в 1 клик</a>
+                    <a href="#" class="product__comparison btn btn--transparent" aria-label="Сравнение">
+                        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5119 0L24 8.40727L23.9848 8.5365L23.4887 8.47815C23.9848 8.5365 23.9848 8.53626 23.9848 8.5365L23.9846 8.53752L23.9845 8.53883L23.9841 8.54234L23.9827 8.55286C23.9816 8.56141 23.98 8.57298 23.9778 8.58739C23.9736 8.6162 23.9672 8.65639 23.9581 8.70636C23.9399 8.80617 23.9107 8.94574 23.8661 9.11198C23.7774 9.44249 23.6247 9.88864 23.3679 10.3396C22.8476 11.2531 21.8798 12.2064 20.1908 12.2064C18.5018 12.2064 17.534 11.2531 17.0137 10.3396C16.7569 9.88864 16.6042 9.4425 16.5155 9.11198C16.4709 8.94574 16.4418 8.80617 16.4235 8.70636C16.4144 8.65639 16.408 8.6162 16.4038 8.58739C16.4016 8.57299 16.4 8.56141 16.3989 8.55287L16.3976 8.54234L16.3971 8.53883L16.397 8.53752C16.3969 8.53728 16.3968 8.5365 16.8929 8.47815L16.3968 8.5365L16.3816 8.40727L19.4137 1.09902L12.4995 1.70985V16H11.5005V1.79811L4.53131 2.41379L7.61839 9.85449L7.60316 9.98373L7.10708 9.92538C7.60316 9.98373 7.60319 9.98349 7.60316 9.98373L7.60304 9.98474L7.60288 9.98605L7.60245 9.98956L7.60109 10.0001C7.59996 10.0086 7.59837 10.0202 7.59623 10.0346C7.59197 10.0634 7.58556 10.1036 7.57645 10.1536C7.55825 10.2534 7.52912 10.393 7.4845 10.5592C7.39579 10.8897 7.24312 11.3359 6.98629 11.7868C6.46598 12.7003 5.49817 13.6536 3.8092 13.6536C2.12022 13.6536 1.15241 12.7003 0.632102 11.7868C0.375274 11.3359 0.222605 10.8897 0.13389 10.5592C0.0892716 10.393 0.0601436 10.2534 0.0419421 10.1536C0.0328292 10.1036 0.0264198 10.0634 0.0221581 10.0346C0.0200263 10.0202 0.0184292 10.0086 0.0172979 10.0001L0.0159408 9.98956L0.0155075 9.98605L0.0153494 9.98474C0.0153209 9.9845 0.0152292 9.98373 0.511311 9.92538L0.0152292 9.98373L0 9.85449L3.46367 1.50612L20.5119 0ZM1.25909 9.42632L3.8092 3.27987L6.35931 9.42632H1.25909ZM1.13391 10.4244C1.21014 10.6794 1.32661 10.9881 1.50039 11.2932C1.89968 11.9942 2.58081 12.6555 3.8092 12.6555C5.03758 12.6555 5.71871 11.9942 6.11801 11.2932C6.29178 10.9881 6.40825 10.6794 6.48448 10.4244H1.13391ZM20.1908 1.83265L17.6407 7.9791H22.7409L20.1908 1.83265ZM17.5155 8.97721C17.5917 9.23222 17.7082 9.54083 17.882 9.84593C18.2813 10.547 18.9624 11.2083 20.1908 11.2083C21.4192 11.2083 22.1003 10.547 22.4996 9.84593C22.6734 9.54083 22.7899 9.23223 22.8661 8.97721H17.5155Z" fill="#202020"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <span class="product__buying">🔥 643 человека уже приобрели этот товар</span>
+            <div class="utp">
+                <div class="utp__item">
+                    <div class="utp__icon" style="background-image: url(img/dist/sprite.svg#icon-utp-delivery);"></div>
+                    <div class="utp__content">
+                        <h3 class="utp__title tooltip">
+                            <span class="tooltip__icon">Бесплатная доставка</span>
+                            <div class="tooltip__wrapper">
+                                <p>
+                                    Бесплатная доставка при заказе:<br>
+                                    от 3 000 р. - по СПб и Мск<br>
+                                    от 7 000 р. - по всей РФ, КЗ и РБ
+                                </p>
+                            </div>
+                        </h3>
+                        <span class="utp__info">по России, Беларуси и Казахстану</span>
+                    </div>
+                </div>
+                <div class="utp__item">
+                    <div class="utp__icon" style="background-image: url(img/dist/sprite.svg#icon-utp-money);"></div>
+                    <div class="utp__content">
+                        <h3 class="utp__title">Безопасная оплата</h3>
+                        <span class="utp__info">после проверки и примерки</span>
+                    </div>
+                </div>
+                <div class="utp__item">
+                    <div class="utp__icon" style="background-image: url(img/dist/sprite.svg#icon-utp-change);"></div>
+                    <div class="utp__content">
+                        <h3 class="utp__title">Бесплатный обмен и возврат</h3>
+                        <span class="utp__info">в течение 21 дня</span>
+                    </div>
+                </div>
+                <div class="utp__item">
+                    <div class="utp__icon" style="background-image: url(img/dist/sprite.svg#icon-utp-warranty);"></div>
+                    <div class="utp__content">
+                        <h3 class="utp__title">Бесплатный сервис и гарантия</h3>
+                        <span class="utp__info">в течение 1 года</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!-- End of product cart -->
+    <!-- Back to top -->
+    <a href="#header" class="go-top">Наверх</a>
+    <!-- End of back to top -->
     <!-- Scripts -->
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>
