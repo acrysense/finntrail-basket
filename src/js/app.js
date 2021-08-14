@@ -655,6 +655,25 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     })
 
+    // SPECIFICATIONs
+    const specificationBtn = document.querySelectorAll('.specification__more')
+
+    if (specificationBtn) {
+        specificationBtn.forEach(item => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault()
+
+                if (item.previousElementSibling.classList.contains('specification__description--all')) {
+                    item.previousElementSibling.classList.remove('specification__description--all')
+                    item.innerHTML = 'Развернуть'
+                } else {
+                    item.previousElementSibling.classList.add('specification__description--all')
+                    item.innerHTML = 'Скрыть'
+                }
+            })
+        })
+    }
+
     // FOOTER ACCORDIONs
     const footerTrigger = document.querySelectorAll('.footer__trigger')
 
