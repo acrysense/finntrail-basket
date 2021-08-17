@@ -2,6 +2,7 @@
 @import "header";
 @import "footer";
 @import "scrollbar";
+@import "modal";
 
 // advantages
 .advantages-cart {
@@ -1872,6 +1873,19 @@
         border-top: 2px solid $grey-color;
         border-bottom: 2px solid $grey-color;
     }
+    &__fixed {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 16px 12px;
+        background: $white-color;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s;
+        &--hidden {
+            transform: translateY(100%);
+        }
+    }
 }
 
 // specification
@@ -2275,6 +2289,63 @@
         &:nth-child(n + 4) {
             margin-top: 1.25%;
         }
+    }
+}
+
+// notification
+.notification {
+    position: fixed;
+    top: 60px;
+    right: 12px;
+    z-index: 100;
+    display: none;
+    padding: 20px;
+    min-width: 294px;
+    color: $white-color;
+    background: $black-color;
+    &--active {
+        display: block;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+    &__icon {
+        margin-right: 8px;
+        min-width: 24px;
+        min-height: 16px;
+        max-width: 24px;
+        max-height: 16px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    &__title {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    &__link {
+        margin-top: 8px;
+        font-size: 12px;
+        text-decoration: underline;
+        color: $white-color;
+        &:hover {
+            color: $white-color;
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        z-index: 1;
+        transform: translateY(-50%);
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-image: url(../img/dist/sprite.svg#icon-close);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center center;
     }
 }
 
