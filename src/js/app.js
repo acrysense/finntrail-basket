@@ -407,6 +407,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ACCORDIONs
     const accordionTrigger = document.querySelectorAll('.accordion-cart__trigger')
+    const accordionSubTrigger = document.querySelectorAll('.accordion-sub__trigger')
 
     if (accordionTrigger) {
         accordionTrigger.forEach(item => {
@@ -421,6 +422,45 @@ document.addEventListener('DOMContentLoaded', function () {
                     slideDownQna(item.nextElementSibling)
                 } else {
                     slideUpQna(item.nextElementSibling)
+                }
+            })
+        })
+    }
+
+    if (accordionSubTrigger) {
+        accordionSubTrigger.forEach(item => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault()
+
+                if (!item.parentNode.classList.contains('is--open')) {
+                    if (document.querySelector('.accordion-sub__item.is--open')) {
+                        let test = document.querySelector('.accordion-sub__item.is--open')
+                        slideUpQna(test.childNodes[test.childNodes.length - 1].previousElementSibling)
+                    }
+                    slideDownQna(item.nextElementSibling)
+                } else {
+                    slideUpQna(item.nextElementSibling)
+                }
+            })
+        })
+    }
+
+    // COMMENTs
+    const commentViewBtn = document.querySelectorAll('.comment__view')
+
+    if (commentViewBtn) {
+        commentViewBtn.forEach((item) => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault()
+
+                if (item.previousElementSibling.classList.contains('is--open')) {
+                    item.previousElementSibling.classList.remove('is--open')
+                    item.innerHTML = 'Показать ответ магазина'
+                    slideUpQna(item.previousElementSibling)
+                } else {
+                    item.previousElementSibling.classList.add('is--open')
+                    item.innerHTML = 'Скрыть ответ магазина'
+                    slideDownQna(item.previousElementSibling)
                 }
             })
         })
