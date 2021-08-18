@@ -22,18 +22,23 @@
     left: 0;
     z-index: 1010;
     display: none;
+    width: 100%;
+    height: 100%;
     background: $white-color;
     &--notification {
         top: auto;
-        padding: 56px 12px 40px;
+        height: fit-content;
     }
     &--active {
         display: block;
     }
+    &__top {
+        display: flex;
+        justify-content: flex-end;
+        padding: 12px;
+        background: $white-color;
+    }
     &__close {
-        position: absolute;
-        top: 12px;
-        right: 12px;
         width: 32px;
         height: 32px;
         background-image: url(../img/dist/sprite.svg#icon-close-black);
@@ -41,17 +46,101 @@
         background-size: 24px;
         background-position: center center;
     }
+    &__content {
+        padding: 0 12px 40px;
+        max-height: calc(100% - 56px);
+        height: 100%;
+        overflow-y: auto;
+    }
     &__title {
         margin-bottom: 20px;
         font-family: $russo-one;
         font-size: 20px;
         font-weight: normal;
         text-align: center;
+        &--left {
+            text-align: left;
+        }
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__img {
+        overflow: hidden;
+        max-width: 56px;
+        max-height: 56px;
+        width: 100%;
+        height: 100%;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__img + &__description {
+        margin-left: 8px;
+    }
+    &__description {
+        font-size: 14px;
     }
     &__btn {
         width: 100%;
     }
     &__btn + &__btn {
         margin-top: 12px;
+    }
+}
+
+.modal-form {
+    margin-top: 24px;
+    &__input-group,
+    &__input {
+        width: 100%;
+    }
+    &__input-group + &__input-group,
+    &__input-group + &__select {
+        margin-top: 24px;
+    }
+    &__select {
+        height: 59px;
+        .select-box__container {
+            top: 67px;
+            &--active {
+                max-height: 227px;
+            }
+        }
+        .select-box__option {
+            padding: 12px 22px;
+        }
+        .select-box__label {
+            font-size: 18px;
+        }
+        .select-box__selected {
+            padding: 19px 22px;
+            font-size: 18px;
+            &::after {
+                right: 12px;
+                background-size: 18px;
+            }
+        }
+    }
+    &__checkbox {
+        margin-top: 24px;
+    }
+    &__btn {
+        margin-top: 24px;
+        width: 100%;
+    }
+    &__copyright {
+        margin-top: 12px;
+        font-size: 12px;
+        font-weight: normal;
+        color: $gray-color;
+        a {
+            display: inline;
+            text-decoration: underline;
+        }
     }
 }

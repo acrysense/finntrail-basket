@@ -1212,6 +1212,17 @@
 // size
 .size {
     padding-bottom: 40px;
+    &--modal {
+        .size {
+            &__info {
+                margin: 32px 0 0;
+            }
+            &__group {
+                margin: 0 auto;
+                max-width: 250px;
+            }
+        }
+    }
     &__title {
         padding: 28px 0 12px;
         font-family: $russo-one;
@@ -1796,6 +1807,19 @@
         font-size: 14px;
         font-weight: normal;
     }
+    &__comment-preview {
+        margin-left: 8px;
+        .comment-preview {
+            &__star {
+                width: 14px;
+                height: 14px;
+            }
+            &__grade,
+            &__help {
+                font-size: 14px;
+            }
+        }
+    }
     &__help {
         display: block;
         font-size: 14px;
@@ -2144,6 +2168,9 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
+    }
+    &__star + &__star {
+        margin-left: 2px;
     }
     &__grade {
         display: block;
