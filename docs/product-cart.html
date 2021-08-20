@@ -78,7 +78,7 @@
             <h2 class="product__title">Облегченный комбинезон EVOLUTION BLUE</h2>
             <div class="product__inner">
                 <span class="product__text">Артикул: 1524</span>
-                <div class="comment-preview product__comment-preview">
+                <a href="#reviews-block" class="comment-preview product__comment-preview">
                     <div class="comment-preview__star"></div>
                     <div class="comment-preview__star"></div>
                     <div class="comment-preview__star"></div>
@@ -86,12 +86,26 @@
                     <div class="comment-preview__star"></div>
                     <span class="comment-preview__grade">5.0</span>
                     <span class="comment-preview__help">(14 отзывов)</span>
-                </div>
+                </a>
             </div>
             <div class="product__prices">
                 <span class="product__price product__price--new">14 990 ₽</span>
                 <span class="product__price product__price--old">17 200 ₽</span>
                 <span class="product__save">Экономия 2 210 ₽</span>
+            </div>
+            <div class="gift product__gift">
+                <div class="gift__content">
+                    <h3 class="gift__title">ПОДАРОК В КОМПЛЕКТЕ</h3>
+                    <div class="gift__prices">
+                        <span class="gift__price gift__price--new">Бесплатно</span>
+                        <span class="gift__price gift__price--old">7 200 ₽</span>
+                    </div>
+                    <span class="gift__text">Гермочехол SmartPack</span>
+                </div>
+                <div class="gift__img">
+                    <img src="img/dist/banner.png" alt="Гермочехол SmartPack">
+                </div>
+                <div class="gift__icon"></div>
             </div>
             <div class="product__block">
                 <span class="product__text">Доступные цвета:</span>
@@ -278,20 +292,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="gift accordion-cart__gift">
-                                <div class="gift__content">
-                                    <h3 class="gift__title">ПОДАРОК В КОМПЛЕКТЕ</h3>
-                                    <div class="gift__prices">
-                                        <span class="gift__price gift__price--new">Бесплатно</span>
-                                        <span class="gift__price gift__price--old">7 200 ₽</span>
-                                    </div>
-                                    <span class="gift__text">Гермочехол SmartPack</span>
-                                </div>
-                                <div class="gift__img">
-                                    <img src="img/dist/banner.png" alt="Гермочехол SmartPack">
-                                </div>
-                                <div class="gift__icon"></div>
-                            </div>
                         </div>
                     </div>
                     <div class="accordion-cart__item">
@@ -333,20 +333,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-cart__item">
-                        <button class="accordion-cart__trigger">
-                            <div class="comment-preview">
-                                <span class="comment-preview__title">Отзывы</span>
-                                <span class="comment-preview__help">Отзывов пока нет</span>
-                            </div>
-                        </button>
-                        <div class="accordion-cart__content accordion-cart__content--white">
-                            <div class="comment">
-                                <a href="#" class="comment__btn btn">Оставить отзыв</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-cart__item">
+                    <div class="accordion-cart__item" id="reviews-block">
                         <button class="accordion-cart__trigger">
                             <div class="comment-preview">
                                 <span class="comment-preview__title">Отзывы</span>
@@ -357,7 +344,7 @@
                         </button>
                         <div class="accordion-cart__content accordion-cart__content--white">
                             <div class="comment">
-                                <a href="#" class="comment__btn btn">Оставить отзыв</a>
+                                <a href="#" class="comment__btn btn modal-btn" data-id="product-reviews">Оставить отзыв</a>
                                 <div class="comment__wrapper">
                                     <div class="comment__item">
                                         <div class="comment__content">
@@ -420,6 +407,22 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- If empty reviews -->
+                    <!--<div class="accordion-cart__item">
+                        <button class="accordion-cart__trigger">
+                            <div class="comment-preview">
+                                <span class="comment-preview__title">Отзывы</span>
+                                <span class="comment-preview__help">Отзывов пока нет</span>
+                            </div>
+                        </button>
+                        <div class="accordion-cart__content accordion-cart__content--white">
+                            <div class="comment">
+                                <a href="#" class="comment__btn btn">Оставить отзыв</a>
+                            </div>
+                        </div>
+                    </div>-->
+
                     <div class="accordion-cart__item">
                         <button class="accordion-cart__trigger">Вопросы и ответы</button>
                         <div class="accordion-cart__content accordion-cart__content--white">
@@ -570,8 +573,8 @@
                             </div>
                             <div class="more-products__body">
                                 <div class="more-products__prices">
-                                    <span class="more-products__price more-products__price--new">4 990 ₽</span>
-                                    <span class="more-products__price more-products__price--old">7 200 ₽</span>
+                                    <span class="more-products__price more-products__price--new">24 990 ₽</span>
+                                    <span class="more-products__price more-products__price--old">48 900 ₽</span>
                                 </div>
                                 <span class="more-products__name">Короткие вейдерсы RUNNER</span>
                             </div>
@@ -587,8 +590,8 @@
                             </div>
                             <div class="more-products__body">
                                 <div class="more-products__prices">
-                                    <span class="more-products__price more-products__price--new">4 990 ₽</span>
-                                    <span class="more-products__price more-products__price--old">7 200 ₽</span>
+                                    <span class="more-products__price more-products__price--new">24 990 ₽</span>
+                                    <span class="more-products__price more-products__price--old">48 900 ₽</span>
                                 </div>
                                 <span class="more-products__name">Короткие вейдерсы RUNNER</span>
                             </div>
@@ -602,8 +605,8 @@
                             </div>
                             <div class="more-products__body">
                                 <div class="more-products__prices">
-                                    <span class="more-products__price more-products__price--new">4 990 ₽</span>
-                                    <span class="more-products__price more-products__price--old">7 200 ₽</span>
+                                    <span class="more-products__price more-products__price--new">24 990 ₽</span>
+                                    <span class="more-products__price more-products__price--old">48 900 ₽</span>
                                 </div>
                                 <span class="more-products__name">Короткие вейдерсы RUNNER</span>
                             </div>
@@ -615,8 +618,8 @@
                             </div>
                             <div class="more-products__body">
                                 <div class="more-products__prices">
-                                    <span class="more-products__price more-products__price--new">4 990 ₽</span>
-                                    <span class="more-products__price more-products__price--old">7 200 ₽</span>
+                                    <span class="more-products__price more-products__price--new">24 990 ₽</span>
+                                    <span class="more-products__price more-products__price--old">48 900 ₽</span>
                                 </div>
                                 <span class="more-products__name">Короткие вейдерсы RUNNER</span>
                             </div>
@@ -630,8 +633,8 @@
                             </div>
                             <div class="more-products__body">
                                 <div class="more-products__prices">
-                                    <span class="more-products__price more-products__price--new">4 990 ₽</span>
-                                    <span class="more-products__price more-products__price--old">7 200 ₽</span>
+                                    <span class="more-products__price more-products__price--new">24 990 ₽</span>
+                                    <span class="more-products__price more-products__price--old">48 900 ₽</span>
                                 </div>
                                 <span class="more-products__name">Короткие вейдерсы RUNNER</span>
                             </div>
@@ -643,8 +646,8 @@
                             </div>
                             <div class="more-products__body">
                                 <div class="more-products__prices">
-                                    <span class="more-products__price more-products__price--new">4 990 ₽</span>
-                                    <span class="more-products__price more-products__price--old">7 200 ₽</span>
+                                    <span class="more-products__price more-products__price--new">24 990 ₽</span>
+                                    <span class="more-products__price more-products__price--old">48 900 ₽</span>
                                 </div>
                                 <span class="more-products__name">Короткие вейдерсы RUNNER</span>
                             </div>
@@ -763,18 +766,15 @@
         <a href="#" class="notification__close" aria-label="Закрыть"></a>
     </div>
     <!-- End of notification -->
-    <!-- Back to top -->
-    <a href="#header" class="go-top">Наверх</a>
-    <!-- End of back to top -->
     <!-- Modal -->
-    <div class="modal modal--notification" id="product-added">
+    <div class="modal" id="product-added">
         <div class="modal__top">
             <a href="#" class="modal__close" aria-label="Закрыть"></a>
         </div>
         <div class="modal__content">
             <h4 class="modal__title">Товар добавлен в корзину</h4>
             <a href="basket.html" class="modal__btn btn">Перейти в корзину</a>
-            <a href="#" class="modal__btn btn btn--transparent">Продолжить покупки</a>
+            <a href="#" class="modal__btn modal__btn--close btn btn--transparent btn--sm">Продолжить покупки</a>
         </div>
     </div>
     <div class="modal" id="product-reviews">
@@ -784,6 +784,115 @@
         <div class="modal__content">
             <h4 class="modal__title">Оставьте свой отзыв</h4>
             <form class="modal-form" novalidate>
+                <div class="star-rating">
+                    <div class="star-rating__stars">
+                        <a href="#" class="star-rating__star"></a>
+                        <a href="#" class="star-rating__star"></a>
+                        <a href="#" class="star-rating__star"></a>
+                        <a href="#" class="star-rating__star"></a>
+                        <a href="#" class="star-rating__star"></a>
+                    </div>
+                    <span class="star-rating__help">Поставьте оценку от 1 до 5 звёзд</span>
+                    <div class="star-rating__questionnaire">
+                        <h4 class="star-rating__title">Что ваc огорчило?</h4>
+                        <label for="question-01" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-01">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Размер совсем не подошел</span>
+                        </label>
+                        <label for="question-02" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-02">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Размер привезли не тот</span>
+                        </label>
+                        <label for="question-03" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-03">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Качество экипировки не оправдало ожиданий</span>
+                        </label>
+                        <label for="question-04" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-04">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Швы на экипировке не проклеены</span>
+                        </label>
+                        <label for="question-05" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-05">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Фурнитура на экипировке неисправна</span>
+                        </label>
+                        <label for="question-06" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-06">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Получена экипировка с заводским дефектом</span>
+                        </label>
+                    </div>
+                    <div class="star-rating__questionnaire">
+                        <h4 class="star-rating__title">Что испортило впечатление?</h4>
+                        <label for="question-01" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-01">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Размер не совсем подошел</span>
+                        </label>
+                        <label for="question-02" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-02">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Расцветка не совпала</span>
+                        </label>
+                        <label for="question-03" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-03">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Изделие упаковано неаккуратно</span>
+                        </label>
+                        <label for="question-04" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-04">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Комплект собран не до конца</span>
+                        </label>
+                        <label for="question-05" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-05">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Ярлыки и марки отсутствуют на упаковке</span>
+                        </label>
+                        <label for="question-06" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-06">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Изменилась стоимость экипировки после заказа</span>
+                        </label>
+                    </div>
+                    <div class="star-rating__questionnaire">
+                        <h4 class="star-rating__title">Что вас особенно порадовало?</h4>
+                        <label for="question-01" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-01">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Размер подошел идеально</span>
+                        </label>
+                        <label for="question-02" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-02">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Расцветка соответствует заявленной</span>
+                        </label>
+                        <label for="question-03" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-03">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Экипировка оправдала ожидания</span>
+                        </label>
+                        <label for="question-04" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-04">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Модель удобна в эксплуатации</span>
+                        </label>
+                        <label for="question-05" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-05">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Легко надевать и удобно носить</span>
+                        </label>
+                        <label for="question-06" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-06">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Отличное соотношение цена / качество</span>
+                        </label>
+                    </div>
+                </div>
                 <div class="input-group modal-form__input-group">
                     <div class="input-group__control">
                         <input type="text" class="input-group__input modal-form__input" id="input-name" placeholder="Имя" required>
@@ -794,9 +903,9 @@
                 </div>
                 <div class="input-group modal-form__input-group">
                     <div class="input-group__control">
-                        <input type="email" class="input-group__input modal-form__input" id="input-email" placeholder="Email" required>
+                        <input type="email" class="input-group__input modal-form__input" id="input-email" placeholder="E-mail" required>
                         <div class="input-group__underline"></div>
-                        <label for="input-email" class="input-group__label">Email*</label>
+                        <label for="input-email" class="input-group__label">E-mail*</label>
                     </div>
                     <span class="input-group__error" aria-live="polite">Текст ошибки</span>
                 </div>
@@ -808,7 +917,24 @@
                     </div>
                     <span class="input-group__error" aria-live="polite">Текст ошибки</span>
                 </div>
-                <button class="modal-form__btn btn">Отправить отзыв</button>
+                <div class="upload-photos">
+                    <label for="upload-photos" class="upload-photos__label">
+                        <input type="file" class="upload-photos__input" id="upload-photos" name="files[]" accept=".jpg, .jpeg, .png" multiple>
+                        <span class="upload-photos__btn">Прикрепить фото</span>
+                        <span class="upload-photos__help">Вы можете добавить до 10 фото весом до 10 Мб каждое</span>
+                    </label>
+                    <div class="upload-photos__list">
+                        <div class="upload-photos__item">
+                            <img src="img/dist/gallery-img-01.png" alt="Image">
+                            <button class="upload-photos__delete" aria-label="Удалить"></button>
+                        </div>
+                        <div class="upload-photos__item">
+                            <img src="img/dist/gallery-img-02.png" alt="Image">
+                            <button class="upload-photos__delete" aria-label="Удалить"></button>
+                        </div>
+                    </div>
+                </div>
+                <button class="modal-form__btn btn btn--sm">Отправить отзыв</button>
             </form>
         </div>
     </div>
@@ -846,17 +972,17 @@
             <form class="modal-form" novalidate>
                 <div class="input-group modal-form__input-group">
                     <div class="input-group__control">
-                        <input type="text" class="input-group__input modal-form__input" id="input-name" placeholder="Имя" required>
+                        <input type="text" class="input-group__input modal-form__input" id="input-name-pr" placeholder="Имя" required>
                         <div class="input-group__underline"></div>
-                        <label for="input-name" class="input-group__label">Имя*</label>
+                        <label for="input-name-pr" class="input-group__label">Имя*</label>
                     </div>
                     <span class="input-group__error" aria-live="polite">Текст ошибки</span>
                 </div>
                 <div class="input-group modal-form__input-group">
                     <div class="input-group__control">
-                        <input type="email" class="input-group__input modal-form__input" id="input-email" placeholder="Email" required>
+                        <input type="email" class="input-group__input modal-form__input" id="input-email-pr" placeholder="E-mail" required>
                         <div class="input-group__underline"></div>
-                        <label for="input-email" class="input-group__label">Email*</label>
+                        <label for="input-email-pr" class="input-group__label">E-mail*</label>
                     </div>
                     <span class="input-group__error" aria-live="polite">Текст ошибки</span>
                 </div>
@@ -898,7 +1024,7 @@
                     <span class="select-box__selected">Размер</span> 
                 </div>
                 <label for="specialist-help" class="square-checkbox modal-form__checkbox">
-                    <input type="checkbox" class="square-checkbox__input" id="specialist-help">
+                    <input type="checkbox" class="square-checkbox__input" id="specialist-help" checked>
                     <span class="square-checkbox__label">Вам потребуется помощь специалиста?</span>
                     <span class="square-checkbox__icon"></span>
                 </label>
@@ -932,113 +1058,51 @@
             <a href="#" class="modal__close" aria-label="Закрыть"></a>
         </div>
         <div class="modal__content">
-            <div class="size size--modal">
+            <div class="size size-tabs size--modal">
                 <h2 class="size__title">ТАБЛИЦА РАЗМЕРОВ</h2>
                 <p class="size__description">Нажмите на нужную кнопку, <br>чтобы перейти к таблице <br>и определить размер по параметрам </p>
                 <div class="size__wrapper">
-                    <a href="#size-5" class="size__item">
+                    <a href="#" class="size__item size-tabs__item" data-size="5">
                         <div class="size__img">
                             <img src="img/dist/img-01.png" alt="Обувь">
                         </div>
                         <span class="size__name">Обувь</span>
                     </a>
-                    <a href="#size-1" class="size__item">
+                    <a href="#" class="size__item size-tabs__item" data-size="1">
                         <div class="size__img">
                             <img src="img/dist/img-02.png" alt="Вейдерсы">
                         </div>
                         <span class="size__name">Вейдерсы</span>
                     </a>
-                    <a href="#size-2" class="size__item">
+                    <a href="#" class="size__item size-tabs__item" data-size="2">
                         <div class="size__img">
                             <img src="img/dist/img-03.png" alt="Куртка, Костюм">
                         </div>
                         <span class="size__name">Куртка, Костюм</span>
                     </a>
-                    <a href="#size-6" class="size__item">
+                    <a href="#" class="size__item size-tabs__item" data-size="6">
                         <div class="size__img">
                             <img src="img/dist/img-04.png" alt="Перчатки">
                         </div>
                         <span class="size__name">Перчатки</span>
                     </a>
-                    <a href="#size-2" class="size__item">
+                    <a href="#" class="size__item size-tabs__item" data-size="2">
                         <div class="size__img">
                             <img src="img/dist/img-05.png" alt="Термоодежда">
                         </div>
                         <span class="size__name">Термоодежда</span>
                     </a>
-                    <a href="#size-3" class="size__item">
+                    <a href="#" class="size__item size-tabs__item" data-size="3">
                         <div class="size__img">
                             <img src="img/dist/img-06.png" alt="Снегоходная экипировка">
                         </div>
                         <span class="size__name">Снегоходная экипировка</span>
                     </a>
                 </div>
-                <h2 class="size__title">КАЛЬКУЛЯТОР РАЗМЕРОВ</h3>
-                <p class="size__description">Введите свои параметры для мгновенного <br>определения размера</p>
-                <div class="size__calculation">
-                    <div class="size__group">
-                        <h3 class="size__subtitle">РОСТ</h3>
-                        <div class="input-size">
-                            <span class="input-size__arrow"></span>
-                            <input type="number" class="input-size__input" min="165" max="195" value="186">
-                            <div id="range-growth"></div>
-                        </div>
-                    </div>
-                    <div class="size__group">
-                        <h3 class="size__subtitle">ВЕС</h3>
-                        <div class="input-size">
-                            <span class="input-size__arrow"></span>
-                            <input type="number" class="input-size__input" min="55" max="135" value="80">
-                            <div id="range-weight"></div>
-                        </div>
-                    </div>
-                    <div class="size__group">
-                        <h3 class="size__subtitle">ДЛИНА СТОПЫ</h3>
-                        <div class="input-size">
-                            <span class="input-size__arrow"></span>
-                            <input type="number" class="input-size__input" min="35" max="45" value="42">
-                            <div id="range-foor-length"></div>
-                        </div>
-                    </div>
-                    <div class="size__group">
-                        <h3 class="size__subtitle">ОБХВАТ ЛАДОНИ</h3>
-                        <div class="input-size">
-                            <span class="input-size__arrow"></span>
-                            <input type="number" class="input-size__input" min="20" max="24" value="22">
-                            <div id="range-palm-girth"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="size__info">
-                    <div class="size__group">
-                        <h3 class="size__subtitle">ВЕЙДЕРСЫ</h3>
-                        <span class="size__value">L</span>
-                    </div>
-                    <div class="size__group">
-                        <h3 class="size__subtitle">ВЕЙДЕРСЫ С САПОГАМИ</h3>
-                        <span class="size__value">L43</span>
-                    </div>
-                    <div class="size__group">
-                        <h3 class="size__subtitle">КУРТКА, КОСТЮМ</h3>
-                        <span class="size__value">L</span>
-                    </div>
-                    <div class="size__group">
-                        <h3 class="size__subtitle">ОБУВЬ</h3>
-                        <span class="size__value">43</span>
-                    </div>
-                    <div class="size__group">
-                        <h3 class="size__subtitle">ТЕРМООДЕЖА</h3>
-                        <span class="size__value">L</span>
-                    </div>
-                    <div class="size__group">
-                        <h3 class="size__subtitle">ПЕРЧАТКИ</h3>
-                        <span class="size__value size__value--empty">НЕ ОПРЕДЕЛЁН</span>
-                    </div>
-                </div>
                 <h2 class="size__title">как правильно подобрать размер экипировки?</h3>
                 <div class="size-info">
                     <div class="size-info__wrapper">
-                        <div class="size-info__item" id="size-1">
+                        <div class="size-info__item size-tabs__content">
                             <div class="size-info__top tooltip">
                                 <div class="size-info__img">
                                     <img src="img/dist/size-info-01.png" alt="РАЗМЕР ВЕЙДЕРСОВ">
@@ -1192,7 +1256,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="size-info__item" id="size-2">
+                        <div class="size-info__item size-tabs__content">
                             <div class="size-info__top tooltip">
                                 <div class="size-info__img">
                                     <img src="img/dist/size-info-02.png" alt="РАЗМЕР КУРТКИ, КОСТЮМА И ТЕРМОБЕЛЬЯ">
@@ -1310,7 +1374,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="size-info__item" id="size-3">
+                        <div class="size-info__item size-tabs__content">
                             <div class="size-info__top tooltip">
                                 <div class="size-info__img">
                                     <img src="img/dist/size-info-03.png" alt="РАЗМЕР СНЕГОХОДНОЙ ЭКИПИРОВКИ">
@@ -1417,7 +1481,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="size-info__item" id="size-4">
+                        <div class="size-info__item size-tabs__content">
                             <div class="size-info__top tooltip">
                                 <div class="size-info__img">
                                     <img src="img/dist/size-info-04.png" alt="РАЗМЕР ЖЕНСКОЙ СНЕГОХОДНОЙ ЭКИПИРОВКИ">
@@ -1493,7 +1557,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="size-info__item" id="size-5">
+                        <div class="size-info__item size-tabs__content">
                             <div class="size-info__top tooltip">
                                 <div class="size-info__img">
                                     <img src="img/dist/size-info-05.png" alt="РАЗМЕР ОБУВИ">
@@ -1564,7 +1628,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="size-info__item" id="size-6">
+                        <div class="size-info__item size-tabs__content">
                             <div class="size-info__top tooltip">
                                 <div class="size-info__img">
                                     <img src="img/dist/size-info-06.png" alt="РАЗМЕР ПЕРЧАТОК">
@@ -1603,6 +1667,68 @@
                         </div>
                     </div>
                 </div>
+                <h2 class="size__title">КАЛЬКУЛЯТОР РАЗМЕРОВ</h3>
+                <p class="size__description">Введите свои параметры для мгновенного <br>определения размера</p>
+                <div class="size__calculation">
+                    <div class="size__group">
+                        <h3 class="size__subtitle">РОСТ</h3>
+                        <div class="input-size">
+                            <span class="input-size__arrow"></span>
+                            <input type="number" class="input-size__input" min="165" max="195" value="186">
+                            <div id="range-growth"></div>
+                        </div>
+                    </div>
+                    <div class="size__group">
+                        <h3 class="size__subtitle">ВЕС</h3>
+                        <div class="input-size">
+                            <span class="input-size__arrow"></span>
+                            <input type="number" class="input-size__input" min="55" max="135" value="80">
+                            <div id="range-weight"></div>
+                        </div>
+                    </div>
+                    <div class="size__group">
+                        <h3 class="size__subtitle">ДЛИНА СТОПЫ</h3>
+                        <div class="input-size">
+                            <span class="input-size__arrow"></span>
+                            <input type="number" class="input-size__input" min="35" max="45" value="42">
+                            <div id="range-foor-length"></div>
+                        </div>
+                    </div>
+                    <div class="size__group">
+                        <h3 class="size__subtitle">ОБХВАТ ЛАДОНИ</h3>
+                        <div class="input-size">
+                            <span class="input-size__arrow"></span>
+                            <input type="number" class="input-size__input" min="20" max="24" value="22">
+                            <div id="range-palm-girth"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="size__info">
+                    <div class="size__group">
+                        <h3 class="size__subtitle">ВЕЙДЕРСЫ</h3>
+                        <span class="size__value">L</span>
+                    </div>
+                    <div class="size__group">
+                        <h3 class="size__subtitle">ВЕЙДЕРСЫ С САПОГАМИ</h3>
+                        <span class="size__value">L43</span>
+                    </div>
+                    <div class="size__group">
+                        <h3 class="size__subtitle">КУРТКА, КОСТЮМ</h3>
+                        <span class="size__value">L</span>
+                    </div>
+                    <div class="size__group">
+                        <h3 class="size__subtitle">ОБУВЬ</h3>
+                        <span class="size__value">43</span>
+                    </div>
+                    <div class="size__group">
+                        <h3 class="size__subtitle">ТЕРМООДЕЖА</h3>
+                        <span class="size__value">L</span>
+                    </div>
+                    <div class="size__group">
+                        <h3 class="size__subtitle">ПЕРЧАТКИ</h3>
+                        <span class="size__value size__value--empty">НЕ ОПРЕДЕЛЁН</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1611,5 +1737,11 @@
     <!-- Scripts -->
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>
+    <script>
+        function textAreaAdjust(e) {
+            e.style.height = "1px";
+            e.style.height = (e.scrollHeight) + "px";
+        }
+    </script>
 </body>
 </html>

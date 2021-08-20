@@ -285,6 +285,10 @@ svg line {
         background: transparent;
         border: 1px solid $grey-line;
     }
+    &--sm {
+        padding: 14px;
+        font-size: 14px;
+    }
 }
 
 .btn[disabled] {
@@ -403,7 +407,7 @@ svg line {
 
 .square-checkbox {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin: 0;
     cursor: pointer;
     &__input {
@@ -441,6 +445,7 @@ svg line {
         font-size: 14px;
         font-weight: normal;
         text-align: left;
+        line-height: 22px;
         color: $primary-color;
         user-select: none;
     }

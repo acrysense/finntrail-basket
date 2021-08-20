@@ -801,9 +801,9 @@
             content: '';
             display: block;
             margin-left: 24px;
-            min-width: 18px;
+            min-width: 19px;
             min-height: 6px;
-            max-width: 18px;
+            max-width: 19px;
             max-height: 6px;
             background-image: url(../img/dist/sprite.svg#icon-dropdown);
             background-repeat: no-repeat;
@@ -880,7 +880,6 @@
         transition: all 0.3s ease-in-out;
         &.is--open {
             .accordion-sub__trigger {
-                border-bottom: 2px solid $primary-color;
                 &::before {
                     transform: translate(100%, -50%) rotate(90deg);
                 }
@@ -909,10 +908,10 @@
             content: '';
             position: absolute;
             top: 50%;
-            right: 15px;
+            right: 16px;
             transform: translateY(-50%);
             display: block;
-            width: 13px;
+            width: 11px;
             height: 1px;
             background: $strong-black-color;
             transition: all 0.3s ease-in-out;
@@ -925,7 +924,7 @@
             transform: translate(100%, -50%);
             display: block;
             width: 1px;
-            height: 12px;
+            height: 11px;
             background: $strong-black-color;
             transition: all 0.3s ease-in-out;
         }
@@ -1318,6 +1317,16 @@
     }
 }
 
+// size tabs
+.size-tabs {
+    &__content {
+        display: none;
+        &--active {
+            display: block;
+        }
+    }
+}
+
 // size info
 .size-info {
     margin-top: -12px;
@@ -1696,6 +1705,7 @@
 
 // product cart
 .product {
+    padding-bottom: 89px;
     &__slider {
         position: relative;
         margin: 0 -12px;
@@ -1865,6 +1875,7 @@
             margin-top: 2px;
             margin-left: 4px;
             font-size: 16px;
+            text-decoration: line-through;
             color: $gray-color;
         }
     }
@@ -1971,10 +1982,10 @@
     &__item {
         display: flex;
         align-items: center;
-        &:last-child {
-            padding-top: 12px;
-            border-top: 1px solid $grey-line;
-        }
+        //&:last-child {
+        //    padding-top: 12px;
+        //    border-top: 1px solid $grey-line;
+        //}
     }
     &__item + &__item {
         margin-top: 12px;
@@ -2039,7 +2050,9 @@
         margin-top: 12px;
     }
     &__item {
-        max-width: 132px;
+        max-width: 142px;
+        min-width: 142px;
+        width: 100%;
         border: 1px solid $grey-line;
     }
     &__item + &__item {
@@ -2101,13 +2114,13 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         &--new {
-            max-width: 50px;
+            max-width: 62px;
             font-weight: 600;
             color: $finntrail-red-color;
         }
         &--old {
             margin-left: 4px;
-            max-width: 50px;
+            max-width: 62px;
             text-decoration: line-through;
             color: $gray-color;
         }
@@ -2373,6 +2386,134 @@
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center center;
+    }
+}
+
+// star rating
+.star-rating {
+    margin-bottom: 16px;
+    &__stars {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__star {
+        display: block;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        background-image: url(../img/dist/sprite.svg#icon-star-noactive);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        &--active {
+            background-image: url(../img/dist/sprite.svg#icon-star-active);
+        }
+    }
+    &__star + &__star {
+        margin-left: 8px;
+    }
+    &__help {
+        display: block;
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: normal;
+        text-align: center;
+        color: $gray-color;
+        transition: all 0.4s;
+        &--rating {
+            color: #CEAB60;
+        }
+    }
+    &__questionnaire {
+        display: none;
+        padding: 20px 12px;
+        margin-top: 16px;
+        width: 100%;
+        background: $grey-color;
+        &--active {
+            display: block;
+        }
+    }
+    &__checkbox {
+        margin-top: 16px;
+    }
+}
+
+// upload photos
+.upload-photos {
+    margin-top: 20px;
+    &__input {
+        display: none;
+    }
+    &__btn {
+        position: relative;
+        display: block;
+        margin-left: 30px;
+        padding: 0;
+        width: fit-content;
+        font-size: 16px;
+        font-weight: normal;
+        border-bottom: 1px dashed $primary-color;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            transform: translateY(-50%);
+            display: block;
+            margin-right: 6px;
+            width: 24px;
+            height: 17px;
+            background-image: url(../img/dist/sprite.svg#icon-upload-photo);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+    &__help {
+        display: block;
+        margin-top: 12px;
+        font-size: 12px;
+        font-weight: normal;
+        color: $gray-color;
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 12px;
+    }
+    &__item {
+        position: relative;
+        overflow: hidden;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        max-width: 64px;
+        max-height: 64px;
+        width: 100%;
+        height: 100%;
+        img {
+            display: block;
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+        }
+    }
+    &__delete {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+        background-color: rgba($white-color, 0.7);
+        background-image: url(../img/dist/sprite.svg#icon-close-black);
+        background-repeat: no-repeat;
+        background-size: 18px;
+        background-position: center center;
+        border: 0;
     }
 }
 

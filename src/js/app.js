@@ -384,7 +384,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (productBuyBlock && productFixed) {
-            if (window.pageYOffset >= productBuyBlock.offsetTop) {
+            if (window.pageYOffset >= productBuyBlock.offsetTop || window.pageYOffset + document.documentElement.clientHeight <= productBuyBlock.offsetTop) {
                 productFixed.classList.remove('product__fixed--hidden')
             } 
             else {
@@ -771,10 +771,73 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
+    // SIZE TABS
+    const sizeTabsItem = document.querySelectorAll('.size-tabs__item')
+
+    if (sizeTabsItem) {
+        sizeTabsItem.forEach((item) => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault()
+
+                const sizeTabsID = item.dataset.size - 1
+
+                document.querySelectorAll('.size-tabs__content').forEach((child) => child.classList.remove('size-tabs__content--active'))
+                document.querySelectorAll('.size-tabs__content')[sizeTabsID].classList.add('size-tabs__content--active')
+            })
+        })
+    }
+
+    // STAR RATING
+    const starRatingBtn = document.querySelectorAll('.star-rating__star')
+    const starRatingHelp = document.querySelector('.star-rating__help')
+    const starRatingQuestionnaire = document.querySelectorAll('.star-rating__questionnaire')
+
+    if (starRatingBtn) {
+        starRatingBtn.forEach((item, i) => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault()
+
+                document.querySelectorAll('.star-rating__star').forEach((child) => child.classList.remove('star-rating__star--active'))
+                document.querySelectorAll('.star-rating__questionnaire').forEach((child) => child.classList.remove('star-rating__questionnaire--active'))
+                
+                for (let j = 0; j < i + 1; j++) {
+                    document.querySelectorAll('.star-rating__star')[j].classList.add('star-rating__star--active')
+                }
+
+                if (!starRatingHelp.classList.contains('star-rating__help--rating')) {
+                    starRatingHelp.classList.add('star-rating__help--rating')
+                }
+
+                switch (i) {
+                    case 0:
+                        starRatingHelp.innerHTML = 'Ужасно'
+                        starRatingQuestionnaire[0].classList.add('star-rating__questionnaire--active')
+                        break;
+                    case 1:
+                        starRatingHelp.innerHTML = 'Плохо'
+                        starRatingQuestionnaire[0].classList.add('star-rating__questionnaire--active')
+                        break;
+                    case 2:
+                        starRatingHelp.innerHTML = 'Нормально'
+                        starRatingQuestionnaire[0].classList.add('star-rating__questionnaire--active')
+                        break;
+                    case 3:
+                        starRatingHelp.innerHTML = 'Хорошо'
+                        starRatingQuestionnaire[1].classList.add('star-rating__questionnaire--active')
+                        break;
+                    case 4:
+                        starRatingHelp.innerHTML = 'Отлично'
+                        starRatingQuestionnaire[2].classList.add('star-rating__questionnaire--active')
+                        break;
+                }
+            })
+        })
+    }
+
     // MODAL
     const modalBtn = document.querySelectorAll('.modal-btn')
     const modal = document.querySelectorAll('.modal')
-    const modalClose = document.querySelectorAll('.modal__close')
+    const modalClose = document.querySelectorAll('.modal__close, .modal__btn--close')
     const overlay = document.querySelector('.overlay')
     
     if (modalBtn) {
