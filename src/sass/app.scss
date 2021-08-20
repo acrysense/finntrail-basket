@@ -1890,7 +1890,7 @@
         font-size: 14px;
         font-weight: normal;
         color: $white-color;
-        background: $finntrail-red-color;
+        background: $green-color;
     }
     &__buying {
         display: block;
@@ -2314,6 +2314,12 @@
 
 // photo gallery
 .photo-gallery {
+    &__title {
+        margin: 16px 0;
+        font-family: $russo-one;
+        font-size: 16px;
+        font-weight: normal;
+    }
     &__wrapper {
         display: flex;
         flex-wrap: wrap;

@@ -855,6 +855,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.querySelectorAll('.modal.modal--active').forEach((child) => child.classList.remove('modal--active'))
                     document.body.classList.add('scroll-disabled')
                     document.getElementById(modalID).classList.add('modal--active')
+
+                    if (document.getElementById(modalID).classList.contains('modal--sm')) {
+                        setTimeout(() => {
+                            document.body.classList.remove('scroll-disabled')
+                            document.querySelectorAll('.modal.modal--active').forEach((child) => child.classList.remove('modal--active'))
+                            overlay.classList.remove('overlay--active')
+                        }, 5000)
+                    }
                 }
             });
         });

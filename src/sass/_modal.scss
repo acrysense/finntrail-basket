@@ -25,23 +25,17 @@
     bottom: 0;
     left: 0;
     z-index: 1010;
-    //display: none;
     visibility: hidden;
     transform: translateY(100%);
-    //max-height: 256px;
     max-height: 80%;
     width: 100%;
     height: 100%;
     background: $white-color;
     transition: all 0.4s;
-    //&:not(.modal--notification) {
-    //    top: 0;
-    //}
-    //&--notification {
-    //    max-height: 266px;
-    //}
+    &--sm {
+        max-height: 256px;
+    }
     &--active {
-        //display: block;
         visibility: visible;
         transform: translateY(0%);
     }
