@@ -828,66 +828,66 @@
                     </div>
                     <div class="star-rating__questionnaire">
                         <h4 class="star-rating__title">Что испортило впечатление?</h4>
-                        <label for="question-01" class="square-checkbox star-rating__checkbox">
-                            <input type="checkbox" class="square-checkbox__input" id="question-01">
+                        <label for="question-07" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-07">
                             <span class="square-checkbox__icon"></span>
                             <span class="square-checkbox__label">Размер не совсем подошел</span>
                         </label>
-                        <label for="question-02" class="square-checkbox star-rating__checkbox">
-                            <input type="checkbox" class="square-checkbox__input" id="question-02">
+                        <label for="question-08" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-08">
                             <span class="square-checkbox__icon"></span>
                             <span class="square-checkbox__label">Расцветка не совпала</span>
                         </label>
-                        <label for="question-03" class="square-checkbox star-rating__checkbox">
-                            <input type="checkbox" class="square-checkbox__input" id="question-03">
+                        <label for="question-09" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-09">
                             <span class="square-checkbox__icon"></span>
                             <span class="square-checkbox__label">Изделие упаковано неаккуратно</span>
                         </label>
-                        <label for="question-04" class="square-checkbox star-rating__checkbox">
-                            <input type="checkbox" class="square-checkbox__input" id="question-04">
+                        <label for="question-10" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-10">
                             <span class="square-checkbox__icon"></span>
                             <span class="square-checkbox__label">Комплект собран не до конца</span>
                         </label>
-                        <label for="question-05" class="square-checkbox star-rating__checkbox">
-                            <input type="checkbox" class="square-checkbox__input" id="question-05">
+                        <label for="question-11" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-11">
                             <span class="square-checkbox__icon"></span>
                             <span class="square-checkbox__label">Ярлыки и марки отсутствуют на упаковке</span>
                         </label>
-                        <label for="question-06" class="square-checkbox star-rating__checkbox">
-                            <input type="checkbox" class="square-checkbox__input" id="question-06">
+                        <label for="question-12" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-12">
                             <span class="square-checkbox__icon"></span>
                             <span class="square-checkbox__label">Изменилась стоимость экипировки после заказа</span>
                         </label>
                     </div>
                     <div class="star-rating__questionnaire">
                         <h4 class="star-rating__title">Что вас особенно порадовало?</h4>
-                        <label for="question-01" class="square-checkbox star-rating__checkbox">
-                            <input type="checkbox" class="square-checkbox__input" id="question-01">
+                        <label for="question-13" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-13">
                             <span class="square-checkbox__icon"></span>
                             <span class="square-checkbox__label">Размер подошел идеально</span>
                         </label>
-                        <label for="question-02" class="square-checkbox star-rating__checkbox">
-                            <input type="checkbox" class="square-checkbox__input" id="question-02">
+                        <label for="question-14" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-14">
                             <span class="square-checkbox__icon"></span>
                             <span class="square-checkbox__label">Расцветка соответствует заявленной</span>
                         </label>
-                        <label for="question-03" class="square-checkbox star-rating__checkbox">
-                            <input type="checkbox" class="square-checkbox__input" id="question-03">
+                        <label for="question-15" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-15">
                             <span class="square-checkbox__icon"></span>
                             <span class="square-checkbox__label">Экипировка оправдала ожидания</span>
                         </label>
-                        <label for="question-04" class="square-checkbox star-rating__checkbox">
-                            <input type="checkbox" class="square-checkbox__input" id="question-04">
+                        <label for="question-16" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-16">
                             <span class="square-checkbox__icon"></span>
                             <span class="square-checkbox__label">Модель удобна в эксплуатации</span>
                         </label>
-                        <label for="question-05" class="square-checkbox star-rating__checkbox">
-                            <input type="checkbox" class="square-checkbox__input" id="question-05">
+                        <label for="question-17" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-17">
                             <span class="square-checkbox__icon"></span>
                             <span class="square-checkbox__label">Легко надевать и удобно носить</span>
                         </label>
-                        <label for="question-06" class="square-checkbox star-rating__checkbox">
-                            <input type="checkbox" class="square-checkbox__input" id="question-06">
+                        <label for="question-18" class="square-checkbox star-rating__checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="question-18">
                             <span class="square-checkbox__icon"></span>
                             <span class="square-checkbox__label">Отличное соотношение цена / качество</span>
                         </label>
@@ -911,7 +911,7 @@
                 </div>
                 <div class="input-group modal-form__input-group">
                     <div class="input-group__control">
-                        <textarea class="input-group__textarea modal-form__input" id="input-review" placeholder="Ваш отзыв" required></textarea>
+                        <textarea class="input-group__textarea modal-form__input" id="input-review" placeholder="Ваш отзыв" onkeyup="textAreaAdjust(this)" required></textarea>
                         <div class="input-group__underline"></div>
                         <label for="input-review" class="input-group__label">Ваш отзыв*</label>
                     </div>
@@ -1738,9 +1738,18 @@
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>
     <script>
+        let itemHeight = 80
+        let labelHeight = 50
         function textAreaAdjust(e) {
-            e.style.height = "1px";
-            e.style.height = (e.scrollHeight) + "px";
+            if (itemHeight < e.getBoundingClientRect().height) {
+                labelHeight += 10.5
+
+                e.nextElementSibling.nextElementSibling.style.transform = 'translate(-13%, -' + labelHeight + 'px) scale(0.8)';
+            }
+            itemHeight = e.getBoundingClientRect().height
+
+            e.style.height = "80px";
+            e.style.height = (e.scrollHeight) + 2 + "px";
         }
     </script>
 </body>

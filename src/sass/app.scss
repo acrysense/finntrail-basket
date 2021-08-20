@@ -880,6 +880,7 @@
         transition: all 0.3s ease-in-out;
         &.is--open {
             .accordion-sub__trigger {
+                border-bottom: 1px solid $primary-color;
                 &::before {
                     transform: translate(100%, -50%) rotate(90deg);
                 }
@@ -899,7 +900,7 @@
         color: $primary-color;
         background: transparent;
         border: 0;
-        border-bottom: 2px solid $grey-color;
+        border-bottom: 1px solid $grey-color;
         transition: all 0.4s;
         &:focus {
             outline: none;
@@ -908,10 +909,10 @@
             content: '';
             position: absolute;
             top: 50%;
-            right: 16px;
+            right: 17px;
             transform: translateY(-50%);
             display: block;
-            width: 11px;
+            width: 9px;
             height: 1px;
             background: $strong-black-color;
             transition: all 0.3s ease-in-out;
@@ -924,7 +925,7 @@
             transform: translate(100%, -50%);
             display: block;
             width: 1px;
-            height: 11px;
+            height: 9px;
             background: $strong-black-color;
             transition: all 0.3s ease-in-out;
         }
@@ -1858,6 +1859,9 @@
     }
     &__color-checkbox + &__color-checkbox {
         margin-left: 8px;
+    }
+    &__gift {
+        margin-bottom: 0;
     }
     &__prices {
         display: flex;

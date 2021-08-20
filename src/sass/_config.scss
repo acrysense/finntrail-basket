@@ -153,6 +153,7 @@ svg line {
         }
     }
     &__textarea {
+        overflow: hidden;
         resize: none;
         &:focus ~ label,
         &:not(:placeholder-shown) ~ label {
