@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINNTRAIL - Карточка товара</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body class="grey">
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                </button>
+                <a href="index.html" class="logotype">
+                    <img src="img/dist/logotype-finntrail.svg" alt="">
+                </a>
+                <button class="basket-btn" aria-label="Корзина">
+                    <span class="basket-btn__count">4</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- End of header -->
+    <!-- Promo -->
+    <div class="promo" id="promo">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/dist/finntrail-promo.png" alt="FINNTRAIL">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/dist/finntrail-promo.png" alt="FINNTRAIL">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/dist/finntrail-promo.png" alt="FINNTRAIL">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!-- End of promo -->
+    <!-- Catalog -->
+    <div class="catalog" id="catalog">
+        <div class="container">
+            <div class="catalog__top">
+                <a href="#" class="catalog__back">Вейдерсы</a>
+                <div class="categories">
+                    <ul class="categories__list">
+                        <li class="categories__item">
+                            <a href="#" class="categories__link">Вейдерсы под ботинок</a>
+                        </li>
+                        <li class="categories__item">
+                            <a href="#" class="categories__link">Вейдерсы с сапогом</a>
+                        </li>
+                        <li class="categories__item">
+                            <a href="#" class="categories__link">Вейдерсы с сапогом</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="catalog__filters">
+                    <div class="catalog__filter">
+                        <div class="select-box">
+                            <div class="select-box__container">
+                                <div class="select-box__option select-box__option--active">
+                                    <input type="radio" class="select-box__radio" id="sort-01" name="sorting">
+                                    <label for="sort-01" class="select-box__label">По популярности</label>
+                                </div>
+                                <div class="select-box__option">
+                                    <input type="radio" class="select-box__radio" id="sort-02" name="sorting">
+                                    <label for="sort-02" class="select-box__label">По рейтингу</label>
+                                </div>
+                                <div class="select-box__option">
+                                    <input type="radio" class="select-box__radio" id="sort-03" name="sorting">
+                                    <label for="sort-03" class="select-box__label">По цене min</label>
+                                </div>
+                                <div class="select-box__option">
+                                    <input type="radio" class="select-box__radio" id="sort-04" name="sorting">
+                                    <label for="sort-04" class="select-box__label">По цене max</label>
+                                </div>
+                                <div class="select-box__option">
+                                    <input type="radio" class="select-box__radio" id="sort-05" name="sorting">
+                                    <label for="sort-05" class="select-box__label">По скидке</label>
+                                </div>
+                                <div class="select-box__option">
+                                    <input type="radio" class="select-box__radio" id="sort-06" name="sorting">
+                                    <label for="sort-06" class="select-box__label">По обновлению</label>
+                                </div>
+                            </div>
+                            <span class="select-box__selected">Сортировать</span> 
+                        </div>
+                    </div>
+                    <div class="catalog__filter">
+                        <a href="#" class="filters-btn">Фильтры (2)</a>
+                        <div class="filters">
+                            <div class="filters__top">
+                                <div class="filters__group">
+                                    <h4 class="filters__title">Фильтры</h4>
+                                    <button class="filters__reset">Сбросить все</button>
+                                </div>
+                                <button class="filters__close" aria-label="Закрыть"></button>
+                            </div>
+                            <div class="filters__content">
+                                <div class="accordion-cart filters__accordion-cart">
+                                    <div class="accordion-cart__wrapper">
+                                        <div class="accordion-cart__item">
+                                            <button class="accordion-cart__trigger">Размеры</button>
+                                            <div class="accordion-cart__content accordion-cart__content--white">
+                                                <label for="size-01" class="square-checkbox filters__checkbox">
+                                                    <input type="checkbox" class="square-checkbox__input" id="size-01">
+                                                    <span class="square-checkbox__icon"></span>
+                                                    <span class="square-checkbox__label">XXS (182-190) <span>(22)</span></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-cart__item">
+                                            <button class="accordion-cart__trigger">Пол и возраст</button>
+                                            <div class="accordion-cart__content accordion-cart__content--white">
+                                                <label for="sex-01" class="square-checkbox filters__checkbox">
+                                                    <input type="checkbox" class="square-checkbox__input" id="sex-01">
+                                                    <span class="square-checkbox__icon"></span>
+                                                    <span class="square-checkbox__label">Мужские <span>(22)</span></span>
+                                                </label>
+                                                <label for="sex-02" class="square-checkbox filters__checkbox">
+                                                    <input type="checkbox" class="square-checkbox__input" id="sex-02">
+                                                    <span class="square-checkbox__icon"></span>
+                                                    <span class="square-checkbox__label">Женские <span>(22)</span></span>
+                                                </label>
+                                                <label for="sex-03" class="square-checkbox filters__checkbox">
+                                                    <input type="checkbox" class="square-checkbox__input" id="sex-03">
+                                                    <span class="square-checkbox__icon"></span>
+                                                    <span class="square-checkbox__label">Детские <span>(22)</span></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-cart__item">
+                                            <button class="accordion-cart__trigger">Тип</button>
+                                            <div class="accordion-cart__content accordion-cart__content--white">
+                                                <label for="type-01" class="square-checkbox filters__checkbox">
+                                                    <input type="checkbox" class="square-checkbox__input" id="type-01">
+                                                    <span class="square-checkbox__icon"></span>
+                                                    <span class="square-checkbox__label">Вейдерсы под ботинок <span>(22)</span></span>
+                                                </label>
+                                                <label for="type-02" class="square-checkbox filters__checkbox">
+                                                    <input type="checkbox" class="square-checkbox__input" id="type-02">
+                                                    <span class="square-checkbox__icon"></span>
+                                                    <span class="square-checkbox__label">Вейдерсы с сапогом <span>(22)</span></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filters__bottom">
+                                <span class="filters__text">Найдено 22 товара</span>
+                                <a href="#" class="filters__btn btn">Показать товары</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="catalog__text">Показано 42 товара</span>
+            </div>
+            <div class="catalog__wrapper">
+                <div class="catalog__item">
+                    <a href="#" class="catalog__img">
+                        <span class="catalog__discount">-30%</span>
+                        <div class="catalog__controls"></div>
+                        <img src="img/dist/product-cart-img.png" alt="Image">
+                    </a>
+                    <div class="catalog__body">
+                        <div class="catalog__prices">
+                            <span class="catalog__price catalog__price--new">4 990 ₽</span>
+                            <span class="catalog__price catalog__price--old">7 200 ₽</span>
+                        </div>
+                        <a href="#" class="catalog__name">Короткие вейдерсы RUNNER Green</a>
+                        <a href="#" class="catalog__btn btn btn--sm">В корзину</a>
+                    </div>
+                </div>
+                <div class="catalog__item">
+                    <a href="#" class="catalog__img">
+                        <div class="catalog__controls">
+                            <div class="catalog__status" style="background-image: url(img/dist/sprite.svg#icon-hit);"></div>
+                            <div class="catalog__status" style="background-image: url(img/dist/sprite.svg#icon-new);"></div>
+                        </div>
+                        <img src="img/dist/product-cart-img.png" alt="Image">
+                    </a>
+                    <div class="catalog__body">
+                        <div class="catalog__prices">
+                            <span class="catalog__price">4 990 ₽</span>
+                        </div>
+                        <a href="#" class="catalog__name">Утепленный комбинезон Finntrail Winter</a>
+                        <a href="#" class="catalog__btn btn btn--sm">В корзину</a>
+                    </div>
+                </div>
+                <div class="catalog__item">
+                    <a href="#" class="catalog__img">
+                        <span class="catalog__discount">-30%</span>
+                        <div class="catalog__controls">
+                            <div class="catalog__status"></div>
+                            <div class="catalog__status"></div>
+                        </div>
+                        <img src="img/dist/product-cart-img.png" alt="Image">
+                    </a>
+                    <div class="catalog__body">
+                        <div class="catalog__prices">
+                            <span class="catalog__price catalog__price--new">4 990 ₽</span>
+                            <span class="catalog__price catalog__price--old">7 200 ₽</span>
+                        </div>
+                        <a href="#" class="catalog__name">Короткие вейдерсы RUNNER Green</a>
+                        <a href="#" class="catalog__btn btn btn--sm">В корзину</a>
+                    </div>
+                </div>
+                <div class="catalog__item">
+                    <a href="#" class="catalog__img">
+                        <div class="catalog__controls">
+                            <div class="catalog__status" style="background-image: url(img/dist/sprite.svg#icon-new);"></div>
+                        </div>
+                        <img src="img/dist/product-cart-img.png" alt="Image">
+                    </a>
+                    <div class="catalog__body">
+                        <div class="catalog__prices">
+                            <span class="catalog__price catalog__price--new">4 990 ₽</span>
+                            <span class="catalog__price catalog__price--old">7 200 ₽</span>
+                        </div>
+                        <a href="#" class="catalog__name">Короткие вейдерсы RUNNER Green</a>
+                        <a href="#" class="catalog__btn btn btn--sm">В корзину</a>
+                    </div>
+                </div>
+                <div class="catalog__item">
+                    <a href="#" class="catalog__img">
+                        <div class="catalog__controls">
+                            <div class="catalog__status" style="background-image: url(img/dist/sprite.svg#icon-hit);"></div>
+                        </div>
+                        <img src="img/dist/product-cart-img.png" alt="Image">
+                    </a>
+                    <div class="catalog__body">
+                        <div class="catalog__prices">
+                            <span class="catalog__price">14 990 ₽</span>
+                        </div>
+                        <a href="#" class="catalog__name">Короткие вейдерсы RUNNER Green</a>
+                        <a href="#" class="catalog__btn btn btn--sm">В корзину</a>
+                    </div>
+                </div>
+                <div class="catalog__item">
+                    <a href="#" class="catalog__img">
+                        <div class="catalog__controls"></div>
+                        <img src="img/dist/product-cart-img.png" alt="Image">
+                    </a>
+                    <div class="catalog__body">
+                        <div class="catalog__prices">
+                            <span class="catalog__price">14 990 ₽</span>
+                        </div>
+                        <a href="#" class="catalog__name">Короткие вейдерсы RUNNER Green</a>
+                        <a href="#" class="catalog__btn btn btn--sm">В корзину</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="catalog__more btn btn--transparent btn--sm">Показать ещё</a>
+        </div>
+    </div>
+    <!-- End of catalog -->
+    <!-- Scripts -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+</html>

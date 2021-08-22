@@ -648,6 +648,27 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
+    // FILTERS
+    const filtersBtn = document.querySelector('.filters-btn')
+    const filters = document.querySelector('.filters')
+    const filtersClose = document.querySelector('.filters__close')
+
+    if (filtersBtn) {
+        filtersBtn.addEventListener('click', (event) => {
+            event.preventDefault()
+
+            filters.classList.add('filters--active')
+        })
+    }
+
+    if (filtersClose) {
+        filtersClose.addEventListener('click', (event) => {
+            event.preventDefault()
+
+            filters.classList.remove('filters--active')
+        })
+    }
+
     // SIZE ELEM
     const sizeElem = document.querySelectorAll('.size-info__column:not(.size-info__column--heading) .size-info__elem:not(.size-info__elem--gray, .size-info__elem--black')
     
@@ -698,6 +719,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const productSlider = document.querySelector('.product__slider .swiper-container')
 
     const mySwiperProduct = new Swiper(productSlider, {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+    })
+
+    const promoSlider = document.querySelector('.promo .swiper-container')
+
+    const mySwiperPromo = new Swiper(promoSlider, {
         slidesPerView: 1,
         loop: true,
         pagination: {
@@ -782,7 +814,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 const sizeTabsID = item.dataset.size - 1
 
                 document.querySelectorAll('.size-tabs__content').forEach((child) => child.classList.remove('size-tabs__content--active'))
+                document.querySelectorAll('.size-tabs__item').forEach((child) => child.classList.remove('size-tabs__item--active'))
                 document.querySelectorAll('.size-tabs__content')[sizeTabsID].classList.add('size-tabs__content--active')
+                item.classList.add('size-tabs__item--active')
             })
         })
     }

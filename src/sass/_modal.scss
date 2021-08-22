@@ -5,7 +5,6 @@
     bottom: 0;
     left: 0;
     z-index: 1000;
-    //display: none;
     visibility: hidden;
     width: 100%;
     height: 100%;
@@ -13,7 +12,6 @@
     background: rgba($strong-black-color, 0.2);
     transition: all 0.4s;
     &--active {
-        //display: block;
         visibility: visible;
         opacity: 1;
     }
@@ -27,7 +25,7 @@
     z-index: 1010;
     visibility: hidden;
     transform: translateY(100%);
-    max-height: 85%;
+    max-height: 90%;
     width: 100%;
     height: 100%;
     background: $white-color;

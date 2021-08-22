@@ -80,6 +80,10 @@ svg line {
     max-width: 100%;
 }
 
+.grey {
+    background: #F4F4F4;
+}
+
 .section-heading {
     padding: 22px 0;
     &__title {
@@ -285,6 +289,15 @@ svg line {
         color: $primary-color;
         background: transparent;
         border: 1px solid $grey-line;
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            background: transparent;
+            border: 1px solid $primary-color;
+            svg path {
+                fill: $finntrail-red-color;
+            }
+        }
     }
     &--sm {
         padding: 14px;
@@ -292,9 +305,17 @@ svg line {
     }
 }
 
-.btn[disabled] {
+.btn:not(.btn--transparent)[disabled] {
     color: $white-color;
     background: rgba($finntrail-red-color, 0.5);
+}
+
+.btn--transparent[disabled] {
+    color: #B9C3CD;
+    border: 1px solid $grey-line;
+    svg path {
+        fill: #B9C3CD;
+    }
 }
 
 .select-box {
@@ -449,6 +470,9 @@ svg line {
         line-height: 22px;
         color: $primary-color;
         user-select: none;
+        span {
+            color: $gray-color;
+        }
     }
 }
 

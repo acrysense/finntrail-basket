@@ -83,7 +83,7 @@
             </div>
             <div class="product__inner">
                 <span class="product__text">Артикул: 1524</span>
-                <a href="#reviews-block" class="comment-preview product__comment-preview">
+                <a href="#reviews-block" class="comment-preview comment-preview--trigger product__comment-preview">
                     <div class="comment-preview__star"></div>
                     <div class="comment-preview__star"></div>
                     <div class="comment-preview__star"></div>
@@ -970,15 +970,15 @@
                     <div class="input-group__control">
                         <input type="text" class="input-group__input modal-form__input" id="input-name-feedback" placeholder="Имя">
                         <div class="input-group__underline"></div>
-                        <label for="input-name-feedback" class="input-group__label">Имя*</label>
+                        <label for="input-name-feedback" class="input-group__label">Имя</label>
                     </div>
                     <span class="input-group__error" aria-live="polite">Текст ошибки</span>
                 </div>
                 <div class="input-group modal-form__input-group">
                     <div class="input-group__control">
-                        <input type="tel" class="input-group__input modal-form__input" id="input-phone-feedback" placeholder="Телефон" data-inputmask="'mask': '+7 (999) 999 99 99'" inputmode="tel" required>
+                        <input type="tel" class="input-group__input modal-form__input" id="input-phone-feedback" placeholder="Телефон*" data-inputmask="'mask': '+7 (999) 999 99 99'" inputmode="tel" required>
                         <div class="input-group__underline"></div>
-                        <label for="input-phone-feedback" class="input-group__label">Телефон</label>
+                        <label for="input-phone-feedback" class="input-group__label">Телефон*</label>
                     </div>
                     <span class="input-group__error" aria-live="polite">Текст ошибки</span>
                 </div>
@@ -1002,7 +1002,7 @@
             <form class="modal-form" novalidate>
                 <div class="input-group modal-form__input-group">
                     <div class="input-group__control">
-                        <input type="text" class="input-group__input modal-form__input" id="input-name-pr" placeholder="Имя" required>
+                        <input type="text" class="input-group__input modal-form__input" id="input-name-pr" placeholder="Имя*" required>
                         <div class="input-group__underline"></div>
                         <label for="input-name-pr" class="input-group__label">Имя*</label>
                     </div>
@@ -1010,7 +1010,7 @@
                 </div>
                 <div class="input-group modal-form__input-group">
                     <div class="input-group__control">
-                        <input type="email" class="input-group__input modal-form__input" id="input-email-pr" placeholder="E-mail" required>
+                        <input type="email" class="input-group__input modal-form__input" id="input-email-pr" placeholder="E-mail*" required>
                         <div class="input-group__underline"></div>
                         <label for="input-email-pr" class="input-group__label">E-mail*</label>
                     </div>
@@ -1098,7 +1098,7 @@
                         </div>
                         <span class="size__name">Обувь</span>
                     </a>
-                    <a href="#" class="size__item size-tabs__item" data-size="1">
+                    <a href="#" class="size__item size-tabs__item size-tabs__item--active" data-size="1">
                         <div class="size__img">
                             <img src="img/dist/img-02.png" alt="Вейдерсы">
                         </div>
