@@ -414,9 +414,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (productBuyBlock && productFixed) {
             if (window.pageYOffset >= productBuyBlock.offsetTop) {
                 productFixed.classList.remove('product__fixed--hidden')
-            } 
-            else {
-                productFixed.classList.add('product__fixed--hidden')
             }
         }
     })
@@ -768,18 +765,66 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // SPECIFICATIONs
     const specificationBtn = document.querySelectorAll('.specification__more')
+    const specificationGradientBtn = document.querySelectorAll('.specification__gradient')
 
     if (specificationBtn) {
         specificationBtn.forEach(item => {
             item.addEventListener('click', (event) => {
                 event.preventDefault()
 
-                if (item.previousElementSibling.classList.contains('specification__description--all')) {
-                    item.previousElementSibling.classList.remove('specification__description--all')
+                if (item.previousElementSibling.previousElementSibling.classList.contains('specification__description') && item.previousElementSibling.previousElementSibling.classList.contains('specification__description--all')) {
+                    item.previousElementSibling.previousElementSibling.classList.remove('specification__description--all')
                     item.innerHTML = 'Развернуть'
-                } else {
-                    item.previousElementSibling.classList.add('specification__description--all')
+
+                    if (item.previousElementSibling.classList.contains('specification__gradient--hidden')) {
+                        item.previousElementSibling.classList.remove('specification__gradient--hidden')
+                    }
+                } else if (item.previousElementSibling.previousElementSibling.classList.contains('specification__description') && !item.previousElementSibling.previousElementSibling.classList.contains('specification__description--all')) {
+                    item.previousElementSibling.previousElementSibling.classList.add('specification__description--all')
                     item.innerHTML = 'Скрыть'
+
+                    if (item.previousElementSibling.classList.contains('specification__gradient')) {
+                        item.previousElementSibling.classList.add('specification__gradient--hidden')
+                    }
+                }
+
+                if (item.parentNode.classList.contains('specification__list') && item.parentNode.classList.contains('specification__list--open')) {
+                    item.parentNode.classList.remove('specification__list--open')
+                    item.previousElementSibling.classList.remove('specification__gradient--hidden')
+                    item.classList.remove('specification__more--bottom')
+                    item.innerHTML = 'Развернуть'
+                } else if (item.parentNode.classList.contains('specification__list') && !item.parentNode.classList.contains('specification__list--open')) {
+                    item.parentNode.classList.add('specification__list--open')
+                    item.previousElementSibling.classList.add('specification__gradient--hidden')
+                    item.classList.add('specification__more--bottom')
+                    item.innerHTML = 'Скрыть'
+                }
+            })
+        })
+    }
+
+    if (specificationGradientBtn) {
+        specificationGradientBtn.forEach(item => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault()
+
+                if (item.previousElementSibling.classList.contains('specification__description') && !item.previousElementSibling.classList.contains('specification__description--all')) {
+                    item.previousElementSibling.classList.add('specification__description--all')
+                    item.classList.add('specification__gradient--hidden')
+
+                    if (item.nextElementSibling.classList.contains('specification__more')) {
+                        item.nextElementSibling.innerHTML = 'Скрыть'
+                    }
+                }
+
+                if (item.parentNode.classList.contains('specification__list') && !item.parentNode.classList.contains('specification__list--open')) {
+                    item.parentNode.classList.add('specification__list--open')
+                    item.classList.add('specification__gradient--hidden')
+
+                    if (item.nextElementSibling.classList.contains('specification__more')) {
+                        item.nextElementSibling.classList.add('specification__more--bottom')
+                        item.nextElementSibling.innerHTML = 'Скрыть'
+                    }
                 }
             })
         })

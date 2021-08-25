@@ -1992,22 +1992,21 @@
         margin-top: 10px;
         font-size: 14px;
         text-overflow: ellipsis;
-        &:not(.specification__description--all) {
-            &::before {
-                content: '';
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                display: block;
-                width: 100%;
-                height: 40px;
-                background: linear-gradient(to top, rgba($white-color, 1), rgba($white-color, 0));
-            }
-        }
         &--all {
             -webkit-line-clamp: initial;
             line-clamp: initial;
+        }
+    }
+    &__gradient {
+        position: relative;
+        z-index: 1;
+        display: block;
+        margin-top: -45px;
+        width: 100%;
+        height: 45px;
+        background: linear-gradient(to top, rgba($white-color, 1), rgba($white-color, 0));
+        &--hidden {
+            display: none;
         }
     }
     &__more {
@@ -2020,15 +2019,28 @@
         &:hover {
             color: $finntrail-red-color;
         }
+        &--bottom {
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+        }
     }
     &__list {
+        position: relative;
+        overflow: hidden;
         margin-top: 20px;
+        max-height: 297px;
+        &--open {
+            padding-bottom: 25px;
+            max-height: none;
+        }
     }
     &__item {
         display: flex;
         align-items: center;
     }
-    &__item + &__item {
+    &__item + &__item,
+    &__more + &__item {
         margin-top: 12px;
     }
     &__img {

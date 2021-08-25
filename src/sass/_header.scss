@@ -98,3 +98,22 @@
         border-radius: 50%;
     }
 }
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1005;
+    width: 75%;
+    height: 100vh;
+    background: $white-color;
+}
+
+.nav {
+    &__link {
+        padding: 12px 16px;
+        font-size: 14px;
+        font-weight: 600;
+        color: $primary-color;
+    }
+}
