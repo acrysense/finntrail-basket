@@ -294,9 +294,6 @@ svg line {
             color: $primary-color;
             background: transparent;
             border: 1px solid $primary-color;
-            svg path {
-                fill: $finntrail-red-color;
-            }
         }
     }
     &--sm {
@@ -472,6 +469,9 @@ svg line {
         user-select: none;
         span {
             color: $gray-color;
+        }
+        a {
+            text-decoration: underline;
         }
     }
 }

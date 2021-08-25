@@ -1152,6 +1152,14 @@
     &__input-shell {
         margin-top: 32px;
     }
+    &__policy-checkbox {
+        margin-top: 12px;
+        .square-checkbox {
+            &__label {
+                color: $white-color;
+            }
+        }
+    }
     &__btn {
         padding: 12px;
         margin-top: 12px;
@@ -1830,6 +1838,12 @@
         font-size: 14px;
         font-weight: normal;
     }
+    &__ends {
+        display: block;
+        font-size: 14px;
+        font-weight: normal;
+        color: $finntrail-red-color;
+    }
     &__comment-preview {
         margin-left: 8px;
         .comment-preview {
@@ -1964,6 +1978,7 @@
         margin-left: 8px;
     }
     &__description {
+        position: relative;
         display: -webkit-box;
         text-overflow: ellipsis;
         display: -moz-box;
@@ -1977,6 +1992,19 @@
         margin-top: 10px;
         font-size: 14px;
         text-overflow: ellipsis;
+        &:not(.specification__description--all) {
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 40px;
+                background: linear-gradient(to top, rgba($white-color, 1), rgba($white-color, 0));
+            }
+        }
         &--all {
             -webkit-line-clamp: initial;
             line-clamp: initial;

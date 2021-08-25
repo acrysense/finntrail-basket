@@ -83,7 +83,7 @@
             </div>
             <div class="product__inner">
                 <span class="product__text">Артикул: 1524</span>
-                <a href="#reviews-block" class="comment-preview comment-preview--trigger product__comment-preview">
+                <a href="#description-block" class="comment-preview comment-preview--trigger product__comment-preview">
                     <div class="comment-preview__star"></div>
                     <div class="comment-preview__star"></div>
                     <div class="comment-preview__star"></div>
@@ -206,8 +206,9 @@
                         <span class="size-checkbox__icon">XXXL</span>
                     </label>
                 </div>
-                <div class="product__inner">
+                <div class="product__inner product__inner--between">
                     <a href="#" class="product__help modal-btn" data-id="product-report">Нет моего размера</a>
+                    <span class="product__ends">Размер L заканчивается</span>
                 </div>
             </div>
             <div class="product__block product__block--buy">
@@ -254,7 +255,7 @@
             </div>
             <div class="accordion-cart product__accordion-cart">
                 <div class="accordion-cart__wrapper">
-                    <div class="accordion-cart__item is--open">
+                    <div class="accordion-cart__item is--open" id="description-block">
                         <button class="accordion-cart__trigger">Описание</button>
                         <div class="accordion-cart__content accordion-cart__content--white" style="display: block;">
                             <div class="specification">
@@ -266,6 +267,12 @@
                                 <p class="specification__description">Облегченные вейдерсы для тех, кто предпочитает комфорт. У Wademan минимальное количество швов, особенно во внутренней области ног. Многим знакомо, что вейдерсы по мере износа начинают...</p>
                                 <a href="#" class="specification__more">Развернуть</a>
                                 <div class="specification__list">
+                                    <div class="specification__item">
+                                        <div class="specification__img">
+                                            <img src="img/dist/case-img.svg" alt="Case">
+                                        </div>
+                                        <p class="specification__text"><b>Удобная сумка</b> для хранения <br>и переноски в комплекте</p>
+                                    </div>
                                     <div class="specification__item">
                                         <div class="specification__img">
                                             <img src="img/dist/techno-03.svg" alt="HARD-TEX">
@@ -286,9 +293,39 @@
                                     </div>
                                     <div class="specification__item">
                                         <div class="specification__img">
-                                            <img src="img/dist/case-img.svg" alt="Case">
+                                            <img src="img/dist/techno-03.svg" alt="HARD-TEX">
                                         </div>
-                                        <p class="specification__text"><b>Удобная сумка</b> для хранения <br>и переноски в комплекте</p>
+                                        <p class="specification__text">Прочная мембранная ткань</p>
+                                    </div>
+                                    <div class="specification__item">
+                                        <div class="specification__img">
+                                            <img src="img/dist/techno-06.svg" alt="Protect">
+                                        </div>
+                                        <p class="specification__text">Мембранная ткань с многослойной ламинацией</p>
+                                    </div>
+                                    <div class="specification__item">
+                                        <div class="specification__img">
+                                            <img src="img/dist/techno-01.svg" alt="Teflon">
+                                        </div>
+                                        <p class="specification__text">Покрытие отталкивающее грязь</p>
+                                    </div>
+                                    <div class="specification__item">
+                                        <div class="specification__img">
+                                            <img src="img/dist/techno-03.svg" alt="HARD-TEX">
+                                        </div>
+                                        <p class="specification__text">Прочная мембранная ткань</p>
+                                    </div>
+                                    <div class="specification__item">
+                                        <div class="specification__img">
+                                            <img src="img/dist/techno-06.svg" alt="Protect">
+                                        </div>
+                                        <p class="specification__text">Мембранная ткань с многослойной ламинацией</p>
+                                    </div>
+                                    <div class="specification__item">
+                                        <div class="specification__img">
+                                            <img src="img/dist/techno-01.svg" alt="Teflon">
+                                        </div>
+                                        <p class="specification__text">Покрытие отталкивающее грязь</p>
                                     </div>
                                 </div>
                             </div>
@@ -333,7 +370,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-cart__item" id="reviews-block">
+                    <div class="accordion-cart__item">
                         <button class="accordion-cart__trigger">
                             <div class="comment-preview">
                                 <span class="comment-preview__title">Отзывы</span>
@@ -982,6 +1019,11 @@
                     </div>
                     <span class="input-group__error" aria-live="polite">Текст ошибки</span>
                 </div>
+                <label for="policy-checkbox-buy" class="square-checkbox modal-form__checkbox">
+                    <input type="checkbox" class="square-checkbox__input" id="policy-checkbox-buy" required>
+                    <span class="square-checkbox__icon"></span>
+                    <span class="square-checkbox__label">Я соглашаюсь с <a href="policy.html">политикой конфиденциальности</a></span>
+                </label>
                 <button class="modal-form__btn btn">Отправить</button>
                 <p class="modal-form__copyright">Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих персональных данных и выражаете согласие с <a href="policy.html">политикой конфиденциальности</a></p>
             </form>
@@ -1058,6 +1100,11 @@
                     <span class="square-checkbox__label">Вам потребуется помощь специалиста?</span>
                     <span class="square-checkbox__icon"></span>
                 </label>
+                <label for="policy-checkbox" class="square-checkbox modal-form__checkbox">
+                    <input type="checkbox" class="square-checkbox__input" id="policy-checkbox" required>
+                    <span class="square-checkbox__icon"></span>
+                    <span class="square-checkbox__label">Я соглашаюсь с <a href="policy.html">политикой конфиденциальности</a></span>
+                </label>
                 <button class="modal-form__btn btn">Сообщить о поступлении</button>
                 <p class="modal-form__copyright">Нажимая на кнопку "Сообщить о поступлении" Вы даете согласие на обработку своих персональных данных и выражаете согласие с <a href="policy.html">политикой конфиденциальности</a></p>
             </form>
@@ -1129,7 +1176,7 @@
                         <span class="size__name">Снегоходная экипировка</span>
                     </a>
                 </div>
-                <h2 class="size__title">как правильно подобрать размер экипировки?</h3>
+                <h2 class="size__title" id="size-tabs-scroll">как правильно подобрать размер экипировки?</h3>
                 <div class="size-info">
                     <div class="size-info__wrapper">
                         <div class="size-info__item size-tabs__content">
