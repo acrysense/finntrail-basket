@@ -418,6 +418,19 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
+    // MOBILE MENU
+    const hamburger = document.getElementById('hamburger-toggle')
+    const mobileMenu = document.querySelector('.mobile-menu')
+
+    if (hamburger) {
+        hamburger.addEventListener('click', (event) => {
+            event.preventDefault()
+
+            mobileMenu.classList.add('mobile-menu--active')
+            overlay.classList.add('overlay--active')
+        })
+    }
+
     // TOOLTIPs
     const tooltip = document.querySelectorAll('.tooltip')
 
@@ -1004,6 +1017,7 @@ document.addEventListener('DOMContentLoaded', function () {
         overlay.addEventListener('click', () => {
             if (overlay.classList.contains('overlay--active')) {
                 document.body.classList.remove('scroll-disabled')
+                mobileMenu.classList.remove('mobile-menu--active')
                 document.querySelectorAll('.modal.modal--active').forEach((child) => child.classList.remove('modal--active'))
                 overlay.classList.remove('overlay--active')
             }
