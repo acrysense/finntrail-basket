@@ -2,6 +2,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // INPUTMASK
     Inputmask().mask(document.querySelectorAll('input'));
 
+    // HEIGHT 100VH FIX FOR IOS
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+    
     // SMOOTH SCROLL
     function currentYPosition() {
         // Firefox, Chrome, Opera, Safari
@@ -421,13 +430,31 @@ document.addEventListener('DOMContentLoaded', function () {
     // MOBILE MENU
     const hamburger = document.getElementById('hamburger-toggle')
     const mobileMenu = document.querySelector('.mobile-menu')
+    const mobileMenuOverlay = document.querySelector('.menu-overlay')
 
     if (hamburger) {
         hamburger.addEventListener('click', (event) => {
             event.preventDefault()
 
-            mobileMenu.classList.add('mobile-menu--active')
-            overlay.classList.add('overlay--active')
+            if (hamburger.classList.contains('hamburger--active') && mobileMenu.classList.contains('mobile-menu--active')) {
+                hamburger.classList.remove('hamburger--active')
+                mobileMenu.classList.remove('mobile-menu--active')
+                mobileMenuOverlay.classList.remove('menu-overlay--active')
+            } else {
+                hamburger.classList.add('hamburger--active')
+                mobileMenu.classList.add('mobile-menu--active')
+                mobileMenuOverlay.classList.add('menu-overlay--active')
+            }
+        })
+    }
+
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.addEventListener('click', (event) => {
+            event.preventDefault()
+
+            hamburger.classList.remove('hamburger--active')
+            mobileMenu.classList.remove('mobile-menu--active')
+            mobileMenuOverlay.classList.remove('menu-overlay--active')
         })
     }
 
@@ -1017,7 +1044,6 @@ document.addEventListener('DOMContentLoaded', function () {
         overlay.addEventListener('click', () => {
             if (overlay.classList.contains('overlay--active')) {
                 document.body.classList.remove('scroll-disabled')
-                mobileMenu.classList.remove('mobile-menu--active')
                 document.querySelectorAll('.modal.modal--active').forEach((child) => child.classList.remove('modal--active'))
                 overlay.classList.remove('overlay--active')
             }

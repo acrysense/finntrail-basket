@@ -880,6 +880,12 @@
     &__video + &__video {
         margin-top: 20px;
     }
+    &__link {
+        padding: 9px 30px;
+        width: 100%;
+        font-size: 14px;
+        font-weight: normal;
+    }
 }
 
 .accordion-sub {
