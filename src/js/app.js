@@ -545,10 +545,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // RANGE
     const inputSizeField = document.querySelectorAll('.input-size__input');
+    const valueMoneyField = document.querySelectorAll('.filters__value');
     const rangeGrowth = document.getElementById('range-growth');
     const rangeWeight = document.getElementById('range-weight');
     const rangeFootLength = document.getElementById('range-foor-length');
     const rangePalmGirth = document.getElementById('range-palm-girth');
+    const rangeMoney = document.getElementById('range-money');
 
     if (rangeGrowth) {
         noUiSlider.create(rangeGrowth, {
@@ -678,6 +680,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    if (rangeMoney) {
+        noUiSlider.create(rangeMoney, {
+            start: [6000, 19000],
+            connect: true,
+            range: {
+                'min': 0,
+                'max': 25000
+            }
+        });
+
+        rangeMoney.noUiSlider.on('update', function( value, handle ) {
+            
+            if (handle === 0) {
+                valueMoneyField[0].innerHTML = Math.round(value[0])
+            } else {
+                valueMoneyField[1].innerHTML = Math.round(value[1])
+            }
+        });
+    }
+
     if (inputSizeField) {
         inputSizeField.forEach((item, handle) => {
             item.addEventListener('change', () => {
@@ -718,19 +740,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const filters = document.querySelector('.filters')
     const filtersClose = document.querySelector('.filters__close')
 
-    if (filtersBtn) {
-        filtersBtn.addEventListener('click', (event) => {
-            event.preventDefault()
+    //if (filtersBtn) {
+    //    filtersBtn.addEventListener('click', (event) => {
+    //        event.preventDefault()
 
-            filters.classList.add('filters--active')
-        })
-    }
+    //        filters.classList.add('filters--active')
+    //    })
+    //}
 
     if (filtersClose) {
         filtersClose.addEventListener('click', (event) => {
             event.preventDefault()
 
-            filters.classList.remove('filters--active')
+            //filters.classList.remove('filters--active')
+            document.body.classList.remove('scroll-disabled')
+            document.querySelectorAll('.modal.modal--active').forEach((child) => child.classList.remove('modal--active'))
+            overlay.classList.remove('overlay--active')
         })
     }
 

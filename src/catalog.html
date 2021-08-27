@@ -97,71 +97,7 @@
                         </div>
                     </div>
                     <div class="catalog__filter">
-                        <a href="#" class="filters-btn">Фильтры (2)</a>
-                        <div class="filters">
-                            <div class="filters__top">
-                                <div class="filters__group">
-                                    <h4 class="filters__title">Фильтры</h4>
-                                    <button class="filters__reset">Сбросить все</button>
-                                </div>
-                                <button class="filters__close" aria-label="Закрыть"></button>
-                            </div>
-                            <div class="filters__content">
-                                <div class="accordion-cart filters__accordion-cart">
-                                    <div class="accordion-cart__wrapper">
-                                        <div class="accordion-cart__item">
-                                            <button class="accordion-cart__trigger">Размеры</button>
-                                            <div class="accordion-cart__content accordion-cart__content--white">
-                                                <label for="size-01" class="square-checkbox filters__checkbox">
-                                                    <input type="checkbox" class="square-checkbox__input" id="size-01">
-                                                    <span class="square-checkbox__icon"></span>
-                                                    <span class="square-checkbox__label">XXS (182-190) <span>(22)</span></span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-cart__item">
-                                            <button class="accordion-cart__trigger">Пол и возраст</button>
-                                            <div class="accordion-cart__content accordion-cart__content--white">
-                                                <label for="sex-01" class="square-checkbox filters__checkbox">
-                                                    <input type="checkbox" class="square-checkbox__input" id="sex-01">
-                                                    <span class="square-checkbox__icon"></span>
-                                                    <span class="square-checkbox__label">Мужские <span>(22)</span></span>
-                                                </label>
-                                                <label for="sex-02" class="square-checkbox filters__checkbox">
-                                                    <input type="checkbox" class="square-checkbox__input" id="sex-02">
-                                                    <span class="square-checkbox__icon"></span>
-                                                    <span class="square-checkbox__label">Женские <span>(22)</span></span>
-                                                </label>
-                                                <label for="sex-03" class="square-checkbox filters__checkbox">
-                                                    <input type="checkbox" class="square-checkbox__input" id="sex-03">
-                                                    <span class="square-checkbox__icon"></span>
-                                                    <span class="square-checkbox__label">Детские <span>(22)</span></span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-cart__item">
-                                            <button class="accordion-cart__trigger">Тип</button>
-                                            <div class="accordion-cart__content accordion-cart__content--white">
-                                                <label for="type-01" class="square-checkbox filters__checkbox">
-                                                    <input type="checkbox" class="square-checkbox__input" id="type-01">
-                                                    <span class="square-checkbox__icon"></span>
-                                                    <span class="square-checkbox__label">Вейдерсы под ботинок <span>(22)</span></span>
-                                                </label>
-                                                <label for="type-02" class="square-checkbox filters__checkbox">
-                                                    <input type="checkbox" class="square-checkbox__input" id="type-02">
-                                                    <span class="square-checkbox__icon"></span>
-                                                    <span class="square-checkbox__label">Вейдерсы с сапогом <span>(22)</span></span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="filters__bottom">
-                                <span class="filters__text">Найдено 22 товара</span>
-                                <a href="#" class="filters__btn btn">Показать товары</a>
-                            </div>
-                        </div>
+                        <a href="#" class="filters-btn modal-btn" data-id="filters">Фильтры (2)</a>
                     </div>
                 </div>
                 <span class="catalog__text">Показано 42 товара</span>
@@ -265,6 +201,212 @@
         </div>
     </div>
     <!-- End of catalog -->
+    <!-- Modal -->
+    <div class="modal" id="filters">
+
+        <div class="filters">
+            <div class="filters__top">
+                <div class="filters__group">
+                    <h4 class="filters__title">Фильтры</h4>
+                    <button class="filters__reset">Сбросить все</button>
+                </div>
+                <button class="filters__close" aria-label="Закрыть"></button>
+            </div>
+            <div class="filters__content">
+                <div class="accordion-cart filters__accordion-cart">
+                    <div class="accordion-cart__wrapper">
+                        <div class="accordion-cart__item is--open">
+                            <button class="accordion-cart__trigger">Категория</button>
+                            <div class="accordion-cart__content accordion-cart__content--white" style="display: block;">
+                                <label for="category-01" class="square-checkbox filters__checkbox">
+                                    <input type="checkbox" class="square-checkbox__input" id="category-01">
+                                    <span class="square-checkbox__icon"></span>
+                                    <span class="square-checkbox__label">Рыбалка <span>(22)</span></span>
+                                </label>
+                                <label for="category-01" class="square-checkbox filters__checkbox">
+                                    <input type="checkbox" class="square-checkbox__input" id="category-01">
+                                    <span class="square-checkbox__icon"></span>
+                                    <span class="square-checkbox__label">Бездорожье <span>(22)</span></span>
+                                </label>
+                                <label for="category-01" class="square-checkbox filters__checkbox">
+                                    <input type="checkbox" class="square-checkbox__input" id="category-01">
+                                    <span class="square-checkbox__icon"></span>
+                                    <span class="square-checkbox__label">Охота <span>(22)</span></span>
+                                </label>
+                                <label for="category-01" class="square-checkbox filters__checkbox">
+                                    <input type="checkbox" class="square-checkbox__input" id="category-01">
+                                    <span class="square-checkbox__icon"></span>
+                                    <span class="square-checkbox__label">Снегоход <span>(22)</span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="accordion-cart__item">
+                            <button class="accordion-cart__trigger">Слои</button>
+                            <div class="accordion-cart__content accordion-cart__content--white">
+                                <label for="layers-01" class="square-checkbox filters__checkbox">
+                                    <input type="checkbox" class="square-checkbox__input" id="layers-01">
+                                    <span class="square-checkbox__icon"></span>
+                                    <span class="square-checkbox__label">Базовый <span>(22)</span></span>
+                                </label>
+                                <label for="layers-02" class="square-checkbox filters__checkbox">
+                                    <input type="checkbox" class="square-checkbox__input" id="layers-02">
+                                    <span class="square-checkbox__icon"></span>
+                                    <span class="square-checkbox__label">Средний <span>(22)</span></span>
+                                </label>
+                                <label for="layers-03" class="square-checkbox filters__checkbox">
+                                    <input type="checkbox" class="square-checkbox__input" id="layers-03">
+                                    <span class="square-checkbox__icon"></span>
+                                    <span class="square-checkbox__label">Утепленный <span>(22)</span></span>
+                                </label>
+                                <label for="layers-04" class="square-checkbox filters__checkbox">
+                                    <input type="checkbox" class="square-checkbox__input" id="layers-04">
+                                    <span class="square-checkbox__icon"></span>
+                                    <span class="square-checkbox__label">Внешний <span>(22)</span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="accordion-cart__item">
+                            <button class="accordion-cart__trigger">
+                                <span>Размеры</span>
+                                <span class="accordion-cart__selected">Мужские</span>
+                            </button>
+                            <div class="accordion-cart__content accordion-cart__content--white">
+                                <div class="accordion-cart__columns filters__columns">
+                                    <label for="size-01" class="square-checkbox filters__checkbox">
+                                        <input type="checkbox" class="square-checkbox__input" id="size-01">
+                                        <span class="square-checkbox__icon"></span>
+                                        <span class="square-checkbox__label">XXS (182-190) <span>(22)</span></span>
+                                    </label>
+                                    <label for="size-02" class="square-checkbox filters__checkbox">
+                                        <input type="checkbox" class="square-checkbox__input" id="size-02">
+                                        <span class="square-checkbox__icon"></span>
+                                        <span class="square-checkbox__label">XS (182-190) <span>(22)</span></span>
+                                    </label>
+                                    <label for="size-03" class="square-checkbox filters__checkbox">
+                                        <input type="checkbox" class="square-checkbox__input" id="size-03">
+                                        <span class="square-checkbox__icon"></span>
+                                        <span class="square-checkbox__label">S (182-190) <span>(22)</span></span>
+                                    </label>
+                                    <label for="size-04" class="square-checkbox filters__checkbox">
+                                        <input type="checkbox" class="square-checkbox__input" id="size-04">
+                                        <span class="square-checkbox__icon"></span>
+                                        <span class="square-checkbox__label">M (182-190) <span>(22)</span></span>
+                                    </label>
+                                    <label for="size-05" class="square-checkbox filters__checkbox">
+                                        <input type="checkbox" class="square-checkbox__input" id="size-05">
+                                        <span class="square-checkbox__icon"></span>
+                                        <span class="square-checkbox__label">ML (182-190) <span>(22)</span></span>
+                                    </label>
+                                    <label for="size-06" class="square-checkbox filters__checkbox">
+                                        <input type="checkbox" class="square-checkbox__input" id="size-06">
+                                        <span class="square-checkbox__icon"></span>
+                                        <span class="square-checkbox__label">MK (182-190) <span>(22)</span></span>
+                                    </label>
+                                    <label for="size-07" class="square-checkbox filters__checkbox">
+                                        <input type="checkbox" class="square-checkbox__input" id="size-07">
+                                        <span class="square-checkbox__icon"></span>
+                                        <span class="square-checkbox__label">L (182-190) <span>(22)</span></span>
+                                    </label>
+                                    <label for="size-08" class="square-checkbox filters__checkbox">
+                                        <input type="checkbox" class="square-checkbox__input" id="size-08">
+                                        <span class="square-checkbox__icon"></span>
+                                        <span class="square-checkbox__label">LL (182-190) <span>(22)</span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-cart__item">
+                            <button class="accordion-cart__trigger">Пол и возраст</button>
+                            <div class="accordion-cart__content accordion-cart__content--white">
+                                <label for="sex-01" class="square-checkbox filters__checkbox">
+                                    <input type="checkbox" class="square-checkbox__input" id="sex-01">
+                                    <span class="square-checkbox__icon"></span>
+                                    <span class="square-checkbox__label">Мужские <span>(22)</span></span>
+                                </label>
+                                <label for="sex-02" class="square-checkbox filters__checkbox">
+                                    <input type="checkbox" class="square-checkbox__input" id="sex-02">
+                                    <span class="square-checkbox__icon"></span>
+                                    <span class="square-checkbox__label">Женские <span>(22)</span></span>
+                                </label>
+                                <label for="sex-03" class="square-checkbox filters__checkbox">
+                                    <input type="checkbox" class="square-checkbox__input" id="sex-03">
+                                    <span class="square-checkbox__icon"></span>
+                                    <span class="square-checkbox__label">Детские <span>(22)</span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="accordion-cart__item">
+                            <button class="accordion-cart__trigger">Тип</button>
+                            <div class="accordion-cart__content accordion-cart__content--white">
+                                <label for="type-01" class="square-checkbox filters__checkbox">
+                                    <input type="checkbox" class="square-checkbox__input" id="type-01">
+                                    <span class="square-checkbox__icon"></span>
+                                    <span class="square-checkbox__label">Вейдерсы под ботинок <span>(22)</span></span>
+                                </label>
+                                <label for="type-02" class="square-checkbox filters__checkbox">
+                                    <input type="checkbox" class="square-checkbox__input" id="type-02">
+                                    <span class="square-checkbox__icon"></span>
+                                    <span class="square-checkbox__label">Вейдерсы с сапогом <span>(22)</span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="accordion-cart__item">
+                            <button class="accordion-cart__trigger">
+                                <span>Цвет</span>
+                                <span class="accordion-cart__selected">Зелёный, Красный</span>
+                            </button>
+                            <div class="accordion-cart__content accordion-cart__content--white">
+                                <div class="accordion-cart__columns filters__columns">
+                                    <label for="color-01" class="square-checkbox filters__checkbox">
+                                        <input type="checkbox" class="square-checkbox__input" id="color-01">
+                                        <span class="square-checkbox__icon"></span>
+                                        <span class="square-checkbox__color" style="background-image: url(img/dist/sprite.svg#color-green);"></span>
+                                        <span class="square-checkbox__label">Зелёный <span>(22)</span></span>
+                                    </label>
+                                    <label for="color-02" class="square-checkbox filters__checkbox">
+                                        <input type="checkbox" class="square-checkbox__input" id="color-02">
+                                        <span class="square-checkbox__icon"></span>
+                                        <span class="square-checkbox__color" style="background-image: url(img/dist/sprite.svg#color-blue);"></span>
+                                        <span class="square-checkbox__label">Синий <span>(22)</span></span>
+                                    </label>
+                                    <label for="color-03" class="square-checkbox filters__checkbox">
+                                        <input type="checkbox" class="square-checkbox__input" id="color-03">
+                                        <span class="square-checkbox__icon"></span>
+                                        <span class="square-checkbox__color" style="background-image: url(img/dist/sprite.svg#color-grey);"></span>
+                                        <span class="square-checkbox__label">Серый <span>(22)</span></span>
+                                    </label>
+                                    <label for="color-04" class="square-checkbox filters__checkbox">
+                                        <input type="checkbox" class="square-checkbox__input" id="color-04">
+                                        <span class="square-checkbox__icon"></span>
+                                        <span class="square-checkbox__color" style="background-image: url(img/dist/sprite.svg#color-red);"></span>
+                                        <span class="square-checkbox__label">Красный <span>(22)</span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-cart__item">
+                            <button class="accordion-cart__trigger">Стоимость</button>
+                            <div class="accordion-cart__content accordion-cart__content--white">
+                                <div class="filters__range">
+                                    <div id="range-money"></div>
+                                    <div class="filters__inner">
+                                        <span class="filters__value">6 000</span>
+                                        <span class="filters__value">19 000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filters__bottom">
+                <span class="filters__text">Найдено 22 товара</span>
+                <a href="#" class="filters__btn btn">Показать товары</a>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <!-- End of modal -->
     <!-- Scripts -->
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>
