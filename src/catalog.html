@@ -68,7 +68,7 @@
                     <div class="catalog__filter">
                         <div class="select-box">
                             <div class="select-box__container">
-                                <div class="select-box__option select-box__option--active">
+                                <div class="select-box__option">
                                     <input type="radio" class="select-box__radio" id="sort-01" name="sorting">
                                     <label for="sort-01" class="select-box__label">По популярности</label>
                                 </div>
@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="select-box__option">
                                     <input type="radio" class="select-box__radio" id="sort-06" name="sorting">
-                                    <label for="sort-06" class="select-box__label">По обновлению</label>
+                                    <label for="sort-06" class="select-box__label">По новинкам</label>
                                 </div>
                             </div>
                             <span class="select-box__selected">Сортировать</span> 
@@ -115,7 +115,7 @@
                             <span class="catalog__price catalog__price--old">7 200 ₽</span>
                         </div>
                         <a href="#" class="catalog__name">Короткие вейдерсы RUNNER Green</a>
-                        <a href="#" class="catalog__btn btn btn--sm">В корзину</a>
+                        <a href="#" class="catalog__btn btn btn--sm modal-btn" data-id="product-added">В корзину</a>
                     </div>
                 </div>
                 <div class="catalog__item">
@@ -202,8 +202,17 @@
     </div>
     <!-- End of catalog -->
     <!-- Modal -->
+    <div class="modal modal--sm" id="product-added">
+        <div class="modal__top">
+            <a href="#" class="modal__close" aria-label="Закрыть"></a>
+        </div>
+        <div class="modal__content">
+            <h4 class="modal__title">Товар добавлен в корзину</h4>
+            <a href="basket.html" class="modal__btn btn">Перейти в корзину</a>
+            <a href="#" class="modal__btn modal__btn--close btn btn--transparent btn--sm">Продолжить покупки</a>
+        </div>
+    </div>
     <div class="modal" id="filters">
-
         <div class="filters">
             <div class="filters__top">
                 <div class="filters__group">

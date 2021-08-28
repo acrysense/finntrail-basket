@@ -106,7 +106,7 @@
     transform: scale(0);
     visibility: hidden;
     padding-top: 10px;
-    width: 274px;
+    width: 85%;
     height: calc(100vh - 48px);
     height: calc((var(--vh, 1vh) * 100) - 48px);
     overflow-x: hidden;
@@ -119,56 +119,56 @@
         opacity: 1;
         .nav__item {
             display: block;
-            animation: fadeInLeft 0.7s cubic-bezier(0.42, 0.83, 0.7, 1.25) forwards;
-            animation-delay: 0.3s;
+            animation: fadeInLeft 0.5s cubic-bezier(0.42, 0.83, 0.7, 1.25) forwards;
+            animation-delay: 0.2s;
             transform-origin: bottom;
             &:nth-of-type(2) {
-                animation-delay: 0.35s;
+                animation-delay: 0.22s;
             }
             &:nth-of-type(3) {
-                animation-delay: 0.4s;
+                animation-delay: 0.24s;
             }
             &:nth-of-type(4) {
-                animation-delay: 0.45s;
+                animation-delay: 0.26s;
             }
             &:nth-of-type(5) {
-                animation-delay: 0.5s;
+                animation-delay: 0.28s;
             }
             &:nth-of-type(6) {
-                animation-delay: 0.55s;
+                animation-delay: 0.3s;
             }
             &:nth-of-type(7) {
-                animation-delay: 0.6s;
+                animation-delay: 0.32s;
             }
             &:nth-of-type(8) {
-                animation-delay: 0.65s;
+                animation-delay: 0.34s;
             }
             &:nth-of-type(9) {
-                animation-delay: 0.7s;
+                animation-delay: 0.36s;
             }
             &:nth-of-type(10) {
-                animation-delay: 0.75s;
+                animation-delay: 0.38s;
             }
             &:nth-of-type(11) {
-                animation-delay: 0.8s;
+                animation-delay: 0.4s;
             }
             &:nth-of-type(12) {
-                animation-delay: 0.85s;
+                animation-delay: 0.42s;
             }
             &:nth-of-type(13) {
-                animation-delay: 0.9s;
+                animation-delay: 0.44s;
             }
             &:nth-of-type(14) {
-                animation-delay: 0.95s;
+                animation-delay: 0.46s;
             }
             &:nth-of-type(n + 15) {
-                animation-delay: 1s;
+                animation-delay: 0.48s;
             }
         }
         .mobile-menu__accordion-cart,
         .mobile-menu__feedback {
             animation: fadeInLeft 0.7s cubic-bezier(0.42, 0.83, 0.7, 1.25) forwards;
-            animation-delay: 1s;
+            animation-delay: 0.48s;
             transform-origin: bottom;
         }
     }
@@ -286,7 +286,6 @@
         text-transform: uppercase;
         letter-spacing: 0.02em;
         color: $white-color;
-        border-radius: 3px;
         &--green {
             background: #249B06;
         }

@@ -377,7 +377,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (!option.classList.contains('select-box__option--disabled')) {
                     const activeOption = option.parentNode.querySelector('.select-box__option--active')
-                    activeOption.classList.remove('select-box__option--active')
+                    if (activeOption != null) {
+                        activeOption.classList.remove('select-box__option--active')
+                    }
 
                     option.parentNode.nextElementSibling.innerHTML = option.querySelector('label').innerHTML
 
@@ -736,23 +738,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // FILTERS
-    const filtersBtn = document.querySelector('.filters-btn')
-    const filters = document.querySelector('.filters')
     const filtersClose = document.querySelector('.filters__close')
-
-    //if (filtersBtn) {
-    //    filtersBtn.addEventListener('click', (event) => {
-    //        event.preventDefault()
-
-    //        filters.classList.add('filters--active')
-    //    })
-    //}
 
     if (filtersClose) {
         filtersClose.addEventListener('click', (event) => {
             event.preventDefault()
 
-            //filters.classList.remove('filters--active')
             document.body.classList.remove('scroll-disabled')
             document.querySelectorAll('.modal.modal--active').forEach((child) => child.classList.remove('modal--active'))
             overlay.classList.remove('overlay--active')
