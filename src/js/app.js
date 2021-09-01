@@ -953,11 +953,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const sizeTabsID = item.dataset.size - 1
 
-                document.querySelectorAll('.size-tabs__content').forEach((child) => child.classList.remove('size-tabs__content--active'))
                 document.querySelectorAll('.size-tabs__item').forEach((child) => child.classList.remove('size-tabs__item--active'))
+                document.querySelectorAll('.size-tabs__content').forEach((child) => child.classList.remove('size-tabs__content--active'))
                 document.querySelectorAll('.size-tabs__content')[sizeTabsID].classList.add('size-tabs__content--active')
                 item.classList.add('size-tabs__item--active')
                 //smoothModalScroll('size-tabs-scroll')
+            })
+        })
+    }
+
+    // GALLERY TABS
+    const sizeTabsTab = document.querySelectorAll('.gallery-tabs__tab')
+
+    if (sizeTabsTab) {
+        sizeTabsTab.forEach((item, i) => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault()
+
+                document.querySelectorAll('.gallery-tabs__item').forEach((child) => child.classList.remove('gallery-tabs__item--active'))
+                document.querySelectorAll('.gallery-tabs__content').forEach((child) => child.classList.remove('gallery-tabs__content--active'))
+                document.querySelectorAll('.gallery-tabs__content')[i].classList.add('gallery-tabs__content--active')
+                item.parentNode.classList.add('gallery-tabs__item--active')
             })
         })
     }

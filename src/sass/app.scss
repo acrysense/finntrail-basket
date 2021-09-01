@@ -664,6 +664,13 @@
         }
     }
     &--heading {
+        .tooltip__icon {
+            &::after {
+                margin-left: 8px;
+                width: 16px;
+                height: 16px;
+            }
+        }
         .tooltip__wrapper {
             bottom: 20px;
             max-width: 100%;
@@ -3278,6 +3285,171 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
+    }
+}
+
+// partners
+.partners {
+    margin-bottom: 40px;
+    &__block {
+        padding: 20px 12px 28px;
+        margin: 0 -12px;
+        border-top: 1px solid $grey-line;
+        &:last-child {
+            border-bottom: 1px solid $grey-line;
+        }
+    }
+    &__logotype {
+        display: block;
+    }
+    &__item {
+        margin-top: 16px;
+    }
+    &__link {
+        display: flex;
+        align-items: flex-start;
+        font-size: 14px;
+        font-weight: normal;
+        &::before {
+            content: '';
+            display: block;
+            margin-right: 8px;
+            min-width: 14px;
+            min-height: 14px;
+            max-width: 14px;
+            max-height: 14px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        &--metro {
+            &::before {
+                background-image: url(../img/dist/sprite.svg#icon-metro);
+            }
+        }
+        &--location {
+            &::before {
+                background-image: url(../img/dist/sprite.svg#icon-location);
+            }
+        }
+        &--phone {
+            &::before {
+                background-image: url(../img/dist/sprite.svg#icon-mobile-phone);
+            }
+        }
+        &--email {
+            &::before {
+                margin-top: 1px;
+                background-image: url(../img/dist/sprite.svg#icon-email-black);
+            }
+        }
+    }
+    &__btn {
+        margin-top: 30px;
+        width: 100%;
+    }
+    &__map {
+        margin: 28px -12px 0;
+        min-height: 270px;
+        background: $grey-color;
+    }
+    &__no-results {
+        margin-top: 40px;
+        text-align: center;
+        .partners__btn {
+            margin-top: 20px;
+        }
+    }
+    &__title {
+        margin-bottom: 12px;
+        font-family: $russo-one;
+        font-size: 18px;
+        font-weight: normal;
+    }
+    &__description {
+        font-size: 14px;
+        font-weight: normal;
+    }
+}
+
+// prostuff
+.prostuff {
+    &__notification {
+        padding: 20px 12px;
+        margin: 0 -12px;
+        color: $white-color;
+        background: $finntrail-red-color;
+    }
+    &__description {
+        font-size: 14px;
+        font-weight: normal;
+        b, strong {
+            font-weight: bold;
+        }
+    }
+    &__description + &__description {
+        margin-top: 8px;
+    }
+    &__form {
+        margin-top: 16px;
+    }
+    &__select,
+    &__input-group,
+    &__input {
+        width: 100%;
+    }
+    &__select + &__input-group,
+    &__input-group + &__input-group,
+    &__input-group + &__select {
+        margin-top: 20px;
+    }
+    &__btn {
+        margin-top: 20px;
+        width: 100%;
+    }
+    &__checkbox {
+        margin-top: 20px;
+    }
+}
+
+// gallery tabs
+.gallery-tabs {
+    margin-bottom: 40px;
+    &__list {
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        border-bottom: 2px solid $grey-color;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    &__item {
+        &--active {
+            .gallery-tabs__tab {
+                border-bottom: 2px solid $finntrail-red-color;
+            }
+        }
+    }
+    &__tab {
+        display: block;
+        padding: 0 16px 12px;
+        font-size: 16px;
+        font-weight: 600;
+        background: transparent;
+        border: 0;
+        border-bottom: 2px solid transparent;
+        transition: border 0.4s;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__content {
+        display: none;
+        margin-top: 12px;
+        &--active {
+            display: block;
+        }
     }
 }
 

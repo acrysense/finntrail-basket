@@ -321,6 +321,26 @@ svg line {
     display: flex;
     flex-direction: column;
     height: 42px;
+    &--lg {
+        height: 59px;
+        .select-box {
+            &__selected {
+                padding: 19px 22px;
+                font-size: 18px;
+                font-weight: 600;
+                &::after {
+                    right: 8px;
+                    background-size: 16px;
+                }
+            }
+            &__container {
+                top: 63px;
+            }
+            &__option {
+                padding: 12px 22px;
+            }
+        }
+    }
     &__selected {
         display: block;
         overflow: hidden;
@@ -416,12 +436,20 @@ svg line {
         justify-content: space-between;
         margin: 0;
         font-size: 16px;
+        font-weight: normal;
         cursor: pointer;
         & > span {
             display: block;
             font-size: 12px;
             color: $finntrail-red-color;
         }
+    }
+    &__help {
+        display: block;
+        margin-top: 2px;
+        font-size: 12px;
+        font-weight: normal;
+        color: $gray-color;
     }
 }
 
