@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINNTRAIL - Гарантия и сервис</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                </button>
+                <a href="index.html" class="logotype">
+                    <img src="img/dist/logotype-finntrail.svg" alt="">
+                </a>
+                <button class="basket-btn" aria-label="Корзина">
+                    <span class="basket-btn__count">4</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- End of header -->
+    <!-- Back button -->
+    <div class="back-button">
+        <div class="container">
+            <div class="back-button__wrapper">
+                <a href="index.html" class="back-button__arrow" aria-label="Назад"></a>
+                <h1>Гарантия и сервис</h1>
+            </div>
+        </div>
+    </div>
+    <!-- End of back button -->
+    <!-- Warranty -->
+    <div class="warranty" id="warranty">
+        <div class="container">
+            <div class="section-heading">
+                <h2 class="section-heading__title">Гарантия FINNTRAIL</h2>
+            </div>
+            <div class="warranty__notification">
+                <p class="warranty__description"><b>FINNTRAIL предоставляет 6 месяцев гарантии на выявление заводского дефекта и 1 год на любой ремонт экипировки, с момента покупки бесплатно!</b></p>
+            </div>
+            <p class="warranty__description">Все обращения по гарантии принимаются только напрямую от конечных покупателей. При покупке изделий из мембраны, а также обуви, к товару прикладываются гарантийные талоны, по которым принимаются обращения. Покупателю необходимо сохранить талон и кассовый чек, подтверждающий дату покупки.</p>
+            <p class="warranty__description">Если вы обнаружили заводской дефект, обязательно свяжитесь с нашим менеджером по телефону: <a href="tel:88007776974">8 800 777-69-74</a>, либо по электронной почте: <a href="mailto:service@finntrail.ru">service@finntrail.ru</a>. Наш менеджер проконсультирует вас по дальнейшим действиям.</p>
+            <div class="section-heading">
+                <h2 class="section-heading__title">Бланк приема товаров в сервисный центр</h2>
+            </div>
+            <div class="warranty__notification tooltip tooltip--ultra tooltip--white">
+                <p class="warranty__description tooltip__icon">Товар, сдаваемый в сервис, должен быть чистым</p>
+                <div class="tooltip__wrapper">
+                    <p>По закон все товары должны быть отправленны в чистом и сухом виде, в целях соблюдения безопасности и гигиены!</p>
+                    <p>Компани FINNTRAIL в праве отказать отказать в рассмотрении обращения в случае получения товара в ненадлежащем виде.</p>
+                </div>
+            </div>
+            <form action="#" class="warranty__form">
+                <div class="warranty__stage">
+                    <h3 class="warranty__title">Шаг 1 - Контактные данные</h3>
+                    <h4 class="warranty__subtitle">Кто вы? <span>*</span></h4>
+                    <div class="warranty__checkboxes">
+                        <label for="person-checkbox" class="type-checkbox warranty__checkbox">
+                            <input type="radio" class="type-checkbox__input" name="type-person" id="person-checkbox">
+                            <div class="type-checkbox__group">
+                                <svg width="42" height="54" viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M26.6957 54L24.3478 43.4348L26.6349 40.2839L22 37.5652L17.3651 40.2839L19.6522 43.4348L17.3043 54H26.6957Z" fill="#202020"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M36.761 33.9873L27.8696 31.9352V29.6235C29.1243 28.6153 30.1131 27.2912 30.7184 25.7734C32.1835 25.6455 33.5655 24.9995 34.5622 23.903C35.5424 22.8254 36.0508 21.4096 36.0543 19.9565H36.087V10.7555C36.087 8.12683 34.4705 5.79104 32.0356 4.85386L31.1729 3.99119C30.5155 3.33373 29.8018 2.75422 29.0446 2.25267C28.8108 2.00047 27.3812 1.31798 26.6957 1.00826C25.0804 0.348505 23.3361 0 21.5374 0C14.0256 0 7.91304 6.1126 7.91304 13.6244V19.9565H7.94571C7.94915 21.4107 8.45758 22.8254 9.43775 23.903C10.4345 24.9995 11.8165 25.6455 13.2816 25.7734C13.6301 26.6458 13.5625 27.5136 16.1304 30.2283V31.9352L7.23896 33.9873C3.48851 34.8523 0.869564 38.1453 0.869564 41.9943V54H43.1304V41.9943C43.1304 38.1453 40.5115 34.8523 36.761 33.9873ZM19.8998 36.2824L17.0378 34.1363L16.2113 34.3266L16.9558 38.049L19.8998 36.2824ZM19.7897 51.6522H24.2091H26.5724H32.5652V42.2609H34.913V51.6522H40.7826V41.9943C40.7826 39.2453 38.9111 36.894 36.2326 36.2761L30.0764 34.8557L28.6927 41.7771L26.2365 40.3028L24.1753 39.0653L22 37.7601L19.8236 39.0653L17.7623 40.3017L15.3062 41.7759L13.9225 34.8546L7.7663 36.2749C5.08889 36.8923 3.21739 39.2441 3.21739 41.9943V51.6522H9.08696V42.2609H11.4348V51.6522H17.4276H19.7897ZM26.9633 34.1363L24.1014 36.2824L27.0465 38.049L27.791 34.3278L26.9633 34.1363ZM22 34.9239L25.5217 32.2826V31.0044C24.4338 31.4469 23.2456 31.6957 22 31.6957C20.7544 31.6957 19.5662 31.4469 18.4783 31.0044V32.2826L22 34.9239ZM14.9565 22.3043C14.9565 26.1889 18.1154 29.3478 22 29.3478C25.8846 29.3478 29.0435 26.1889 29.0435 22.3043V16.4348H27.1439L26.2142 14.5753C23.9884 15.7951 21.5002 16.4348 18.942 16.4348H14.9565V22.3043ZM11.1763 22.3256C11.5815 22.7704 12.098 23.0839 12.6591 23.2742C12.6265 22.9549 12.6087 22.6316 12.6087 22.3043V16.6881C11.3454 17.1673 10.4042 18.2788 10.2775 19.608C10.1812 20.6174 10.5016 21.5821 11.1763 22.3256ZM31.342 23.2742C31.902 23.0839 32.4196 22.7715 32.8249 22.3256C33.4995 21.5821 33.8188 20.6163 33.7225 19.6069C33.5958 18.2776 32.6546 17.1662 31.3913 16.687V22.3043C31.3913 22.6316 31.3735 22.9549 31.342 23.2742ZM31.0204 6.98272L30.7573 6.89559L29.5118 5.65003C27.3823 3.52059 24.5496 2.34783 21.5374 2.34783C15.3205 2.34783 10.2609 7.40746 10.2609 13.6244V15.3606C11.2995 14.5742 12.5886 14.087 13.9844 14.087H18.942C21.4778 14.087 23.9334 13.3429 26.0451 11.9363L27.1513 11.1992L28.5952 14.087H30.0156C31.4114 14.087 32.7005 14.5742 33.7391 15.3606V10.7555C33.7391 9.04165 32.646 7.52611 31.0204 6.98272Z" fill="#202020"/>
+                                </svg>
+                                <span class="type-checkbox__label">Физлицо</span>
+                            </div>
+                        </label>
+                        <label for="entity-checkbox" class="type-checkbox warranty__checkbox">
+                            <input type="radio" class="type-checkbox__input" name="type-person" id="entity-checkbox">
+                            <div class="type-checkbox__group">
+                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30.6685 54L28.8709 45.9817L30.622 43.5904L27.0734 41.5272L23.5248 43.5904L25.2758 45.9817L23.4783 54H30.6685Z" fill="#202020"/>
+                                    <path d="M5.22581 26.1196H6.16016C6.27862 25.3041 6.55908 24.5404 6.96774 23.8623V20.1033H5.22581V26.1196Z" fill="#202020"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M54 20.8824C54 18.9444 52.7527 17.268 50.8968 16.7113L45.2903 15.0293V13.7063C46.8677 12.6031 47.9032 10.7765 47.9032 8.71053V6.09677C47.9032 2.73496 45.1683 0 41.8064 0C38.4446 0 35.7097 2.73496 35.7097 6.09677V8.70968C35.7097 10.7765 36.7452 12.6031 38.3226 13.7054V15.0284L33.3817 16.511C31.5275 14.8528 29.1651 13.9355 26.6568 13.9355C24.1587 13.9355 21.8733 14.8507 20.1071 16.3587L15.6774 15.0293V13.7063C17.2548 12.6031 18.2903 10.7765 18.2903 8.71053V6.09677C18.2903 2.73496 15.5554 0 12.1935 0C8.83173 0 6.09677 2.73496 6.09677 6.09677V8.70968C6.09677 10.7765 7.13232 12.6031 8.70968 13.7054V15.0284L3.10325 16.7104C1.24734 17.268 0 18.9444 0 20.8824V26.1196V27V27.871H1.74194H6.09677V27C6.09677 26.7011 6.1184 26.4071 6.16016 26.1196H5.22581H1.74194V20.8824C1.74194 19.7197 2.49 18.7135 3.60422 18.3801L9.21235 16.6972C9.71929 17.3556 10.7 18.2903 12.1935 18.2903C13.6871 18.2903 14.6678 17.3556 15.1747 16.6972L18.7466 17.7685C17.6129 19.1945 16.8576 20.93 16.6283 22.8289C15.5162 21.647 13.9414 20.9032 12.1935 20.9032C9.97845 20.9032 8.0355 22.0906 6.96774 23.8623C6.55908 24.5404 6.27862 25.3041 6.16016 26.1196C6.1184 26.4071 6.09677 26.7011 6.09677 27V27.871V29.6129C6.09677 31.6798 7.13232 33.5063 8.70968 34.6086V35.9317L3.10325 37.6136C1.24734 38.1712 0 39.8476 0 41.7856V49.6452H10.4516H11.3226V50.5161V54H42.6774V50.5161V49.6452H43.5484H54V41.7856C54 39.8476 52.7527 38.1712 50.8968 37.6145L45.2903 35.9325V34.6095C46.8677 33.5063 47.9032 31.6798 47.9032 29.6138V27.871V27.0009C47.9032 26.7016 47.8816 26.4074 47.8397 26.1196C47.7212 25.3044 47.4408 24.541 47.0323 23.8632C45.9645 22.0915 44.0215 20.9041 41.8064 20.9041C40.1011 20.9041 38.5595 21.6096 37.4516 22.7417V21.9162C37.4516 20.196 36.5169 18.6476 35.0582 17.8289L38.8253 16.6981C39.3322 17.3556 40.3129 18.2903 41.8064 18.2903C43.3 18.2903 44.2807 17.3556 44.7876 16.6972L50.3966 18.3801C51.51 18.7135 52.2581 19.7197 52.2581 20.8824V26.1196H48.7742H47.8397C47.8816 26.4074 47.9032 26.7016 47.9032 27.0009V27.871H52.2581H54V27V26.1196V20.8824ZM16.5484 6.09677C16.5484 3.69566 14.5947 1.74194 12.1935 1.74194C9.79243 1.74194 7.83871 3.69566 7.83871 6.09677H8.34904C8.90233 6.09677 9.44498 5.87223 9.83581 5.48097L10.4516 4.86517L11.0674 5.48097C11.4582 5.87223 12.0009 6.09677 12.5542 6.09677H16.5484ZM7.83871 7.83871V8.70968C7.83871 11.1108 9.79243 13.0645 12.1935 13.0645C14.5947 13.0645 16.5484 11.1108 16.5484 8.70968V7.83871H12.5542C11.7955 7.83871 11.0708 7.62097 10.4516 7.2144C9.83241 7.62097 9.10774 7.83871 8.34904 7.83871H7.83871ZM10.4516 15.438C10.6677 15.7706 11.2677 16.5484 12.1935 16.5484C13.1194 16.5484 13.7194 15.7714 13.9355 15.4371V14.5496C13.3835 14.715 12.7987 14.8065 12.1935 14.8065C11.5884 14.8065 11.0036 14.715 10.4516 14.5504V15.438ZM38.3226 34.6095C37.3436 33.9252 36.5781 32.962 36.1345 31.8354C35.4137 32.5426 34.473 32.9696 33.4697 33.0576C33.0194 34.1838 32.2858 35.1662 31.3548 35.9142V37.6302L32.1777 37.8199C32.353 37.7408 32.5324 37.6694 32.717 37.6145L38.3226 35.9325V34.6095ZM29.6129 36.9387C28.8057 37.267 27.9241 37.4516 27 37.4516C26.0759 37.4516 25.1943 37.267 24.3871 36.9387V37.8871L27 39.8468L29.6129 37.8871V36.9387ZM25.4409 40.8555L23.3175 39.2624L22.7043 39.4045L23.2567 42.1662L25.4409 40.8555ZM25.3601 52.2581H28.6399H30.3924H34.8387V45.2903H36.5806V52.2581H40.9355V50.5161V46.1613V45.0926C40.9355 43.0529 39.547 41.3085 37.5596 40.8492L32.993 39.7953L31.9664 44.9305L30.1441 43.8376L28.6139 42.9194L27 41.951L25.3852 42.9194L23.8551 43.8376L22.0328 44.9305L21.0061 39.7953L16.4404 40.8492C14.453 41.3085 13.0645 43.0529 13.0645 45.0926V46.1613V50.5161V52.2581H17.4194V45.2903H19.1613V52.2581H23.6076H25.3601ZM30.6825 39.2624L28.5591 40.8555L30.7433 42.1654L31.2957 39.4036L30.6825 39.2624ZM33.9303 31.2034C34.3458 31.0622 34.729 30.8305 35.0305 30.4996C35.5319 29.9472 35.7679 29.2314 35.6965 28.4817C35.6025 27.4963 34.9051 26.6717 33.9677 26.3162V30.4839C33.9677 30.7267 33.9546 30.9666 33.9303 31.2034ZM27 35.7097C29.8821 35.7097 32.2258 33.366 32.2258 30.4839V26.129H30.8164L30.1275 24.7503C28.4761 25.6553 26.6292 26.129 24.7311 26.129H21.7742V30.4839C21.7742 33.366 24.1179 35.7097 27 35.7097ZM18.9695 30.4996C19.271 30.8305 19.6542 31.0622 20.0697 31.2034C20.0454 30.9666 20.0323 30.7267 20.0323 30.4839V26.317C19.0949 26.6717 18.3975 27.4971 18.3035 28.4825C18.2321 29.2314 18.4681 29.948 18.9695 30.4996ZM22.6452 35.9142C21.7134 35.1662 20.9798 34.1838 20.5303 33.0576C19.527 32.9696 18.5863 32.5426 17.8655 31.8354C17.4219 32.962 16.6556 33.9252 15.6774 34.6095V35.9325L21.2838 37.6145C21.4676 37.6702 21.6462 37.7408 21.8223 37.8199L22.6452 37.6302V35.9142ZM16.5484 27C16.5484 24.5989 14.5947 22.6452 12.1935 22.6452C9.79243 22.6452 7.83871 24.5989 7.83871 27H11.8329C12.3862 27 12.9289 26.7755 13.3197 26.3842L13.9355 25.7684L14.5513 26.3842C14.9421 26.7755 15.4848 27 16.0381 27H16.5484ZM7.83871 28.7419V29.6129C7.83871 32.014 9.79243 33.9677 12.1935 33.9677C14.5947 33.9677 16.5484 32.014 16.5484 29.6129V28.7419H16.0381C15.2794 28.7419 14.5547 28.5242 13.9355 28.1176C13.3163 28.5242 12.5916 28.7419 11.8329 28.7419H7.83871ZM13.9355 35.4528C13.3835 35.6182 12.7987 35.7097 12.1935 35.7097C11.5884 35.7097 11.0036 35.6182 10.4516 35.4537V36.3412C10.6677 36.6738 11.2677 37.4516 12.1935 37.4516C13.1194 37.4516 13.7194 36.6746 13.9355 36.3404V35.4528ZM6.96774 47.9032H10.4516H11.3226V46.1613V45.0926C11.3226 42.2377 13.2657 39.7945 16.0483 39.1519L18.4774 38.5918L15.1747 37.6005C14.6678 38.2588 13.6871 39.1935 12.1935 39.1935C10.7 39.1935 9.71929 38.2588 9.21235 37.6005L3.60422 39.2833C2.49 39.6167 1.74194 40.6229 1.74194 41.7856V47.9032H5.22581V41.8064H6.96774V47.9032ZM52.2581 41.7856C52.2581 40.6229 51.51 39.6167 50.3958 39.2833L44.7876 37.6005C44.2807 38.2588 43.3 39.1935 41.8064 39.1935C40.3129 39.1935 39.3322 38.2588 38.8253 37.6005L35.5226 38.5918L37.9517 39.1519C40.7343 39.7945 42.6774 42.2377 42.6774 45.0926V46.1613V47.9032H43.5484H47.0323V41.8064H48.7742V47.9032H52.2581V41.7856ZM41.8064 37.4516C42.7323 37.4516 43.3323 36.6746 43.5484 36.3412V35.4528C42.9964 35.6182 42.4116 35.7097 41.8064 35.7097C41.2013 35.7097 40.6165 35.6182 40.0645 35.4528V36.3412C40.278 36.6712 40.8789 37.4516 41.8064 37.4516ZM37.4516 29.6129C37.4516 32.014 39.4053 33.9677 41.8064 33.9677C44.2076 33.9677 46.1613 32.014 46.1613 29.6129V28.7419H42.1671C41.4084 28.7419 40.6837 28.5242 40.0645 28.1176C39.4453 28.5242 38.7206 28.7419 37.9619 28.7419H37.4516V29.6129ZM46.1613 27C46.1613 24.5989 44.2076 22.6452 41.8064 22.6452C39.4053 22.6452 37.4516 24.5989 37.4516 27H37.9619C38.5152 27 39.0579 26.7755 39.4487 26.3842L40.0645 25.7684L40.6803 26.3842C41.0711 26.7755 41.6138 27 42.1671 27H46.1613ZM32.9471 24.3871C33.9818 24.3871 34.9391 24.7486 35.7097 25.3321V21.9154C35.7097 20.6438 34.8987 19.5194 33.6926 19.1171L33.4974 19.0516L32.5733 18.1274C30.9934 16.5475 28.8916 15.6774 26.6568 15.6774C22.0442 15.6774 18.2903 19.4313 18.2903 24.0439V25.3321C19.0609 24.7486 20.0182 24.3871 21.0529 24.3871H24.7311C26.6126 24.3871 28.4345 23.8359 30.0012 22.7915L30.822 22.2446L31.8932 24.3871H32.9471ZM46.1613 6.09677C46.1613 3.69566 44.2076 1.74194 41.8064 1.74194C39.4053 1.74194 37.4516 3.69566 37.4516 6.09677H41.4458C41.9991 6.09677 42.5418 5.87223 42.9326 5.48097L43.5484 4.86517L44.1642 5.48097C44.555 5.87223 45.0977 6.09677 45.651 6.09677H46.1613ZM37.4516 7.83871V8.70968C37.4516 11.1108 39.4053 13.0645 41.8064 13.0645C44.2076 13.0645 46.1613 11.1108 46.1613 8.70968V7.83871H45.651C44.8923 7.83871 44.1676 7.62097 43.5484 7.2144C42.9292 7.62097 42.2045 7.83871 41.4458 7.83871H37.4516ZM40.0645 15.438C40.278 15.768 40.8789 16.5484 41.8064 16.5484C42.7323 16.5484 43.3323 15.7714 43.5484 15.4371V14.5496C42.9964 14.715 42.4116 14.8065 41.8064 14.8065C41.2013 14.8065 40.6165 14.715 40.0645 14.5496V15.438Z" fill="#202020"/>
+                                    <path d="M47.8397 26.1196H48.7742V20.1033H47.0323V23.8632C47.4408 24.541 47.7212 25.3044 47.8397 26.1196Z" fill="#202020"/>
+                                    <path d="M20.0322 0H21.7742V1.74194H20.0322V0Z" fill="#202020"/>
+                                    <path d="M20.0322 3.48389H21.7742V13.0645H20.0322V3.48389Z" fill="#202020"/>
+                                    <path d="M32.2258 0H33.9678V1.74194H32.2258V0Z" fill="#202020"/>
+                                    <path d="M32.2258 3.48389H33.9678V13.0645H32.2258V3.48389Z" fill="#202020"/>
+                                    <path d="M23.5161 3.48389H25.258V9.58066H23.5161V3.48389Z" fill="#202020"/>
+                                    <path d="M23.5161 11.3226H25.258V13.0646H23.5161V11.3226Z" fill="#202020"/>
+                                    <path d="M28.7419 3.48389H30.4839V9.58066H28.7419V3.48389Z" fill="#202020"/>
+                                    <path d="M28.7419 11.3226H30.4839V13.0646H28.7419V11.3226Z" fill="#202020"/>
+                                    <rect x="33.8967" y="40.3533" width="1.76088" height="6.16304" transform="rotate(-180 33.8967 40.3533)" fill="#202020"/>
+                                </svg>
+                                <span class="type-checkbox__label">Юрлицо</span>
+                            </div>
+                        </label>
+                    </div>
+                    <h4 class="warranty__subtitle">Ф.И.О. <span>*</span></h4>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="text" class="input-group__input warranty__input" id="input-surname" placeholder="Фамилия*" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-surname" class="input-group__label">Фамилия*</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="text" class="input-group__input warranty__input" id="input-name" placeholder="Имя*" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-name" class="input-group__label">Имя*</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="text" class="input-group__input warranty__input" id="input-patronymic" placeholder="Отчество" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-patronymic" class="input-group__label">Отчество</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <h4 class="warranty__subtitle">Контакты <span>*</span></h4>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="tel" class="input-group__input warranty__input" id="input-phone" placeholder="Телефон*" data-inputmask="'mask': '+7 (999) 999 99 99'" inputmode="tel" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-phone" class="input-group__label">Телефон*</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="email" class="input-group__input warranty__input" id="input-email" placeholder="E-mail*" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-email" class="input-group__label">E-mail*</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <h4 class="warranty__subtitle">Откуда можно забрать товар <span>*</span></h4>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="text" class="input-group__input warranty__input" id="input-city" placeholder="Город*" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-city" class="input-group__label">Город*</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="text" class="input-group__input warranty__input" id="input-street" placeholder="Улица*" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-street" class="input-group__label">Улица*</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="text" class="input-group__input warranty__input" id="input-house" placeholder="Дом*" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-house" class="input-group__label">Дом*</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="text" class="input-group__input warranty__input" id="input-office" placeholder="Квартира или офис*" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-office" class="input-group__label">Квартира или офис*</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <button class="warranty__btn btn btn--sm">Продолжить</button>
+                </div>
+                <div class="warranty__stage">
+                    <h3 class="warranty__title">Шаг 2 - Обращение</h3>
+                    <h4 class="warranty__subtitle">Данные о товаре <span>*</span></h4>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="text" class="input-group__input warranty__input" id="input-model" placeholder="Модель*" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-model" class="input-group__label">Модель*</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <span class="warranty__help">Например: Куртка MUDWAY 2010</span>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="text" class="input-group__input warranty__input" id="input-place" placeholder="Когда и где был приобретен*" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-place" class="input-group__label">Когда и где был приобретен*</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <span class="warranty__help">*Например: 25 марта 2019 в ЭкипLand</span>
+                    <h4 class="warranty__subtitle">Выявленные дефекты</h4>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <textarea class="input-group__textarea warranty__input" id="input-defect" placeholder="Дефекты" onkeyup="textAreaAdjust(this)" required></textarea>
+                            <div class="input-group__underline"></div>
+                            <label for="input-defect" class="input-group__label">Дефекты</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <div class="upload-file">
+                        <label for="upload-file" class="upload-file__label">
+                            <input type="file" class="upload-file__input" id="upload-file" name="files[]">
+                            <span class="upload-file__icon"></span>
+                            <span class="upload-file__btn">Прекрепите документ</span>
+                        </label>
+                        <label for="upload-photo" class="upload-file__label">
+                            <input type="file" class="upload-file__input" id="upload-photo" name="files[]">
+                            <span class="upload-file__icon"></span>
+                            <span class="upload-file__btn">Прекрепите фото</span>
+                        </label>
+                    </div>
+                    <h4 class="warranty__subtitle">Адрес обратного отправления <span>*</span></h4>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="text" class="input-group__input warranty__input" id="input-city-back" placeholder="Город*" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-city-back" class="input-group__label">Город*</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="text" class="input-group__input warranty__input" id="input-street-back" placeholder="Улица*" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-street-back" class="input-group__label">Улица*</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="text" class="input-group__input warranty__input" id="input-house-back" placeholder="Дом*" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-house-back" class="input-group__label">Дом*</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="text" class="input-group__input warranty__input" id="input-office-back" placeholder="Квартира или офис*" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-office-back" class="input-group__label">Квартира или офис*</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <div class="warranty__inner">
+                        <button class="warranty__btn btn btn--sm btn--transparent">Назад</button>
+                        <button class="warranty__btn btn btn--sm">Отправить</button>
+                    </div>
+                </div>
+                <div class="warranty__stage">
+                    <div class="thanks">
+                        <div class="thanks__wrapper">
+                            <div class="thanks__icon"></div>
+                            <h3 class="thanks__title">Спасибо за обращение!</h3>
+                            <p class="thanks__description">Наш менеджер свяжется с вами в ближайшее время.</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End of warranty -->
+    <!-- Back to top -->
+    <a href="#header" class="go-top">Наверх</a>
+    <!-- End of back to top -->
+    <!-- Scripts -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <script>
+        let itemHeight = 80
+        let labelHeight = 50
+        function textAreaAdjust(e) {
+            if (itemHeight < e.getBoundingClientRect().height) {
+                labelHeight += 10.5
+
+                e.nextElementSibling.nextElementSibling.style.transform = 'translate(-13%, -' + labelHeight + 'px) scale(0.8)';
+            }
+            itemHeight = e.getBoundingClientRect().height
+
+            e.style.height = "80px";
+            e.style.height = (e.scrollHeight) + 2 + "px";
+        }
+    </script>
+</body>
+</html>

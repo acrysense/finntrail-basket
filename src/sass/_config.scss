@@ -16,6 +16,7 @@ $grey-line: #E8E8E8;
 $green-color: #27AA06;
 $finntrail-red-color: #D61635;
 $red-color: #F43C38;
+$blue-color: #1962EF;
 
 // COMMON DOCUMENT STYLES
 body {
@@ -605,6 +606,59 @@ svg line {
     }
 }
 
+.type-checkbox {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    cursor: pointer;
+    &__input {
+        display: none;
+        &:checked {
+            & ~ .type-checkbox__group {
+                color: $white-color;
+                background: $finntrail-red-color;
+                svg path {
+                    fill: $white-color;
+                }
+            }
+        }
+    }
+    &__group {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 86px;
+        min-height: 106px;
+        max-width: 86px;
+        max-height: 106px;
+        text-align: center;
+        background: $white-color;
+        border-radius: 4px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.25s;
+    }
+    &__icon {
+        display: block;
+        margin: 0 auto;
+        min-width: 48px;
+        min-height: 48px;
+        max-width: 48px;
+        max-height: 48px;
+        background-repeat: no-repeat;
+        background-size: 50px;
+        background-position: center center;
+    }
+    &__label {
+        display: block;
+        margin-top: 8px;
+        font-size: 12px;
+        font-weight: normal;
+        user-select: none;
+    }
+}
+
 .communication-btn {
     display: flex;
     align-items: center;
@@ -620,6 +674,45 @@ svg line {
     }
     span {
         display: block;
+    }
+}
+
+.upload-file {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    &__label {
+        display: block;
+        padding: 20px 4px;
+        margin: 0;
+        width: 100%;
+        border: 1px solid $grey-line;
+    }
+    &__label + &__label {
+        margin-left: 20px;
+    }
+    &__input {
+        display: none;
+    }
+    &__icon {
+        display: block;
+        margin: 0 auto;
+        min-width: 54px;
+        min-height: 54px;
+        max-width: 54px;
+        max-height: 54px;
+        background-image: url(../img/dist/sprite.svg#icon-upload);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    &__btn {
+        display: block;
+        margin-top: 16px;
+        font-size: 12px;
+        font-weight: normal;
+        text-align: center;
     }
 }
 

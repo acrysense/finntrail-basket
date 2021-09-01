@@ -819,6 +819,17 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     })
 
+    const stockSlider = document.querySelector('.stock__slider .swiper-container')
+
+    const mySwiperStock = new Swiper(stockSlider, {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+    })
+
     // SPECIFICATIONs
     const specificationBtn = document.querySelectorAll('.specification__more')
     const specificationGradientBtn = document.querySelectorAll('.specification__gradient')
