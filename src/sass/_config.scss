@@ -91,6 +91,9 @@ svg line {
         font-family: $russo-one;
         font-size: 22px;
         font-weight: normal;
+        span {
+            color: $green-color;
+        }
     }
 }
 
