@@ -729,14 +729,20 @@ svg line {
     &__icon {
         display: block;
         margin: 0 auto;
-        min-width: 54px;
-        min-height: 54px;
-        max-width: 54px;
-        max-height: 54px;
+        min-width: 56px;
+        min-height: 50px;
+        max-width: 56px;
+        max-height: 50px;
         background-image: url(../img/dist/sprite.svg#icon-upload);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
+        &--photo {
+            background-image: url(../img/dist/sprite.svg#icon-upload-photo);
+        }
+        &--document {
+            background-image: url(../img/dist/sprite.svg#icon-upload-document);
+        }
     }
     &__btn {
         display: block;

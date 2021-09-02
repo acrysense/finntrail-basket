@@ -2159,8 +2159,8 @@
                 font-size: 20px;
             }
             &__item {
-                max-width: 200px;
-                min-width: 200px;
+                max-width: 210px;
+                min-width: 210px;
             }
             &__img {
                 padding: 0 12px;
@@ -2170,6 +2170,10 @@
             }
             &__name {
                 font-weight: 600;
+            }
+            &__price {
+                max-width: 76px;
+                font-size: 16px;
             }
         }
     }
@@ -2257,18 +2261,17 @@
     &__price {
         display: block;
         overflow: hidden;
+        max-width: 62px;
         font-size: 14px;
         font-weight: normal;
         white-space: nowrap;
         text-overflow: ellipsis;
         &--new {
-            max-width: 62px;
             font-weight: 600;
             color: $finntrail-red-color;
         }
         &--old {
             margin-left: 4px;
-            max-width: 62px;
             text-decoration: line-through;
             color: $gray-color;
         }
@@ -3162,6 +3165,11 @@
                 max-width: 135px;
             }
         }
+        &:nth-child(3) {
+            .equipment__img {
+                max-width: 90px;
+            }
+        }
         &:nth-child(5) {
             .equipment__img {
                 max-width: 60px;
@@ -3205,6 +3213,12 @@
         margin: 0 -12px 20px;
         color: $white-color;
         background: $finntrail-red-color;
+    }
+    &__stage {
+        display: none;
+        &--active {
+            display: block;
+        }
     }
     &__title {
         margin-bottom: 20px;
@@ -3415,6 +3429,7 @@
 
 // prostuff
 .prostuff {
+    padding-bottom: 40px;
     &__notification {
         padding: 20px 12px;
         margin: 0 -12px;

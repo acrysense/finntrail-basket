@@ -45,22 +45,24 @@
                 <h2 class="section-heading__title">Гарантия FINNTRAIL</h2>
             </div>
             <div class="warranty__notification">
-                <p class="warranty__description"><b>FINNTRAIL предоставляет 6 месяцев гарантии на выявление заводского дефекта и 1 год на любой ремонт экипировки, с момента покупки бесплатно!</b></p>
+                <p class="warranty__description"><b>FINNTRAIL предоставляет 6 месяцев гарантии на&nbsp;выявление заводского дефекта</b></p>
+                <p class="warranty__description"><b>А также 1 год на любой ремонт экипировки, с&nbsp;момента покупки — бесплатно</b></p>
             </div>
-            <p class="warranty__description">Все обращения по гарантии принимаются только напрямую от конечных покупателей. При покупке изделий из мембраны, а также обуви, к товару прикладываются гарантийные талоны, по которым принимаются обращения. Покупателю необходимо сохранить талон и кассовый чек, подтверждающий дату покупки.</p>
+            <p class="warranty__description">Все обращения по гарантии принимаются только напрямую от конечных покупателей. При покупке изделий из мембраны, а также обуви, к товару прикладываются гарантийные талоны, по которым принимаются обращения.</p>
+            <p class="warranty__description">Покупателю необходимо сохранить талон и кассовый чек, подтверждающий дату покупки.</p>
             <p class="warranty__description">Если вы обнаружили заводской дефект, обязательно свяжитесь с нашим менеджером по телефону: <a href="tel:88007776974">8 800 777-69-74</a>, либо по электронной почте: <a href="mailto:service@finntrail.ru">service@finntrail.ru</a>. Наш менеджер проконсультирует вас по дальнейшим действиям.</p>
             <div class="section-heading">
-                <h2 class="section-heading__title">Бланк приема товаров в сервисный центр</h2>
+                <h2 class="section-heading__title">Бланк приема товаров в&nbsp;сервисный центр</h2>
             </div>
             <div class="warranty__notification tooltip tooltip--ultra tooltip--white">
                 <p class="warranty__description tooltip__icon">Товар, сдаваемый в сервис, должен быть чистым</p>
                 <div class="tooltip__wrapper">
-                    <p>По закон все товары должны быть отправленны в чистом и сухом виде, в целях соблюдения безопасности и гигиены!</p>
-                    <p>Компани FINNTRAIL в праве отказать отказать в рассмотрении обращения в случае получения товара в ненадлежащем виде.</p>
+                    <p>По закон все товары должны быть отправленны в&nbsp;чистом&nbsp;и&nbsp;сухом виде, в целях соблюдения безопасности и&nbsp;гигиены!</p>
+                    <p>Компани FINNTRAIL в праве отказать отказать в&nbsp;рассмотрении обращения в случае получения товара в&nbsp;ненадлежащем виде.</p>
                 </div>
             </div>
             <form action="#" class="warranty__form">
-                <div class="warranty__stage">
+                <div class="warranty__stage warranty__stage--active">
                     <h3 class="warranty__title">Шаг 1 - Контактные данные</h3>
                     <h4 class="warranty__subtitle">Кто вы? <span>*</span></h4>
                     <div class="warranty__checkboxes">
@@ -120,6 +122,16 @@
                         </div>
                         <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
                     </div>
+                    <h4 class="warranty__subtitle">Название вашей организации <span>*</span></h4>
+                    <div class="input-group warranty__input-group">
+                        <div class="input-group__control">
+                            <input type="tel" class="input-group__input warranty__input" id="input-phone" placeholder="Название компании" data-inputmask="'mask': '+7 (999) 999 99 99'" inputmode="tel" required>
+                            <div class="input-group__underline"></div>
+                            <label for="input-phone" class="input-group__label">Название компании</label>
+                        </div>
+                        <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
+                    </div>
+                    <span class="warranty__help">*Например: ООО “Ромашка”</span>
                     <h4 class="warranty__subtitle">Контакты <span>*</span></h4>
                     <div class="input-group warranty__input-group">
                         <div class="input-group__control">
@@ -172,7 +184,7 @@
                     </div>
                     <button class="warranty__btn btn btn--sm">Продолжить</button>
                 </div>
-                <div class="warranty__stage">
+                <div class="warranty__stage warranty__stage--active">
                     <h3 class="warranty__title">Шаг 2 - Обращение</h3>
                     <h4 class="warranty__subtitle">Данные о товаре <span>*</span></h4>
                     <div class="input-group warranty__input-group">
@@ -183,7 +195,7 @@
                         </div>
                         <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
                     </div>
-                    <span class="warranty__help">Например: Куртка MUDWAY 2010</span>
+                    <span class="warranty__help">*Например: Куртка MUDWAY 2010</span>
                     <div class="input-group warranty__input-group">
                         <div class="input-group__control">
                             <input type="text" class="input-group__input warranty__input" id="input-place" placeholder="Когда и где был приобретен*" required>
@@ -196,21 +208,22 @@
                     <h4 class="warranty__subtitle">Выявленные дефекты</h4>
                     <div class="input-group warranty__input-group">
                         <div class="input-group__control">
-                            <textarea class="input-group__textarea warranty__input" id="input-defect" placeholder="Дефекты" onkeyup="textAreaAdjust(this)" required></textarea>
+                            <textarea class="input-group__textarea warranty__input" id="input-defect" placeholder="Опишите проблему" onkeyup="textAreaAdjust(this)" required></textarea>
                             <div class="input-group__underline"></div>
-                            <label for="input-defect" class="input-group__label">Дефекты</label>
+                            <label for="input-defect" class="input-group__label">Опишите проблему</label>
                         </div>
                         <span class="input-group__error" aria-live="polite">Ошибка ввода данных</span>
                     </div>
+                    <span class="warranty__help">*Например: Сломался замок после первого использования</span>
                     <div class="upload-file">
                         <label for="upload-file" class="upload-file__label">
                             <input type="file" class="upload-file__input" id="upload-file" name="files[]">
-                            <span class="upload-file__icon"></span>
+                            <span class="upload-file__icon upload-file__icon--document"></span>
                             <span class="upload-file__btn">Прекрепите документ</span>
                         </label>
                         <label for="upload-photo" class="upload-file__label">
                             <input type="file" class="upload-file__input" id="upload-photo" name="files[]">
-                            <span class="upload-file__icon"></span>
+                            <span class="upload-file__icon upload-file__icon--photo"></span>
                             <span class="upload-file__btn">Прекрепите фото</span>
                         </label>
                     </div>
@@ -252,12 +265,12 @@
                         <button class="warranty__btn btn btn--sm">Отправить</button>
                     </div>
                 </div>
-                <div class="warranty__stage">
+                <div class="warranty__stage warranty__stage--active">
                     <div class="thanks">
                         <div class="thanks__wrapper">
                             <div class="thanks__icon"></div>
                             <h3 class="thanks__title">Спасибо за обращение!</h3>
-                            <p class="thanks__description">Наш менеджер свяжется с вами в ближайшее время.</p>
+                            <p class="thanks__description">Наш менеджер свяжется с вами <br>в&nbsp;ближайшее время.</p>
                         </div>
                     </div>
                 </div>
