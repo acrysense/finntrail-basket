@@ -824,10 +824,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const mySwiperStock = new Swiper(stockSlider, {
         slidesPerView: 1,
         loop: true,
+        autoplay: {
+            delay: 4000,
+        },
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
         },
+        
     })
 
     // SPECIFICATIONs

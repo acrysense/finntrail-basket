@@ -8,9 +8,6 @@
 .advantages-cart {
     padding: 8px 0;
     background: $grey-color;
-    &--main {
-        margin-top: 20px;
-    }
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -3311,6 +3308,12 @@
         .swiper-pagination-bullet-active {
             background: $finntrail-red-color;
         }
+        
+        &--main {
+            .swiper-container {
+                padding-bottom: 0;
+            }
+        }
     }
     &__icon {
         position: absolute;
@@ -3452,7 +3455,19 @@
 
 // gallery tabs
 .gallery-tabs {
+    position: relative;
     margin-bottom: 40px;
+    &--title {
+        padding-top: 44px;
+    }
+    &__title {
+        position: absolute;
+        top: 0;
+        font-family: $russo-one;
+        font-size: 20px;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
     &__list {
         display: flex;
         align-items: center;
