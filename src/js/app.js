@@ -59,34 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
             leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
         }
     }
-
-    function smoothModalScroll(eID) {
-        let startY = currentYPosition();
-        let stopY = elmYPosition(eID) - Number(12);
-        let distance = stopY > startY ? stopY - startY : startY - stopY;
-        if (distance < 100) {
-            scrollTo(0, stopY); return;
-        }
-        let speed = Math.round(distance / 100);
-        if (speed >= 20) speed = 20;
-        let step = Math.round(distance / 25);
-        const currentModal = document.querySelector('.modal--active .modal__content')
-        let leapY = stopY > startY ? startY + step : startY - step;
-        let timer = 0;
-        
-        console.log(currentModal + '.scrollTop(' + leapY + ')')
-
-        if (stopY > startY) {
-            for (let i = startY; i < stopY; i += step ) {
-                setTimeout(currentModal + '.scrollTo(0, ' + leapY + ')', timer * speed);
-                leapY += step; if (leapY > stopY) leapY = stopY; timer++;
-            } return;
-        }
-        for (let i = startY; i > stopY; i -= step ) {
-            setTimeout(currentModal + '.scrollTo(0, ' + leapY + ')', timer * speed);
-            leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
-        }
-    }
     
     function smoothScrollCoord(coord) {
         let startY = currentYPosition();
@@ -961,7 +933,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.querySelectorAll('.size-tabs__content').forEach((child) => child.classList.remove('size-tabs__content--active'))
                 document.querySelectorAll('.size-tabs__content')[sizeTabsID].classList.add('size-tabs__content--active')
                 item.classList.add('size-tabs__item--active')
-                //smoothModalScroll('size-tabs-scroll')
+                
+                document.querySelector('.size-tabs__content--active').scrollIntoView({block: "start", behavior: "smooth"});
             })
         })
     }

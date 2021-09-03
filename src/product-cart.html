@@ -1337,7 +1337,7 @@
                 <h2 class="size__title" id="size-tabs-scroll">как правильно подобрать размер экипировки?</h3>
                 <div class="size-info">
                     <div class="size-info__wrapper">
-                        <div class="size-info__item size-tabs__content">
+                        <div class="size-info__item size-tabs__content size-tabs__content--active">
                             <div class="size-info__top tooltip">
                                 <div class="size-info__img">
                                     <img src="img/dist/size-info-01.png" alt="РАЗМЕР ВЕЙДЕРСОВ">
@@ -1973,16 +1973,7 @@
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>
     <script>
-        let itemHeight = 80
-        let labelHeight = 50
         function textAreaAdjust(e) {
-            if (itemHeight < e.getBoundingClientRect().height) {
-                labelHeight += 10.5
-
-                e.nextElementSibling.nextElementSibling.style.transform = 'translate(-13%, -' + labelHeight + 'px) scale(0.8)';
-            }
-            itemHeight = e.getBoundingClientRect().height
-
             e.style.height = "80px";
             e.style.height = (e.scrollHeight) + 2 + "px";
         }

@@ -7,3 +7,16 @@
         }
     }
 }
+
+@media (max-width: 359px) {
+    .more-products {
+        &--lg {
+            .more-products {
+                &__item {
+                    max-width: 180px;
+                    min-width: 180px;
+                }
+            }
+        }
+    }
+}

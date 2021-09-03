@@ -166,8 +166,11 @@ svg line {
         &:focus ~ label,
         &:not(:placeholder-shown) ~ label {
             color: $primary-color;
-            transform: translate(-13%, -50px) scale(0.8);
+            transform: translate(-13%, -40px) scale(0.8);
         }
+    }
+    &__textarea ~ &__label {
+        top: 30px;
     }
     &__input[disabled],
     &__textarea[disabled] {
