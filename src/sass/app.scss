@@ -3213,6 +3213,9 @@
         margin: 0 -12px 20px;
         color: $white-color;
         background: $finntrail-red-color;
+        .warranty__description {
+            font-weight: bold;
+        }
     }
     &__stage {
         display: none;
@@ -3292,7 +3295,7 @@
             padding-bottom: 11px;
         }
         .swiper-slide {
-            padding-top: 6px;
+            padding-top: 7px;
             img {
                 display: block;
                 width: 100%;
@@ -3326,6 +3329,9 @@
         &--main {
             .swiper-container {
                 padding-bottom: 0;
+            }
+            .swiper-slide {
+                padding-top: 0;
             }
         }
     }
