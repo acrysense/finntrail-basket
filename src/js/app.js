@@ -709,6 +709,17 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
+    // ADD INPUT GROUP
+    const addInputGroupBtn = document.querySelectorAll('.input-group__add')
+    
+    if (addInputGroupBtn) {
+        addInputGroupBtn.forEach((item) => {
+            item.addEventListener('click', (event) =>
+                event.preventDefault()
+            )
+        })
+    }
+
     // FILTERS
     const filtersClose = document.querySelector('.filters__close')
 

@@ -3062,7 +3062,9 @@
 // about
 .about {
     &__img {
+        overflow: hidden;
         margin: 0 -12px;
+        max-height: 240px;
     }
     &__slider {
         position: relative;
@@ -3122,6 +3124,7 @@
         z-index: 1;
         padding: 28px 20px;
         margin-top: -16px;
+        text-align: center;
         color: $white-color;
         background: $finntrail-red-color;
         p {

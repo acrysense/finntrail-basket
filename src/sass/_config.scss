@@ -99,6 +99,9 @@ svg line {
 
 .input-group {
     position: relative;
+    &--hidden {
+        display: none;
+    }
     &--error {
         .input-group {
             &__input,
@@ -203,12 +206,21 @@ svg line {
     &__error {
         display: none;
         overflow: hidden;
-        margin-top: 6px;
+        margin-top: 4px;
         height: 14px;
         font-size: 12px;
         color: $finntrail-red-color;
         &--active {
             display: block;
+        }
+    }
+    &__add {
+        display: block;
+        margin-top: 8px;
+        font-size: 12px;
+        color: $finntrail-red-color;
+        &:hover {
+            color: $finntrail-red-color;
         }
     }
 }
@@ -732,13 +744,13 @@ svg line {
     &__icon {
         display: block;
         margin: 0 auto;
-        min-width: 56px;
-        min-height: 50px;
-        max-width: 56px;
-        max-height: 50px;
+        min-width: 70px;
+        min-height: 70px;
+        max-width: 70px;
+        max-height: 70px;
         background-image: url(../img/dist/sprite.svg#icon-upload);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100%;
         background-position: center center;
         &--photo {
             background-image: url(../img/dist/sprite.svg#icon-upload-photo);
@@ -749,7 +761,7 @@ svg line {
     }
     &__btn {
         display: block;
-        margin-top: 16px;
+        margin-top: 12px;
         font-size: 12px;
         font-weight: normal;
         text-align: center;
