@@ -714,9 +714,15 @@ document.addEventListener('DOMContentLoaded', function () {
     
     if (addInputGroupBtn) {
         addInputGroupBtn.forEach((item) => {
-            item.addEventListener('click', (event) =>
+            item.addEventListener('click', (event) => {
                 event.preventDefault()
-            )
+
+                item.parentNode.querySelectorAll('.input-group--hidden')[0].classList.remove('input-group--hidden')
+
+                if (item.parentNode.querySelectorAll('.input-group--hidden').length === 0) {
+                    item.classList.add('input-group__add--hidden')
+                }
+            })
         })
     }
 
