@@ -17,153 +17,95 @@
     <!-- End of top promo -->
     <!-- Header -->
     <header class="header" id="header">
-        <div class="container">
-            <div class="header__wrapper">
-                <button class="hamburger" id="hamburger-toggle" aria-label="Меню">
-                    <span class="hamburger__inner"></span>
-                    <span class="hamburger__inner"></span>
-                    <span class="hamburger__inner"></span>
-                </button>
-                <a href="index.html" class="logotype">
-                    <img src="img/dist/logotype-finntrail.svg" alt="">
-                </a>
-                <button class="basket-btn" aria-label="Корзина">
-                    <span class="basket-btn__count">4</span>
-                </button>
-            </div>
-            <div class="header__search header-search">
-                <div class="header-search__control">
-                    <input type="text" class="header-search__input" placeholder="Поиск по товарам">
-                    <span class="header-search__icon" aria-label="Поиск">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.8045 14.8619L11.2545 10.312C12.1359 9.22334 12.6665 7.84001 12.6665 6.33337C12.6665 2.8414 9.8252 9.15527e-05 6.33324 9.15527e-05C2.84128 9.15527e-05 0 2.84137 0 6.33334C0 9.8253 2.84131 12.6666 6.33327 12.6666C7.83991 12.6666 9.22324 12.136 10.3119 11.2546L14.8618 15.8046C14.9918 15.9346 15.1625 15.9999 15.3332 15.9999C15.5039 15.9999 15.6745 15.9346 15.8045 15.8046C16.0652 15.5439 16.0652 15.1226 15.8045 14.8619ZM6.33327 11.3333C3.57596 11.3333 1.33333 9.09065 1.33333 6.33334C1.33333 3.57602 3.57596 1.33339 6.33327 1.33339C9.09059 1.33339 11.3332 3.57602 11.3332 6.33334C11.3332 9.09065 9.09056 11.3333 6.33327 11.3333Z" fill="white"/>
-                        </svg>
-                    </span>
-                </div>
-                <div class="header-search__dropdown">
-                    <div class="header-search__popular">
-                        <span class="header-search__heading">Популярные запросы</span>
-                        <ul class="header-search__list">
-                            <li class="header-search__item">
-                                <a href="#" class="header-search__link">Куртки</a>
-                            </li>
-                            <li class="header-search__item">
-                                <a href="#" class="header-search__link">Вейдерсы мужские</a>
-                            </li>
-                            <li class="header-search__item">
-                                <a href="#" class="header-search__link">Снегоходная экипировка</a>
-                            </li>
-                            <li class="header-search__item">
-                                <a href="#" class="header-search__link">Сапоги</a>
-                            </li>
-                        </ul>
+        <div class="header__wrap">
+            <div class="container">
+                <div class="header__wrapper">
+                    <button class="hamburger hamburger--comparison" id="hamburger-toggle" aria-label="Меню">
+                        <span class="hamburger__inner"></span>
+                        <span class="hamburger__inner"></span>
+                        <span class="hamburger__inner"></span>
+                    </button>
+                    <a href="index.html" class="logotype header__logotype">
+                        <img src="img/dist/logotype-finntrail.svg" alt="">
+                    </a>
+                    <div class="header__controls">
+                        <button class="search-btn header__btn" aria-label="Поиск"></button>
+                        <button class="basket-btn header__btn" aria-label="Корзина">
+                            <span class="basket-btn__count">4</span>
+                        </button>
                     </div>
-                    <div class="header-search__options">
-                        <ul class="header-search__list">
-                            <li class="header-search__item">
-                                <a href="#" class="header-search__link">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15.8045 14.8619L11.2545 10.312C12.1359 9.22334 12.6665 7.84001 12.6665 6.33337C12.6665 2.8414 9.8252 9.15527e-05 6.33324 9.15527e-05C2.84128 9.15527e-05 0 2.84137 0 6.33334C0 9.8253 2.84131 12.6666 6.33327 12.6666C7.83991 12.6666 9.22324 12.136 10.3119 11.2546L14.8618 15.8046C14.9918 15.9346 15.1625 15.9999 15.3332 15.9999C15.5039 15.9999 15.6745 15.9346 15.8045 15.8046C16.0652 15.5439 16.0652 15.1226 15.8045 14.8619ZM6.33327 11.3333C3.57596 11.3333 1.33333 9.09065 1.33333 6.33334C1.33333 3.57602 3.57596 1.33339 6.33327 1.33339C9.09059 1.33339 11.3332 3.57602 11.3332 6.33334C11.3332 9.09065 9.09056 11.3333 6.33327 11.3333Z" fill="#000000"/>
-                                    </svg>
-                                    <span><b>Бо</b>тинки</span>
-                                </a>
-                            </li>
-                            <li class="header-search__item">
-                                <a href="#" class="header-search__link">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15.8045 14.8619L11.2545 10.312C12.1359 9.22334 12.6665 7.84001 12.6665 6.33337C12.6665 2.8414 9.8252 9.15527e-05 6.33324 9.15527e-05C2.84128 9.15527e-05 0 2.84137 0 6.33334C0 9.8253 2.84131 12.6666 6.33327 12.6666C7.83991 12.6666 9.22324 12.136 10.3119 11.2546L14.8618 15.8046C14.9918 15.9346 15.1625 15.9999 15.3332 15.9999C15.5039 15.9999 15.6745 15.9346 15.8045 15.8046C16.0652 15.5439 16.0652 15.1226 15.8045 14.8619ZM6.33327 11.3333C3.57596 11.3333 1.33333 9.09065 1.33333 6.33334C1.33333 3.57602 3.57596 1.33339 6.33327 1.33339C9.09059 1.33339 11.3332 3.57602 11.3332 6.33334C11.3332 9.09065 9.09056 11.3333 6.33327 11.3333Z" fill="#000000"/>
-                                    </svg>
-                                    <span><b>Бо</b>тинки распродажа</span>
-                                </a>
-                            </li>
-                            <li class="header-search__item">
-                                <a href="#" class="header-search__link">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15.8045 14.8619L11.2545 10.312C12.1359 9.22334 12.6665 7.84001 12.6665 6.33337C12.6665 2.8414 9.8252 9.15527e-05 6.33324 9.15527e-05C2.84128 9.15527e-05 0 2.84137 0 6.33334C0 9.8253 2.84131 12.6666 6.33327 12.6666C7.83991 12.6666 9.22324 12.136 10.3119 11.2546L14.8618 15.8046C14.9918 15.9346 15.1625 15.9999 15.3332 15.9999C15.5039 15.9999 15.6745 15.9346 15.8045 15.8046C16.0652 15.5439 16.0652 15.1226 15.8045 14.8619ZM6.33327 11.3333C3.57596 11.3333 1.33333 9.09065 1.33333 6.33334C1.33333 3.57602 3.57596 1.33339 6.33327 1.33339C9.09059 1.33339 11.3332 3.57602 11.3332 6.33334C11.3332 9.09065 9.09056 11.3333 6.33327 11.3333Z" fill="#000000"/>
-                                    </svg>
-                                    <span><b>Бо</b>тинки с резиновой подошвой</span>
-                                </a>
-                            </li>
-                            <li class="header-search__item">
-                                <a href="#" class="header-search__link">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15.8045 14.8619L11.2545 10.312C12.1359 9.22334 12.6665 7.84001 12.6665 6.33337C12.6665 2.8414 9.8252 9.15527e-05 6.33324 9.15527e-05C2.84128 9.15527e-05 0 2.84137 0 6.33334C0 9.8253 2.84131 12.6666 6.33327 12.6666C7.83991 12.6666 9.22324 12.136 10.3119 11.2546L14.8618 15.8046C14.9918 15.9346 15.1625 15.9999 15.3332 15.9999C15.5039 15.9999 15.6745 15.9346 15.8045 15.8046C16.0652 15.5439 16.0652 15.1226 15.8045 14.8619ZM6.33327 11.3333C3.57596 11.3333 1.33333 9.09065 1.33333 6.33334C1.33333 3.57602 3.57596 1.33339 6.33327 1.33339C9.09059 1.33339 11.3332 3.57602 11.3332 6.33334C11.3332 9.09065 9.09056 11.3333 6.33327 11.3333Z" fill="#000000"/>
-                                    </svg>
-                                    <span><b>Бо</b>тинки непромокаемые</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="header-search__list">
-                            <li class="header-search__item">
-                                <a href="#" class="header-search__link">
-                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.68965 1.53448H1.03448L1.03448 6.18965H5.68965V1.53448ZM1.03448 0.5C0.463154 0.5 0 0.963154 0 1.53448V6.18965C0 6.76098 0.463154 7.22414 1.03448 7.22414H5.68965C6.26098 7.22414 6.72414 6.76098 6.72414 6.18965V1.53448C6.72414 0.963154 6.26098 0.5 5.68965 0.5H1.03448Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.68965 9.81033H1.03448L1.03448 14.4655H5.68965V9.81033ZM1.03448 8.77585C0.463154 8.77585 0 9.239 0 9.81033V14.4655C0 15.0368 0.463154 15.5 1.03448 15.5H5.68965C6.26098 15.5 6.72414 15.0368 6.72414 14.4655V9.81033C6.72414 9.239 6.26098 8.77585 5.68965 8.77585H1.03448Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9655 1.53448H9.31036L9.31036 6.18965H13.9655V1.53448ZM9.31036 0.5C8.73903 0.5 8.27588 0.963154 8.27588 1.53448V6.18965C8.27588 6.76098 8.73903 7.22414 9.31036 7.22414H13.9655C14.5369 7.22414 15 6.76098 15 6.18965V1.53448C15 0.963154 14.5369 0.5 13.9655 0.5H9.31036Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9655 9.81033H9.31036L9.31036 14.4655H13.9655V9.81033ZM9.31036 8.77585C8.73903 8.77585 8.27588 9.239 8.27588 9.81033V14.4655C8.27588 15.0368 8.73903 15.5 9.31036 15.5H13.9655C14.5369 15.5 15 15.0368 15 14.4655V9.81033C15 9.239 14.5369 8.77585 13.9655 8.77585H9.31036Z" fill="black"/>
-                                    </svg>
-                                    <span>Ботинки</span>
-                                </a>
-                            </li>
-                            <li class="header-search__item">
-                                <a href="#" class="header-search__link">
-                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.68965 1.53448H1.03448L1.03448 6.18965H5.68965V1.53448ZM1.03448 0.5C0.463154 0.5 0 0.963154 0 1.53448V6.18965C0 6.76098 0.463154 7.22414 1.03448 7.22414H5.68965C6.26098 7.22414 6.72414 6.76098 6.72414 6.18965V1.53448C6.72414 0.963154 6.26098 0.5 5.68965 0.5H1.03448Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.68965 9.81033H1.03448L1.03448 14.4655H5.68965V9.81033ZM1.03448 8.77585C0.463154 8.77585 0 9.239 0 9.81033V14.4655C0 15.0368 0.463154 15.5 1.03448 15.5H5.68965C6.26098 15.5 6.72414 15.0368 6.72414 14.4655V9.81033C6.72414 9.239 6.26098 8.77585 5.68965 8.77585H1.03448Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9655 1.53448H9.31036L9.31036 6.18965H13.9655V1.53448ZM9.31036 0.5C8.73903 0.5 8.27588 0.963154 8.27588 1.53448V6.18965C8.27588 6.76098 8.73903 7.22414 9.31036 7.22414H13.9655C14.5369 7.22414 15 6.76098 15 6.18965V1.53448C15 0.963154 14.5369 0.5 13.9655 0.5H9.31036Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9655 9.81033H9.31036L9.31036 14.4655H13.9655V9.81033ZM9.31036 8.77585C8.73903 8.77585 8.27588 9.239 8.27588 9.81033V14.4655C8.27588 15.0368 8.73903 15.5 9.31036 15.5H13.9655C14.5369 15.5 15 15.0368 15 14.4655V9.81033C15 9.239 14.5369 8.77585 13.9655 8.77585H9.31036Z" fill="black"/>
-                                    </svg>
-                                    <span>Ботинки на резине</span>
-                                </a>
-                            </li>
-                            <li class="header-search__item">
-                                <a href="#" class="header-search__link">
-                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.68965 1.53448H1.03448L1.03448 6.18965H5.68965V1.53448ZM1.03448 0.5C0.463154 0.5 0 0.963154 0 1.53448V6.18965C0 6.76098 0.463154 7.22414 1.03448 7.22414H5.68965C6.26098 7.22414 6.72414 6.76098 6.72414 6.18965V1.53448C6.72414 0.963154 6.26098 0.5 5.68965 0.5H1.03448Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.68965 9.81033H1.03448L1.03448 14.4655H5.68965V9.81033ZM1.03448 8.77585C0.463154 8.77585 0 9.239 0 9.81033V14.4655C0 15.0368 0.463154 15.5 1.03448 15.5H5.68965C6.26098 15.5 6.72414 15.0368 6.72414 14.4655V9.81033C6.72414 9.239 6.26098 8.77585 5.68965 8.77585H1.03448Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9655 1.53448H9.31036L9.31036 6.18965H13.9655V1.53448ZM9.31036 0.5C8.73903 0.5 8.27588 0.963154 8.27588 1.53448V6.18965C8.27588 6.76098 8.73903 7.22414 9.31036 7.22414H13.9655C14.5369 7.22414 15 6.76098 15 6.18965V1.53448C15 0.963154 14.5369 0.5 13.9655 0.5H9.31036Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9655 9.81033H9.31036L9.31036 14.4655H13.9655V9.81033ZM9.31036 8.77585C8.73903 8.77585 8.27588 9.239 8.27588 9.81033V14.4655C8.27588 15.0368 8.73903 15.5 9.31036 15.5H13.9655C14.5369 15.5 15 15.0368 15 14.4655V9.81033C15 9.239 14.5369 8.77585 13.9655 8.77585H9.31036Z" fill="black"/>
-                                    </svg>
-                                    <span>Ботинки на войлоке</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="header-search__list">
-                            <li class="header-search__item">
-                                <a href="#" class="header-search__link">
-                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.68965 1.53448H1.03448L1.03448 6.18965H5.68965V1.53448ZM1.03448 0.5C0.463154 0.5 0 0.963154 0 1.53448V6.18965C0 6.76098 0.463154 7.22414 1.03448 7.22414H5.68965C6.26098 7.22414 6.72414 6.76098 6.72414 6.18965V1.53448C6.72414 0.963154 6.26098 0.5 5.68965 0.5H1.03448Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.68965 9.81033H1.03448L1.03448 14.4655H5.68965V9.81033ZM1.03448 8.77585C0.463154 8.77585 0 9.239 0 9.81033V14.4655C0 15.0368 0.463154 15.5 1.03448 15.5H5.68965C6.26098 15.5 6.72414 15.0368 6.72414 14.4655V9.81033C6.72414 9.239 6.26098 8.77585 5.68965 8.77585H1.03448Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9655 1.53448H9.31036L9.31036 6.18965H13.9655V1.53448ZM9.31036 0.5C8.73903 0.5 8.27588 0.963154 8.27588 1.53448V6.18965C8.27588 6.76098 8.73903 7.22414 9.31036 7.22414H13.9655C14.5369 7.22414 15 6.76098 15 6.18965V1.53448C15 0.963154 14.5369 0.5 13.9655 0.5H9.31036Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9655 9.81033H9.31036L9.31036 14.4655H13.9655V9.81033ZM9.31036 8.77585C8.73903 8.77585 8.27588 9.239 8.27588 9.81033V14.4655C8.27588 15.0368 8.73903 15.5 9.31036 15.5H13.9655C14.5369 15.5 15 15.0368 15 14.4655V9.81033C15 9.239 14.5369 8.77585 13.9655 8.77585H9.31036Z" fill="black"/>
-                                    </svg>
-                                    <span>Ботинки</span>
-                                </a>
-                            </li>
-                            <li class="header-search__item">
-                                <a href="#" class="header-search__link">
-                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.68965 1.53448H1.03448L1.03448 6.18965H5.68965V1.53448ZM1.03448 0.5C0.463154 0.5 0 0.963154 0 1.53448V6.18965C0 6.76098 0.463154 7.22414 1.03448 7.22414H5.68965C6.26098 7.22414 6.72414 6.76098 6.72414 6.18965V1.53448C6.72414 0.963154 6.26098 0.5 5.68965 0.5H1.03448Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.68965 9.81033H1.03448L1.03448 14.4655H5.68965V9.81033ZM1.03448 8.77585C0.463154 8.77585 0 9.239 0 9.81033V14.4655C0 15.0368 0.463154 15.5 1.03448 15.5H5.68965C6.26098 15.5 6.72414 15.0368 6.72414 14.4655V9.81033C6.72414 9.239 6.26098 8.77585 5.68965 8.77585H1.03448Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9655 1.53448H9.31036L9.31036 6.18965H13.9655V1.53448ZM9.31036 0.5C8.73903 0.5 8.27588 0.963154 8.27588 1.53448V6.18965C8.27588 6.76098 8.73903 7.22414 9.31036 7.22414H13.9655C14.5369 7.22414 15 6.76098 15 6.18965V1.53448C15 0.963154 14.5369 0.5 13.9655 0.5H9.31036Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9655 9.81033H9.31036L9.31036 14.4655H13.9655V9.81033ZM9.31036 8.77585C8.73903 8.77585 8.27588 9.239 8.27588 9.81033V14.4655C8.27588 15.0368 8.73903 15.5 9.31036 15.5H13.9655C14.5369 15.5 15 15.0368 15 14.4655V9.81033C15 9.239 14.5369 8.77585 13.9655 8.77585H9.31036Z" fill="black"/>
-                                    </svg>
-                                    <span>Ботинки на резине</span>
-                                </a>
-                            </li>
-                            <li class="header-search__item">
-                                <a href="#" class="header-search__link">
-                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.68965 1.53448H1.03448L1.03448 6.18965H5.68965V1.53448ZM1.03448 0.5C0.463154 0.5 0 0.963154 0 1.53448V6.18965C0 6.76098 0.463154 7.22414 1.03448 7.22414H5.68965C6.26098 7.22414 6.72414 6.76098 6.72414 6.18965V1.53448C6.72414 0.963154 6.26098 0.5 5.68965 0.5H1.03448Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.68965 9.81033H1.03448L1.03448 14.4655H5.68965V9.81033ZM1.03448 8.77585C0.463154 8.77585 0 9.239 0 9.81033V14.4655C0 15.0368 0.463154 15.5 1.03448 15.5H5.68965C6.26098 15.5 6.72414 15.0368 6.72414 14.4655V9.81033C6.72414 9.239 6.26098 8.77585 5.68965 8.77585H1.03448Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9655 1.53448H9.31036L9.31036 6.18965H13.9655V1.53448ZM9.31036 0.5C8.73903 0.5 8.27588 0.963154 8.27588 1.53448V6.18965C8.27588 6.76098 8.73903 7.22414 9.31036 7.22414H13.9655C14.5369 7.22414 15 6.76098 15 6.18965V1.53448C15 0.963154 14.5369 0.5 13.9655 0.5H9.31036Z" fill="black"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9655 9.81033H9.31036L9.31036 14.4655H13.9655V9.81033ZM9.31036 8.77585C8.73903 8.77585 8.27588 9.239 8.27588 9.81033V14.4655C8.27588 15.0368 8.73903 15.5 9.31036 15.5H13.9655C14.5369 15.5 15 15.0368 15 14.4655V9.81033C15 9.239 14.5369 8.77585 13.9655 8.77585H9.31036Z" fill="black"/>
-                                    </svg>
-                                    <span>Ботинки на войлоке</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <a href="catalog.html" class="header-search__btn btn btn--sm">Смотреть все</a>
+                </div>
+                <div class="header__search header-search">
+                    <div class="header-search__control">
+                        <input type="text" class="header-search__input" placeholder="Поиск по товарам">
+                        <span class="header-search__icon" aria-label="Поиск">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.8045 14.8619L11.2545 10.312C12.1359 9.22334 12.6665 7.84001 12.6665 6.33337C12.6665 2.8414 9.8252 9.15527e-05 6.33324 9.15527e-05C2.84128 9.15527e-05 0 2.84137 0 6.33334C0 9.8253 2.84131 12.6666 6.33327 12.6666C7.83991 12.6666 9.22324 12.136 10.3119 11.2546L14.8618 15.8046C14.9918 15.9346 15.1625 15.9999 15.3332 15.9999C15.5039 15.9999 15.6745 15.9346 15.8045 15.8046C16.0652 15.5439 16.0652 15.1226 15.8045 14.8619ZM6.33327 11.3333C3.57596 11.3333 1.33333 9.09065 1.33333 6.33334C1.33333 3.57602 3.57596 1.33339 6.33327 1.33339C9.09059 1.33339 11.3332 3.57602 11.3332 6.33334C11.3332 9.09065 9.09056 11.3333 6.33327 11.3333Z" fill="white"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="header-search__dropdown">
+                        <div class="header-search__popular">
+                            <span class="header-search__heading">Популярные запросы</span>
+                            <ul class="header-search__list">
+                                <li class="header-search__item">
+                                    <a href="#" class="header-search__link">Куртки</a>
+                                </li>
+                                <li class="header-search__item">
+                                    <a href="#" class="header-search__link">Вейдерсы мужские</a>
+                                </li>
+                                <li class="header-search__item">
+                                    <a href="#" class="header-search__link">Снегоходная экипировка</a>
+                                </li>
+                                <li class="header-search__item">
+                                    <a href="#" class="header-search__link">Сапоги</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header-search__options">
+                            <ul class="header-search__list">
+                                <li class="header-search__item">
+                                    <a href="#" class="header-search__link">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.8045 14.8619L11.2545 10.312C12.1359 9.22334 12.6665 7.84001 12.6665 6.33337C12.6665 2.8414 9.8252 9.15527e-05 6.33324 9.15527e-05C2.84128 9.15527e-05 0 2.84137 0 6.33334C0 9.8253 2.84131 12.6666 6.33327 12.6666C7.83991 12.6666 9.22324 12.136 10.3119 11.2546L14.8618 15.8046C14.9918 15.9346 15.1625 15.9999 15.3332 15.9999C15.5039 15.9999 15.6745 15.9346 15.8045 15.8046C16.0652 15.5439 16.0652 15.1226 15.8045 14.8619ZM6.33327 11.3333C3.57596 11.3333 1.33333 9.09065 1.33333 6.33334C1.33333 3.57602 3.57596 1.33339 6.33327 1.33339C9.09059 1.33339 11.3332 3.57602 11.3332 6.33334C11.3332 9.09065 9.09056 11.3333 6.33327 11.3333Z" fill="#000000"/>
+                                        </svg>
+                                        <span><b>Бо</b>тинки</span>
+                                    </a>
+                                </li>
+                                <li class="header-search__item">
+                                    <a href="#" class="header-search__link">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.8045 14.8619L11.2545 10.312C12.1359 9.22334 12.6665 7.84001 12.6665 6.33337C12.6665 2.8414 9.8252 9.15527e-05 6.33324 9.15527e-05C2.84128 9.15527e-05 0 2.84137 0 6.33334C0 9.8253 2.84131 12.6666 6.33327 12.6666C7.83991 12.6666 9.22324 12.136 10.3119 11.2546L14.8618 15.8046C14.9918 15.9346 15.1625 15.9999 15.3332 15.9999C15.5039 15.9999 15.6745 15.9346 15.8045 15.8046C16.0652 15.5439 16.0652 15.1226 15.8045 14.8619ZM6.33327 11.3333C3.57596 11.3333 1.33333 9.09065 1.33333 6.33334C1.33333 3.57602 3.57596 1.33339 6.33327 1.33339C9.09059 1.33339 11.3332 3.57602 11.3332 6.33334C11.3332 9.09065 9.09056 11.3333 6.33327 11.3333Z" fill="#000000"/>
+                                        </svg>
+                                        <span><b>Бо</b>тинки распродажа</span>
+                                    </a>
+                                </li>
+                                <li class="header-search__item">
+                                    <a href="#" class="header-search__link">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.8045 14.8619L11.2545 10.312C12.1359 9.22334 12.6665 7.84001 12.6665 6.33337C12.6665 2.8414 9.8252 9.15527e-05 6.33324 9.15527e-05C2.84128 9.15527e-05 0 2.84137 0 6.33334C0 9.8253 2.84131 12.6666 6.33327 12.6666C7.83991 12.6666 9.22324 12.136 10.3119 11.2546L14.8618 15.8046C14.9918 15.9346 15.1625 15.9999 15.3332 15.9999C15.5039 15.9999 15.6745 15.9346 15.8045 15.8046C16.0652 15.5439 16.0652 15.1226 15.8045 14.8619ZM6.33327 11.3333C3.57596 11.3333 1.33333 9.09065 1.33333 6.33334C1.33333 3.57602 3.57596 1.33339 6.33327 1.33339C9.09059 1.33339 11.3332 3.57602 11.3332 6.33334C11.3332 9.09065 9.09056 11.3333 6.33327 11.3333Z" fill="#000000"/>
+                                        </svg>
+                                        <span><b>Бо</b>тинки с резиновой подошвой</span>
+                                    </a>
+                                </li>
+                                <li class="header-search__item">
+                                    <a href="#" class="header-search__link">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.8045 14.8619L11.2545 10.312C12.1359 9.22334 12.6665 7.84001 12.6665 6.33337C12.6665 2.8414 9.8252 9.15527e-05 6.33324 9.15527e-05C2.84128 9.15527e-05 0 2.84137 0 6.33334C0 9.8253 2.84131 12.6666 6.33327 12.6666C7.83991 12.6666 9.22324 12.136 10.3119 11.2546L14.8618 15.8046C14.9918 15.9346 15.1625 15.9999 15.3332 15.9999C15.5039 15.9999 15.6745 15.9346 15.8045 15.8046C16.0652 15.5439 16.0652 15.1226 15.8045 14.8619ZM6.33327 11.3333C3.57596 11.3333 1.33333 9.09065 1.33333 6.33334C1.33333 3.57602 3.57596 1.33339 6.33327 1.33339C9.09059 1.33339 11.3332 3.57602 11.3332 6.33334C11.3332 9.09065 9.09056 11.3333 6.33327 11.3333Z" fill="#000000"/>
+                                        </svg>
+                                        <span><b>Бо</b>тинки непромокаемые</span>
+                                    </a>
+                                </li>
+                                <li class="header-search__item">
+                                    <a href="#" class="header-search__link">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.8045 14.8619L11.2545 10.312C12.1359 9.22334 12.6665 7.84001 12.6665 6.33337C12.6665 2.8414 9.8252 9.15527e-05 6.33324 9.15527e-05C2.84128 9.15527e-05 0 2.84137 0 6.33334C0 9.8253 2.84131 12.6666 6.33327 12.6666C7.83991 12.6666 9.22324 12.136 10.3119 11.2546L14.8618 15.8046C14.9918 15.9346 15.1625 15.9999 15.3332 15.9999C15.5039 15.9999 15.6745 15.9346 15.8045 15.8046C16.0652 15.5439 16.0652 15.1226 15.8045 14.8619ZM6.33327 11.3333C3.57596 11.3333 1.33333 9.09065 1.33333 6.33334C1.33333 3.57602 3.57596 1.33339 6.33327 1.33339C9.09059 1.33339 11.3332 3.57602 11.3332 6.33334C11.3332 9.09065 9.09056 11.3333 6.33327 11.3333Z" fill="#000000"/>
+                                        </svg>
+                                        <span><b>Бо</b>тинки непромокаемые</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -171,7 +113,7 @@
     </header>
     <!-- End of header -->
     <!-- Mobile menu -->
-    <div class="mobile-menu">
+    <div class="mobile-menu mobile-menu--promo">
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item nav__item--main">
@@ -328,6 +270,178 @@
     </div>
     <div class="menu-overlay"></div>
     <!-- End of mobile menu -->
+    <!-- Back button -->
+    <div class="back-button">
+        <div class="container">
+            <div class="back-button__wrapper">
+                <a href="index.html" class="back-button__arrow" aria-label="Назад"></a>
+                <h1>Блог</h1>
+            </div>
+        </div>
+    </div>
+    <!-- End of back button -->
+    <!-- Blog -->
+    <div class="blog gallery-tabs" id="blog">
+        <div class="container">
+            <div class="section-heading">
+                <h2 class="section-heading__title">Блог FINNTRAIL</h2>
+            </div>
+            <ul class="gallery-tabs__list">
+                <li class="gallery-tabs__item gallery-tabs__item--active">
+                    <button class="gallery-tabs__tab">Все</button>
+                </li>
+                <li class="gallery-tabs__item">
+                    <button class="gallery-tabs__tab">Рыбалка</button>
+                </li>
+                <li class="gallery-tabs__item">
+                    <button class="gallery-tabs__tab">Бездорожье</button>
+                </li>
+                <li class="gallery-tabs__item">
+                    <button class="gallery-tabs__tab">Снегоход</button>
+                </li>
+                <li class="gallery-tabs__item">
+                    <button class="gallery-tabs__tab">Охота</button>
+                </li>
+            </ul>
+            <div class="gallery-tabs__content gallery-tabs__content--active">
+                <div class="blog__wrapper">
+                    <div class="blog__item">
+                        <div class="blog__img">
+                            <span class="blog__icon" style="background-image: url(img/dist/sprite.svg#icon-blog-photo);"></span>
+                            <img src="img/dist/blog-01.png" alt="СНЕГОХОД">
+                        </div>
+                        <div class="blog__body">
+                            <span class="blog__status blog__status--snow">СНЕГОХОД</span>
+                            <h3 class="blog__title">Виды снегоходов: как правильно выбрать снегоход</h3>
+                            <a href="#" class="blog__btn btn btn--sm">Читать статью</a>
+                        </div>
+                    </div>
+                    <div class="blog__item">
+                        <div class="blog__img">
+                            <span class="blog__icon" style="background-image: url(img/dist/sprite.svg#icon-blog-video);"></span>
+                            <img src="img/dist/blog-02.png" alt="РЫБАЛКА">
+                        </div>
+                        <div class="blog__body">
+                            <span class="blog__status blog__status--fishing">РЫБАЛКА</span>
+                            <h3 class="blog__title">Обзор костюма Storm от Александра Худякова. Герметичный костюм для рыбалки</h3>
+                            <a href="#" class="blog__btn btn btn--sm">Читать статью</a>
+                        </div>
+                    </div>
+                    <div class="blog__item">
+                        <div class="blog__img">
+                            <span class="blog__icon" style="background-image: url(img/dist/sprite.svg#icon-blog-video);"></span>
+                            <img src="img/dist/blog-03.png" alt="Бездорожье">
+                        </div>
+                        <div class="blog__body">
+                            <span class="blog__status blog__status--offroad">Бездорожье</span>
+                            <h3 class="blog__title">Интервью: Андрей Мирончик</h3>
+                            <a href="#" class="blog__btn btn btn--sm">Читать статью</a>
+                        </div>
+                    </div>
+                    <div class="blog__item">
+                        <div class="blog__img">
+                            <span class="blog__icon" style="background-image: url(img/dist/sprite.svg#icon-blog-photo);"></span>
+                            <img src="img/dist/blog-04.png" alt="Бездорожье">
+                        </div>
+                        <div class="blog__body">
+                            <span class="blog__status blog__status--offroad">Бездорожье</span>
+                            <h3 class="blog__title">Виды снегоходов: как правильно выбрать снегоход</h3>
+                            <a href="#" class="blog__btn btn btn--sm">Читать статью</a>
+                        </div>
+                    </div>
+                    <div class="blog__item">
+                        <div class="blog__img">
+                            <span class="blog__icon" style="background-image: url(img/dist/sprite.svg#icon-blog-photo);"></span>
+                            <img src="img/dist/blog-01.png" alt="СНЕГОХОД">
+                        </div>
+                        <div class="blog__body">
+                            <span class="blog__status blog__status--snow">СНЕГОХОД</span>
+                            <h3 class="blog__title">Виды снегоходов: как правильно выбрать снегоход</h3>
+                            <a href="#" class="blog__btn btn btn--sm">Читать статью</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-tabs__content">
+                <div class="blog__item">
+                    <div class="blog__img">
+                        <span class="blog__icon" style="background-image: url(img/dist/sprite.svg#icon-blog-video);"></span>
+                        <img src="img/dist/blog-02.png" alt="РЫБАЛКА">
+                    </div>
+                    <div class="blog__body">
+                        <span class="blog__status blog__status--fishing">РЫБАЛКА</span>
+                        <h3 class="blog__title">Обзор костюма Storm от Александра Худякова. Герметичный костюм для рыбалки</h3>
+                        <a href="#" class="blog__btn btn btn--sm">Читать статью</a>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-tabs__content">
+                <div class="blog__item">
+                    <div class="blog__img">
+                        <span class="blog__icon" style="background-image: url(img/dist/sprite.svg#icon-blog-video);"></span>
+                        <img src="img/dist/blog-03.png" alt="Бездорожье">
+                    </div>
+                    <div class="blog__body">
+                        <span class="blog__status blog__status--offroad">Бездорожье</span>
+                        <h3 class="blog__title">Интервью: Андрей Мирончик</h3>
+                        <a href="#" class="blog__btn btn btn--sm">Читать статью</a>
+                    </div>
+                </div>
+                <div class="blog__item">
+                    <div class="blog__img">
+                        <span class="blog__icon" style="background-image: url(img/dist/sprite.svg#icon-blog-photo);"></span>
+                        <img src="img/dist/blog-04.png" alt="Бездорожье">
+                    </div>
+                    <div class="blog__body">
+                        <span class="blog__status blog__status--offroad">Бездорожье</span>
+                        <h3 class="blog__title">Виды снегоходов: как правильно выбрать снегоход</h3>
+                        <a href="#" class="blog__btn btn btn--sm">Читать статью</a>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-tabs__content">
+                <div class="blog__item">
+                    <div class="blog__img">
+                        <span class="blog__icon" style="background-image: url(img/dist/sprite.svg#icon-blog-photo);"></span>
+                        <img src="img/dist/blog-01.png" alt="СНЕГОХОД">
+                    </div>
+                    <div class="blog__body">
+                        <span class="blog__status blog__status--snow">СНЕГОХОД</span>
+                        <h3 class="blog__title">Виды снегоходов: как правильно выбрать снегоход</h3>
+                        <a href="#" class="blog__btn btn btn--sm">Читать статью</a>
+                    </div>
+                </div>
+                <div class="blog__item">
+                    <div class="blog__img">
+                        <span class="blog__icon" style="background-image: url(img/dist/sprite.svg#icon-blog-photo);"></span>
+                        <img src="img/dist/blog-01.png" alt="СНЕГОХОД">
+                    </div>
+                    <div class="blog__body">
+                        <span class="blog__status blog__status--snow">СНЕГОХОД</span>
+                        <h3 class="blog__title">Виды снегоходов: как правильно выбрать снегоход</h3>
+                        <a href="#" class="blog__btn btn btn--sm">Читать статью</a>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-tabs__content">
+                <div class="blog__item">
+                    <div class="blog__img">
+                        <span class="blog__icon" style="background-image: url(img/dist/sprite.svg#icon-blog-photo);"></span>
+                        <img src="img/dist/blog-03.png" alt="Охота">
+                    </div>
+                    <div class="blog__body">
+                        <span class="blog__status blog__status--hunting">Охота</span>
+                        <h3 class="blog__title">Интервью: Андрей Мирончик</h3>
+                        <a href="#" class="blog__btn btn btn--sm">Читать статью</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of blog -->
+    <!-- Back to top -->
+    <a href="#header" class="go-top">Наверх</a>
+    <!-- End of back to top -->
     <!-- Scripts -->
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>

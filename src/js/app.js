@@ -401,18 +401,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
-    // TOP PROMO
-    const topPromo = document.querySelector('.top-promo')
-    const topPromoClose = document.querySelector('.top-promo__close')
-
-    if (topPromo && topPromoClose) {
-        topPromoClose.addEventListener('click', (event) => {
-            event.preventDefault()
-
-            topPromo.classList.add('top-promo--hidden')
-        })
-    }
-
     // MOBILE MENU
     const hamburger = document.getElementById('hamburger-toggle')
     const mobileMenu = document.querySelector('.mobile-menu')
@@ -444,20 +432,52 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
+    // TOP PROMO
+    const topPromo = document.querySelector('.top-promo')
+    const topPromoClose = document.querySelector('.top-promo__close')
+
+    if (topPromo && topPromoClose) {
+        topPromoClose.addEventListener('click', (event) => {
+            event.preventDefault()
+
+            topPromo.classList.add('top-promo--hidden')
+            mobileMenu.classList.remove('mobile-menu--promo')
+        })
+    }
+
     // HEADER SEARCH
+    const header = document.querySelector('.header')
+    const headerSearchBtn = document.querySelector('.search-btn')
+    const headerSearch = document.querySelector('.header-search')
     const headerSearchInput = document.querySelector('.header-search__input')
     const headerSearchDropdown = document.querySelector('.header-search__dropdown')
     const headerSearchPopular = document.querySelector('.header-search__popular')
     const headerSearchOptions = document.querySelector('.header-search__options')
 
+    if (headerSearchBtn) {
+        headerSearchBtn.addEventListener('click', (event) => {
+            event.preventDefault()
+
+            header.classList.add('header--search')
+            headerSearchBtn.classList.add('search-btn--hidden')
+            headerSearch.classList.add('header-search--active')
+        })
+    }
+
     if (headerSearchInput && headerSearchDropdown) {
         headerSearchInput.addEventListener('focus', () => {
-            headerSearchDropdown.classList.add('header-search__dropdown--active')
+            if (headerSearchInput.value.length > 0) {
+                headerSearchPopular.classList.add('header-search__popular--hidden')
+                headerSearchOptions.classList.add('header-search__options--active')
+            } else {
+                headerSearchPopular.classList.remove('header-search__popular--hidden')
+                headerSearchOptions.classList.remove('header-search__options--active')
+            }
             mobileMenuOverlay.classList.add('menu-overlay--active')
+            headerSearchDropdown.classList.add('header-search__dropdown--active')
         })
         headerSearchInput.addEventListener('blur', () => {
             if (headerSearchInput.value.length > 0) {
-                headerSearchInput.value = ''
                 headerSearchPopular.classList.remove('header-search__popular--hidden')
                 headerSearchOptions.classList.remove('header-search__options--active')
             }
@@ -474,6 +494,44 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
     }
+
+    // SCROLL
+    let prevScrollpos = window.pageYOffset;
+
+    window.addEventListener('scroll', () => {
+        if (header) {
+            const headerHeight = header.getBoundingClientRect().height;
+            const topPromoHeight = topPromo ? topPromo.getBoundingClientRect().height : 0
+
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos || prevScrollpos <= 0) { // If up
+                if (window.pageYOffset <= topPromoHeight) {
+                    if (topPromo && !topPromo.classList.contains('top-promo--hidden')) {
+                        mobileMenu.classList.add('mobile-menu--promo')
+                    }
+                    header.querySelector('.header__wrap').style.transform = 'translate3d(0px, 0px, 0px)'
+                    header.querySelector('.header__wrap').style.transition = 'none'
+                    header.querySelector('.header__wrap').style.position = 'relative'
+                } else {
+                    header.querySelector('.header__wrap').style.transform = 'translate3d(0px, 0px, 0px)'
+                    header.querySelector('.header__wrap').style.transition = 'transform 0.25s ease-in-out'
+                    header.querySelector('.header__wrap').style.position = 'fixed'
+                }
+            } else { // If down
+                if (window.pageYOffset >= headerHeight) {
+                    if (headerSearch.classList.contains('header-search--active')) {
+                        headerSearch.classList.remove('header-search--active')
+                        setTimeout(() => headerSearchBtn.classList.remove('search-btn--hidden'), 200)
+                    }
+                    mobileMenu.classList.remove('mobile-menu--promo')
+                    header.querySelector('.header__wrap').style.transform = 'translate3d(0px, -100%, 0px)'
+                    header.querySelector('.header__wrap').style.transition = 'transform 0.25s ease-in-out'
+                    setTimeout(() => header.querySelector('.header__wrap').style.position = 'fixed', 200)
+                }
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    })
 
     // TOOLTIPs
     const tooltip = document.querySelectorAll('.tooltip')
