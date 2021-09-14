@@ -401,6 +401,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
+    // TOP PROMO
+    const topPromo = document.querySelector('.top-promo')
+    const topPromoClose = document.querySelector('.top-promo__close')
+
+    if (topPromo && topPromoClose) {
+        topPromoClose.addEventListener('click', (event) => {
+            event.preventDefault()
+
+            topPromo.classList.add('top-promo--hidden')
+        })
+    }
+
     // MOBILE MENU
     const hamburger = document.getElementById('hamburger-toggle')
     const mobileMenu = document.querySelector('.mobile-menu')
@@ -429,6 +441,37 @@ document.addEventListener('DOMContentLoaded', function () {
             hamburger.classList.remove('hamburger--active')
             mobileMenu.classList.remove('mobile-menu--active')
             mobileMenuOverlay.classList.remove('menu-overlay--active')
+        })
+    }
+
+    // HEADER SEARCH
+    const headerSearchInput = document.querySelector('.header-search__input')
+    const headerSearchDropdown = document.querySelector('.header-search__dropdown')
+    const headerSearchPopular = document.querySelector('.header-search__popular')
+    const headerSearchOptions = document.querySelector('.header-search__options')
+
+    if (headerSearchInput && headerSearchDropdown) {
+        headerSearchInput.addEventListener('focus', () => {
+            headerSearchDropdown.classList.add('header-search__dropdown--active')
+            mobileMenuOverlay.classList.add('menu-overlay--active')
+        })
+        headerSearchInput.addEventListener('blur', () => {
+            if (headerSearchInput.value.length > 0) {
+                headerSearchInput.value = ''
+                headerSearchPopular.classList.remove('header-search__popular--hidden')
+                headerSearchOptions.classList.remove('header-search__options--active')
+            }
+            headerSearchDropdown.classList.remove('header-search__dropdown--active')
+            mobileMenuOverlay.classList.remove('menu-overlay--active')
+        })
+        headerSearchInput.addEventListener('input', () => {
+            if (headerSearchInput.value.length > 0) {
+                headerSearchPopular.classList.add('header-search__popular--hidden')
+                headerSearchOptions.classList.add('header-search__options--active')
+            } else {
+                headerSearchPopular.classList.remove('header-search__popular--hidden')
+                headerSearchOptions.classList.remove('header-search__options--active')
+            }
         })
     }
 
@@ -821,6 +864,28 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'bullets',
         },
         
+    })
+
+    const comparisonSlider = document.querySelectorAll('.comparison__slider .swiper-container')
+
+    comparisonSlider.forEach(slider => {
+        const mySwiperReviews = new Swiper(slider, {
+            slidesPerView: 1,
+            loop: true,
+            observer: true,
+            observeParents: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+                renderFraction: function (currentClass, totalClass) {
+                    return '<span class="' + currentClass + '"></span>' + ' из ' + '<span class="' + totalClass + '"></span>';
+                },
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        })
     })
 
     // SPECIFICATIONs

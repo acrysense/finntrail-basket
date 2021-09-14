@@ -8,6 +8,19 @@
     }
 }
 
+@media (min-width: 360px) {
+    .comparison {
+        &__slider {
+            .swiper-controls {
+                top: 297px;
+            }
+        }
+        &__img {
+            height: 160px;
+        }
+    }
+}
+
 @media (max-width: 359px) {
     .more-products {
         &--lg {
@@ -17,6 +30,16 @@
                     min-width: 180px;
                 }
             }
+        }
+    }
+    .comparison {
+        &__slider {
+            .swiper-controls {
+                top: 273px;
+            }
+        }
+        &__img {
+            height: 136px;
         }
     }
 }

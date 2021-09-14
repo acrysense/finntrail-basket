@@ -1,8 +1,42 @@
+// top promo
+.top-promo {
+    position: relative;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0;
+    color: $white-color;
+    background: #7F805E;
+    &--hidden {
+        display: none;
+    }
+    &__title {
+        font-size: 14px;
+        font-weight: 800;
+    }
+    &__close {
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        transform: translateY(-50%);
+        display: block;
+        padding: 0;
+        width: 16px;
+        height: 16px;
+        background-image: url(../img/dist/sprite.svg#icon-close);
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position: center center;
+    }
+}
+
+// header and elements
 .header {
     position: sticky;
     top: 0;
     z-index: 999;
-    padding: 8px 0;
+    padding: 12px 0;
     color: $white-color;
     background: $strong-black-color;
     &__wrapper {
@@ -10,8 +44,167 @@
         align-items: center;
         justify-content: space-between;
     }
+    &__search {
+        margin-top: 12px;
+    }
 }
 
+.header-search {
+    position: relative;
+    &__control {
+        position: relative;
+    }
+    &__input {
+        display: block;
+        appearance: none;
+        padding: 14px 46px 14px 14px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: normal;
+        background: #484848;
+        border: none;
+        border-radius: 0;
+        transition: all 0.3s ease-in-out;
+        &::placeholder {
+            color: $white-color;
+        }
+        &:focus {
+            background: $white-color;
+            outline: none;
+            & + .header-search__icon {
+                svg path {
+                    fill: $gray-color;
+                }
+            }
+        }
+    }
+    &__icon {
+        position: absolute;
+        top: 50%;
+        right: 6px;
+        z-index: 1;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+    }
+    &__dropdown {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        transform: translateY(100%);
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        background: $white-color;
+        transition: all 0.3s ease;
+        &--active {
+            max-height: 100vh;
+            opacity: 1;
+        }
+    }
+    &__popular {
+        visibility: visible;
+        opacity: 1;
+        max-height: 100vh;
+        transition: all 0.3s;
+        &--hidden {
+            visibility: hidden;
+            opacity: 0;
+            max-height: 0;
+        }
+    }
+    &__options {
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0;
+        transition: all 0.3s;
+        &--active {
+            visibility: visible;
+            opacity: 1;
+            max-height: 100vh;
+        }
+    }
+    &__heading {
+        display: block;
+        padding: 12px 14px;
+        width: 100%;
+        font-size: 12px;
+        font-weight: normal;
+        color: #666666;
+        background: $grey-color;
+    }
+    &__list {
+        padding: 4px 0;
+    }
+    &__list + &__list {
+        border-top: 1px solid $grey-line;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 12px 14px;
+        width: 100%;
+        font-size: 14px;
+        font-weight: normal;
+        color: $primary-color;
+        svg + span {
+            margin-left: 16px;
+        }
+        span {
+            display: block;
+        }
+        b, strong {
+            font-weight: bold;
+        }
+        &:hover {
+            color: $primary-color;
+        }
+    }
+    &__btn {
+        margin: 20px 14px 12px;
+        width: calc(100% - 28px);
+    }
+}
+
+
+.basket-btn {
+    position: relative;
+    padding: 0;
+    width: 34px;
+    height: 34px;
+    background-color: transparent;
+    background-image: url(../img/dist/sprite.svg#icon-basket);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center center;
+    border: 0;
+    &__count {
+        position: absolute;
+        top: 0;
+        right: 2px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        font-size: 10px;
+        font-weight: 600;
+        overflow: hidden;
+        white-space: nowrap;
+        color: $white-color;
+        background: $red-color;
+        border-radius: 50%;
+    }
+}
+
+// hamburger
 .hamburger {
     position: relative;
     z-index: 100;
@@ -66,40 +259,10 @@
     }
 }
 
-.basket-btn {
-    position: relative;
-    padding: 0;
-    width: 34px;
-    height: 32px;
-    background-color: transparent;
-    background-image: url(../img/dist/sprite.svg#icon-basket);
-    background-repeat: no-repeat;
-    background-size: 24px;
-    background-position: center center;
-    border: 0;
-    &__count {
-        position: absolute;
-        top: 0;
-        right: 2px;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 16px;
-        height: 16px;
-        font-size: 10px;
-        font-weight: 600;
-        overflow: hidden;
-        white-space: nowrap;
-        color: $white-color;
-        background: $red-color;
-        border-radius: 50%;
-    }
-}
-
+// mobile menu
 .mobile-menu {
     position: fixed;
-    top: 48px;
+    top: 98px;
     left: 0;
     z-index: 1005;
     transform-origin: left top;
@@ -228,6 +391,26 @@
     }
 }
 
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 998;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba($strong-black-color, 0.2);
+    transition: all 0.4s;
+    &--active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+// nav
 .nav {
     &__item {
         position: relative;
@@ -309,26 +492,7 @@
     }
 }
 
-.menu-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 998;
-    visibility: hidden;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background: rgba($strong-black-color, 0.2);
-    transition: all 0.4s;
-    &--active {
-        visibility: visible;
-        opacity: 1;
-    }
-}
-
-// ANIMATION
+// animation
 @keyframes fadeInLeft {
     0% {
         right: 50px;
