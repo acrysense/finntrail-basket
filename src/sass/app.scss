@@ -3801,16 +3801,11 @@
         justify-content: center;
         width: 44px;
         height: 44px;
-        font-size: 14px;
-        font-weight: 600;
-        color: $primary-color;
-        background-color: $white-color;
-        background-repeat: no-repeat;
-        background-size: 34px;
-        background-position: center center;
+        background: $white-color;
         border-radius: 4px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
         &--black {
-            background-color: $strong-black-color;
+            background: $strong-black-color;
         }
     }
     &__social + &__social {

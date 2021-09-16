@@ -462,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault()
 
             header.classList.add('header--search')
-            headerSearchBtn.parentNode.classList.add('header__btn--hidden')
+            headerSearchBtn.classList.add('search-btn--hidden')
             headerSearch.classList.add('header-search--active')
         })
     }
@@ -524,7 +524,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (window.pageYOffset >= headerHeight) {
                     if (headerSearch && headerSearch.classList.contains('header-search--active')) {
                         headerSearch.classList.remove('header-search--active')
-                        setTimeout(() => headerSearchBtn.parentNode.classList.remove('header__btn--hidden'), 200)
+                        setTimeout(() => headerSearchBtn.classList.remove('search-btn--hidden'), 200)
                     }
                     if (mobileMenu.classList.contains('mobile-menu--active')) {
                         hamburger.classList.remove('hamburger--active')

@@ -34,7 +34,7 @@
 // header and elements
 .header {
     position: relative;
-    min-height: 67px;
+    min-height: 58px;
     color: $white-color;
     background: $strong-black-color;
     &__wrap {
@@ -62,15 +62,6 @@
         display: flex;
         align-items: center;
     }
-    &__btn {
-        visibility: visible;
-        opacity: 1;
-        transition: all 0.4s;
-        &--hidden {
-            visibility: hidden;
-            opacity: 0;
-        }
-    }
     &__help {
         display: block;
         margin-left: 2px;
@@ -95,6 +86,10 @@
     border: 0;
     &:focus {
         outline: none;
+    }
+    &--hidden {
+        visibility: hidden;
+        opacity: 0;
     }
 }
 
@@ -338,7 +333,7 @@
 // mobile menu
 .mobile-menu {
     position: fixed;
-    top: 67px;
+    top: 58px;
     left: 0;
     z-index: 1005;
     transform-origin: left top;
@@ -346,16 +341,16 @@
     visibility: hidden;
     padding-top: 10px;
     width: 85%;
-    height: calc(100vh - 67px);
-    height: calc((var(--vh, 1vh) * 100) - 67px);
+    height: calc(100vh - 58px);
+    height: calc((var(--vh, 1vh) * 100) - 58px);
     overflow-x: hidden;
     overflow-y: auto;
     background: $white-color;
     transition: all 0.4s ease-in-out;
     &--promo {
-        top: 107px;
-        height: calc(100vh - 107px);
-        height: calc((var(--vh, 1vh) * 100) - 107px);
+        top: 98px;
+        height: calc(100vh - 98px);
+        height: calc((var(--vh, 1vh) * 100) - 98px);
     }
     &--active {
         transform: scale(1);
