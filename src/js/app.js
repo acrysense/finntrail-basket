@@ -414,10 +414,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 hamburger.classList.remove('hamburger--active')
                 mobileMenu.classList.remove('mobile-menu--active')
                 mobileMenuOverlay.classList.remove('menu-overlay--active')
+                document.body.classList.remove('scroll-disabled')
             } else {
                 hamburger.classList.add('hamburger--active')
                 mobileMenu.classList.add('mobile-menu--active')
                 mobileMenuOverlay.classList.add('menu-overlay--active')
+                document.body.classList.add('scroll-disabled')
             }
         })
     }
@@ -429,6 +431,7 @@ document.addEventListener('DOMContentLoaded', function () {
             hamburger.classList.remove('hamburger--active')
             mobileMenu.classList.remove('mobile-menu--active')
             mobileMenuOverlay.classList.remove('menu-overlay--active')
+            document.body.classList.remove('scroll-disabled')
         })
     }
 
@@ -459,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault()
 
             header.classList.add('header--search')
-            headerSearchBtn.classList.add('search-btn--hidden')
+            headerSearchBtn.parentNode.classList.add('header__btn--hidden')
             headerSearch.classList.add('header-search--active')
         })
     }
@@ -519,9 +522,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             } else { // If down
                 if (window.pageYOffset >= headerHeight) {
-                    if (headerSearch.classList.contains('header-search--active')) {
+                    if (headerSearch && headerSearch.classList.contains('header-search--active')) {
                         headerSearch.classList.remove('header-search--active')
-                        setTimeout(() => headerSearchBtn.classList.remove('search-btn--hidden'), 200)
+                        setTimeout(() => headerSearchBtn.parentNode.classList.remove('header__btn--hidden'), 200)
+                    }
+                    if (mobileMenu.classList.contains('mobile-menu--active')) {
+                        hamburger.classList.remove('hamburger--active')
+                        mobileMenu.classList.remove('mobile-menu--active')
+                        mobileMenuOverlay.classList.remove('menu-overlay--active')
+                        document.body.classList.remove('scroll-disabled')
                     }
                     mobileMenu.classList.remove('mobile-menu--promo')
                     header.querySelector('.header__wrap').style.transform = 'translate3d(0px, -100%, 0px)'
