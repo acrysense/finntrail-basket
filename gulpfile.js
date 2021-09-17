@@ -23,6 +23,7 @@ let paths = {
             'node_modules/simplebar/dist/simplebar.min.js',
             'node_modules/nouislider/dist/nouislider.min.js',
             'node_modules/slim-select/dist/slimselect.min.js',
+            'node_modules/hammerjs/hammer.min.js',
         ],
         dest: baseDir + '/js',
     },

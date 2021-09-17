@@ -1156,6 +1156,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const modal = document.querySelectorAll('.modal')
     const modalClose = document.querySelectorAll('.modal__close, .modal__btn--close')
     const overlay = document.querySelector('.overlay')
+    const swipeOverlay = document.querySelector('.swipe')
     
     if (modalBtn) {
         modalBtn.forEach((item) => {
@@ -1169,6 +1170,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         overlay.classList.add('overlay--active')
                     }
     
+                    swipeOverlay.classList.add('swipe--active')
                     document.querySelectorAll('.modal.modal--active').forEach((child) => child.classList.remove('modal--active'))
                     document.body.classList.add('scroll-disabled')
                     document.getElementById(modalID).classList.add('modal--active')
@@ -1193,6 +1195,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.body.classList.remove('scroll-disabled')
                 document.querySelectorAll('.modal.modal--active').forEach((child) => child.classList.remove('modal--active'))
                 overlay.classList.remove('overlay--active')
+                swipeOverlay.classList.remove('swipe--active')
             }
         };
     }, false);
@@ -1204,6 +1207,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.body.classList.remove('scroll-disabled')
                     document.querySelectorAll('.modal.modal--active').forEach((child) => child.classList.remove('modal--active'))
                     overlay.classList.remove('overlay--active')
+                    swipeOverlay.classList.remove('swipe--active')
                 }
             });
         });
@@ -1215,9 +1219,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.body.classList.remove('scroll-disabled')
                 document.querySelectorAll('.modal.modal--active').forEach((child) => child.classList.remove('modal--active'))
                 overlay.classList.remove('overlay--active')
+                swipeOverlay.classList.remove('swipe--active')
             }
         });
     }
+
+    let mc = new Hammer(swipeOverlay);
+
+    mc.on('pandown', () => {
+        if (overlay.classList.contains('overlay--active')) {
+            document.body.classList.remove('scroll-disabled')
+            document.querySelectorAll('.modal.modal--active').forEach((child) => child.classList.remove('modal--active'))
+            overlay.classList.remove('overlay--active')
+            swipeOverlay.classList.remove('swipe--active')
+        }
+    });
 
     // PRODUCT CART BTN BUY
     const productBtnBuy = document.querySelectorAll('.product__btn--buy')

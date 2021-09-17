@@ -17,6 +17,22 @@
     }
 }
 
+.swipe {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1011;
+    width: 100%;
+    height: 10%;
+    visibility: hidden;
+    opacity: 0;
+    &--active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
 .modal {
     position: fixed;
     right: 0;
