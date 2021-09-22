@@ -3906,6 +3906,7 @@
         }
     }
     &__profile {
+        position: relative;
         background: $grey-color;
         border-radius: 4px;
 
@@ -3913,44 +3914,49 @@
             display: flex;
             padding: 20px;
         }
+        @media screen and (max-width: 767px) {
+            padding: 20px;
+        }
     }
     &__ava {
         position: relative;
-        padding-top: 100%;
         overflow: hidden;
         width: 100%;
         img {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
             display: block;
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
+        @media screen and (min-width: 1024px) {
+            padding-top: 100%;
+            img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+        }
         @media screen and (min-width: 768px) and (max-width: 1023px) {
-            padding-top: 0;
             margin-right: 20px;
             max-width: 154px;
             max-height: 154px;
             img {
-                position: static;
                 width: 154px;
                 height: 154px;
             }
         }
-        //@media screen and (max-width: 767px) {
-        //    margin-right: 10px;
-        //    max-width: 75px;
-        //    max-height: 75px;
-        //    img {
-        //        width: 75px;
-        //        height: 75px;
-        //    }
-        //}
+        @media screen and (max-width: 767px) {
+            margin-right: 10px;
+            max-width: 75px;
+            max-height: 75px;
+            img {
+                width: 75px;
+                height: 75px;
+            }
+        }
     }
     &__body {
         @media screen and (min-width: 1024px) {
@@ -3961,13 +3967,27 @@
             flex-direction: column;
             justify-content: space-between;
         }
+    }
+    &__group {
         @media screen and (max-width: 767px) {
-            padding: 20px;
+            position: absolute;
+            top: 20px;
+            left: 104px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-height: 75px;
+            height: 100%;
         }
     }
     &__name {
         font-size: 20px;
         font-weight: 600;
+
+        @media screen and (max-width: 767px) {
+            overflow: hidden;
+            max-height: 48px;
+        }
     }
     &__personal-link {
         display: block;
@@ -3976,10 +3996,21 @@
         font-size: 16px;
         font-weight: 600;
         color: $finntrail-red-color;
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: 0;
+            overflow: hidden;
+            max-height: 19px;
+            white-space: nowrap;
+        }
     }
     &__about {
         font-size: 14px;
         font-weight: normal;
+
+        @media screen and (max-width: 767px) {
+            margin-top: 12px;
+        }
     }
     &__socials {
         display: flex;
