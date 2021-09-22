@@ -961,9 +961,17 @@ document.addEventListener('DOMContentLoaded', function () {
         moreProductsSlider.forEach(slider => {
             if (window.innerWidth >= 1024) {
                 const mySwiperMoreProducts = new Swiper(slider, {
-                    slidesPerView: 4,
+                    slidesPerView: 6,
                     loop: true,
                     spaceBetween: 20,
+                    breakpoints: {
+                        0: {
+                            slidesPerView: 5,
+                        },
+                        1200: {
+                            slidesPerView: 6,
+                        }
+                    },
                     navigation: {
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev',
