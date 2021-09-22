@@ -955,6 +955,26 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     })
 
+    const moreProductsSlider = document.querySelectorAll('.more-products__list .swiper-container')
+
+    function initMoreProductsSlider() {
+        moreProductsSlider.forEach(slider => {
+            if (window.innerWidth >= 1024) {
+                const mySwiperMoreProducts = new Swiper(slider, {
+                    slidesPerView: 4,
+                    loop: true,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                })
+            }
+        })
+    }
+
+    initMoreProductsSlider()
+
     // SPECIFICATIONs
     const specificationBtn = document.querySelectorAll('.specification__more')
     const specificationGradientBtn = document.querySelectorAll('.specification__gradient')
