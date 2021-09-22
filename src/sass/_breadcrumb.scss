@@ -23,7 +23,7 @@
                     transform: translateY(-50%);
                     display: block;
                     width: 8px;
-                    height: 14px;
+                    height: 12px;
                     background-image: url(../img/dist/sprite.svg#icon-arrow-left);
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -40,15 +40,24 @@
                     height: 100%;
                     background: $primary-color;
                 }
+                &:hover {
+                    color: $primary-color;
+                }
             }
         }
     }
     &__item:not(.breadcrumb__item--back) + &__item {
         &::before {
-            content: '/';
+            content: '';
             display: inline-block;
-            padding: 0 4px 0 8px;
-            color: $gray-color;
+            padding: 0 8px 0 10px;
+            width: 8px;
+            height: 12px;
+            vertical-align: middle;
+            background-image: url(../img/dist/sprite.svg#icon-arrow-right-gray);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
         }
     }
     &__link {
@@ -56,5 +65,9 @@
         font-size: 14px;
         font-weight: normal;
         color: $gray-color;
+        &:hover {
+            color: $gray-color;
+            text-decoration: underline;
+        }
     }
 }
