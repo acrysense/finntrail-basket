@@ -957,31 +957,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const moreProductsSlider = document.querySelectorAll('.more-products__list .swiper-container')
 
-    function initMoreProductsSlider() {
-        moreProductsSlider.forEach(slider => {
-            if (window.innerWidth >= 1024) {
-                const mySwiperMoreProducts = new Swiper(slider, {
-                    slidesPerView: 6,
-                    loop: true,
-                    spaceBetween: 20,
-                    breakpoints: {
-                        0: {
-                            slidesPerView: 5,
+    if (moreProductsSlider) {
+        function initMoreProductsSlider() {
+            moreProductsSlider.forEach(slider => {
+                if (window.innerWidth >= 1024) {
+                    const mySwiperMoreProducts = new Swiper(slider, {
+                        slidesPerView: 6,
+                        loop: true,
+                        spaceBetween: 20,
+                        breakpoints: {
+                            0: {
+                                slidesPerView: 5,
+                            },
+                            1200: {
+                                slidesPerView: 6,
+                            }
                         },
-                        1200: {
-                            slidesPerView: 6,
-                        }
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                })
-            }
-        })
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                    })
+                }
+            })
+        }
+    
+        initMoreProductsSlider()
     }
-
-    initMoreProductsSlider()
 
     // SPECIFICATIONs
     const specificationBtn = document.querySelectorAll('.specification__more')
@@ -1252,16 +1254,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    let mc = new Hammer(swipeOverlay);
-
-    mc.on('pandown', () => {
-        if (overlay.classList.contains('overlay--active')) {
-            document.body.classList.remove('scroll-disabled')
-            document.querySelectorAll('.modal.modal--active').forEach((child) => child.classList.remove('modal--active'))
-            overlay.classList.remove('overlay--active')
-            swipeOverlay.classList.remove('swipe--active')
-        }
-    });
+    if (swipeOverlay) {
+        let mc = new Hammer(swipeOverlay);
+    
+        mc.on('pandown', () => {
+            if (overlay.classList.contains('overlay--active')) {
+                document.body.classList.remove('scroll-disabled')
+                document.querySelectorAll('.modal.modal--active').forEach((child) => child.classList.remove('modal--active'))
+                overlay.classList.remove('overlay--active')
+                swipeOverlay.classList.remove('swipe--active')
+            }
+        });
+    }
 
     // PRODUCT CART BTN BUY
     const productBtnBuy = document.querySelectorAll('.product__btn--buy')

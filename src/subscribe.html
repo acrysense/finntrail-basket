@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FINNTRAIL - Subscribe</title>
+    <title>FINNTRAIL - Емейл</title>
     <!-- Styles -->
     <link rel="stylesheet" href="css/vendor.min.css">
     <link rel="stylesheet" href="css/app.min.css">
@@ -14,47 +14,59 @@
         <div class="container">
             <h2 class="subscribe__title">🔥 ПОДПИШИСЬ НА СКИДКИ!</h2>
             <form action="#" class="subscribe-form">
-                <label for="subscribe-radio-01" class="circle-checkbox subscribe-form__checkbox">
-                    <input type="radio" class="circle-checkbox__input" name="subscribe" id="subscribe-radio-01">
-                    <span class="circle-checkbox__icon"></span>
-                    <span class="circle-checkbox__label">Я — рыболов</span>
-                </label>
-                <label for="subscribe-radio-02" class="circle-checkbox subscribe-form__checkbox">
-                    <input type="radio" class="circle-checkbox__input" name="subscribe" id="subscribe-radio-02">
-                    <span class="circle-checkbox__icon"></span>
-                    <span class="circle-checkbox__label">Я — квадроциклист</span>
-                </label>
-                <label for="subscribe-radio-03" class="circle-checkbox subscribe-form__checkbox">
-                    <input type="radio" class="circle-checkbox__input" name="subscribe" id="subscribe-radio-03">
-                    <span class="circle-checkbox__icon"></span>
-                    <span class="circle-checkbox__label">Я — снегоходчик</span>
-                </label>
-                <label for="subscribe-radio-04" class="circle-checkbox subscribe-form__checkbox">
-                    <input type="radio" class="circle-checkbox__input" name="subscribe" id="subscribe-radio-04">
-                    <span class="circle-checkbox__icon"></span>
-                    <span class="circle-checkbox__label">Я — разносторонний</span>
-                </label>
-                <label for="subscribe-email" class="input-shell subscribe-form__input-shell">
-                    <span class="input-shell__icon" style="background-image: url(img/dist/sprite.svg#icon-email);"></span>
-                    <input type="email" id="subscribe-email" class="input-shell__input" placeholder="E-mail">
-                    <div class="input-shell__underline"></div>
-                </label>
-                <button class="subscribe-form__btn btn">Подписаться</button>
+                <div class="subscribe-form__group">
+                    <label for="subscribe-radio-01" class="subscribe-checkbox subscribe-form__checkbox">
+                        <input type="radio" class="subscribe-checkbox__input" name="subscribe" id="subscribe-radio-01">
+                        <span class="subscribe-checkbox__group">
+                            <span class="subscribe-checkbox__icon"></span>
+                            <span class="subscribe-checkbox__img" style="background-image: url(img/dist/sprite.svg#icon-subscribe-fisherman);"></span>
+                            <span class="subscribe-checkbox__label">Я — рыболов</span>
+                        </span>
+                    </label>
+                    <label for="subscribe-radio-02" class="subscribe-checkbox subscribe-form__checkbox">
+                        <input type="radio" class="subscribe-checkbox__input" name="subscribe" id="subscribe-radio-02">
+                        <span class="subscribe-checkbox__group">
+                            <span class="subscribe-checkbox__icon"></span>
+                            <span class="subscribe-checkbox__img" style="background-image: url(img/dist/sprite.svg#icon-subscribe-atv);"></span>
+                            <span class="subscribe-checkbox__label">Я — квадроциклист</span>
+                        </span>
+                    </label>
+                    <label for="subscribe-radio-03" class="subscribe-checkbox subscribe-form__checkbox">
+                        <input type="radio" class="subscribe-checkbox__input" name="subscribe" id="subscribe-radio-03">
+                        <span class="subscribe-checkbox__group">
+                            <span class="subscribe-checkbox__icon"></span>
+                            <span class="subscribe-checkbox__img" style="background-image: url(img/dist/sprite.svg#icon-subscribe-snowmobile);"></span>
+                            <span class="subscribe-checkbox__label">Я — снегоходчик</span>
+                        </span>
+                    </label>
+                    <label for="subscribe-radio-04" class="subscribe-checkbox subscribe-form__checkbox">
+                        <input type="radio" class="subscribe-checkbox__input" name="subscribe" id="subscribe-radio-04">
+                        <span class="subscribe-checkbox__group">
+                            <span class="subscribe-checkbox__icon"></span>
+                            <span class="subscribe-checkbox__img" style="background-image: url(img/dist/sprite.svg#icon-subscribe-versatile);"></span>
+                            <span class="subscribe-checkbox__label">Я — разносторонний</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="subscribe-form__group subscribe-form__group--short">
+                    <label for="subscribe-email" class="input-shell subscribe-form__input-shell">
+                        <span class="input-shell__icon" style="background-image: url(img/dist/sprite.svg#icon-email);"></span>
+                        <input type="email" id="subscribe-email" class="input-shell__input" placeholder="E-mail">
+                        <div class="input-shell__underline"></div>
+                    </label>
+                    <button class="subscribe-form__btn btn">Подписаться</button>
+                </div>
                 <label for="policy-checkbox" class="square-checkbox subscribe-form__policy-checkbox">
                     <input type="checkbox" class="square-checkbox__input" id="policy-checkbox" checked required>
                     <span class="square-checkbox__icon"></span>
                     <span class="square-checkbox__label">Я соглашаюсь с <a href="policy.html">политикой конфиденциальности</a></span>
                 </label>
             </form>
-            <p class="subscribe__copyright">
-                Нажимая на кнопку "Подписаться"
-                Вы даете согласие на обработку своих персональных данных и выражаете согласие с <a href="policy.html">политикой конфиденциальности</a>
-            </p>
         </div>
     </div>
     <!-- End of subscribe -->
     <!-- Scripts -->
     <script src="js/vendor.min.js"></script>
-    <script src="js/app.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
