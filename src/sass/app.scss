@@ -4045,16 +4045,35 @@
         min-height: 44px;
         max-width: 44px;
         max-height: 44px;
-        background: $white-color;
+        background-color: $white-color;
+        background-repeat: no-repeat;
+        background-position: center center;
         border-radius: 4px;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-        &--black {
-            background: $strong-black-color;
+        &--instagram {
+            background-image: url(../img/dist/sprite.svg#icon-instagram);
+            background-size: 38px;
         }
-        img {
-            display: block;
-            width: 75%;
-            object-fit: cover;
+        &--youtube {
+            background-image: url(../img/dist/sprite.svg#icon-youtube-sm);
+            background-size: 36px;
+        }
+        &--vkontakte {
+            background-image: url(../img/dist/sprite.svg#icon-vkontakte);
+            background-size: 32px;
+        }
+        &--tiktok {
+            background-image: url(../img/dist/sprite.svg#icon-tiktok);
+            background-size: 42px;
+        }
+        &--telegram {
+            background-image: url(../img/dist/sprite.svg#icon-telegram);
+            background-size: 36px;
+        }
+        &--dzen {
+            background-color: $strong-black-color;
+            background-image: url(../img/dist/sprite.svg#icon-yandex-dzen);
+            background-size: 50px;
         }
 
         @media screen and (min-width: 1024px) and (max-width: 1199px) {
@@ -4062,12 +4081,48 @@
             min-height: 33px;
             max-width: 33px;
             max-height: 33px;
+            &--instagram {
+                background-size: 28px;
+            }
+            &--youtube {
+                background-size: 26px;
+            }
+            &--vkontakte {
+                background-size: 22px;
+            }
+            &--tiktok {
+                background-size: 34px;
+            }
+            &--telegram {
+                background-size: 28px;
+            }
+            &--dzen {
+                background-size: 40px;
+            }
         }
         @media screen and (max-width: 359px) {
             min-width: 35px;
             min-height: 35px;
             max-width: 35px;
             max-height: 35px;
+            &--instagram {
+                background-size: 30px;
+            }
+            &--youtube {
+                background-size: 28px;
+            }
+            &--vkontakte {
+                background-size: 24px;
+            }
+            &--tiktok {
+                background-size: 34px;
+            }
+            &--telegram {
+                background-size: 28px;
+            }
+            &--dzen {
+                background-size: 40px;
+            }
         }
     }
     &__social + &__social {
