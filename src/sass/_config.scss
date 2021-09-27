@@ -514,7 +514,7 @@ svg line {
         max-height: 20px;
         background-color: transparent;
         background-repeat: no-repeat;
-        background-size: 20px;
+        background-size: 19px;
         background-position: center center;
         border: 1px solid $dark-gray-color;
         border-radius: 3px;
@@ -691,6 +691,9 @@ svg line {
         border: 1px solid transparent;
         border-radius: 50%;
         transition: all 0.25s;
+        &:hover {
+            border: 1px solid $primary-color;
+        }
     }
 }
 
@@ -699,6 +702,13 @@ svg line {
     display: block;
     margin: 0;
     cursor: pointer;
+    &:hover {
+        .size-checkbox__help {
+            top: -8px;
+            opacity: 1;
+            background: $black-color;
+        }
+    }
     &__input {
         display: none;
         &:checked {
@@ -804,17 +814,26 @@ svg line {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 14px;
-    width: 100%;
+    padding: 10px 16px;
+    width: fit-content;
     font-size: 16px;
     text-align: center;
     color: $white-color;
     background: $light-black-color;
+    border-radius: 4px;
+    &:hover {
+        background: $black-color;
+    }
     svg + span {
         margin-left: 8px;
     }
     span {
         display: block;
+    }
+
+    @media screen and (max-width: 1023px) {
+        padding: 14px;
+        width: 100%;
     }
 }
 

@@ -896,17 +896,45 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     })
 
-    const productSlider = document.querySelector('.product__slider .swiper-container')
+    const galleryThumb = document.querySelector('.gallery-thumbs')
+    const galleryMain = document.querySelector('.gallery-main')
 
-    const mySwiperProduct = new Swiper(productSlider, {
+    let mySwiperThumb = new Swiper(galleryThumb, {
+        //allowTouchMove: false,
+        slidesPerView: 5,
+        spaceBetween: 12,
+        freeMode: true,
+        direction: 'vertical',
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            0: {
+                slidesPerView: 'auto',
+            },
+            1200: {
+                slidesPerView: 5,
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    })
+
+    let mySwiperMain = new Swiper(galleryMain, {
         slidesPerView: 1,
-        loop: true,
+        loopedSlides: 5,
+        thumbs: {
+            swiper: mySwiperThumb,
+            autoScrollOffset: 2,
+            slidesPerGroup: 1,
+        },
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
         },
     })
-
+    
     const promoSlider = document.querySelector('.promo .swiper-container')
 
     const mySwiperPromo = new Swiper(promoSlider, {
