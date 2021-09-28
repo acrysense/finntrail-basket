@@ -1894,7 +1894,7 @@
 
 // product cart
 .product {
-    padding-bottom: 89px;
+    padding-bottom: 40px;
     &__wrap {
         position: relative;
     }
@@ -2042,7 +2042,7 @@
     }
     &__content {
         @media screen and (min-width: 1024px) {
-            margin-top: 164px;
+            margin-top: 96px;
             width: 63%;
         }
         @media screen and (max-width: 1023px) {
@@ -2066,6 +2066,19 @@
             display: none;
         }
     }
+    &__share {
+        position: absolute;
+        top: 16px;
+        right: 12px;
+        z-index: 10;
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url(../img/dist/sprite.svg#icon-share);
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: center center;
+    }
     &__controls {
         position: absolute;
         z-index: 10;
@@ -2078,21 +2091,9 @@
             left: 12px;
         }
         @media screen and (max-width: 1023px) {
-            top: 16px;
+            top: 56px;
             right: 12px;
         }
-    }
-    &__share {
-        display: block;
-        width: 32px;
-        height: 32px;
-        background-image: url(../img/dist/sprite.svg#icon-share);
-        background-repeat: no-repeat;
-        background-size: 30px;
-        background-position: center center;
-    }
-    &__share + &__status {
-        margin-top: 8px;
     }
     &__status {
         display: block;
@@ -2306,10 +2307,10 @@
         display: -moz-box;
         -moz-box-orient: vertical;
         display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        line-clamp: 4;
         box-orient: vertical;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        line-clamp: 3;
         overflow: hidden;
         margin-top: 10px;
         font-size: 14px;
@@ -2317,6 +2318,11 @@
         &--all {
             -webkit-line-clamp: initial;
             line-clamp: initial;
+        }
+
+        @media screen and (max-width: 1023px) {
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
         }
     }
     &__gradient {

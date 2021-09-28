@@ -900,7 +900,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const galleryMain = document.querySelector('.gallery-main')
 
     let mySwiperThumb = new Swiper(galleryThumb, {
-        //allowTouchMove: false,
         slidesPerView: 5,
         spaceBetween: 12,
         freeMode: true,
