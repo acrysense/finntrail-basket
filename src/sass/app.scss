@@ -4297,28 +4297,22 @@
         border-radius: 4px;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
         &--instagram {
-            background-image: url(../img/dist/sprite.svg#icon-instagram);
             background-size: 38px;
         }
         &--youtube {
-            background-image: url(../img/dist/sprite.svg#icon-youtube-sm);
             background-size: 36px;
         }
         &--vkontakte {
-            background-image: url(../img/dist/sprite.svg#icon-vkontakte);
             background-size: 32px;
         }
         &--tiktok {
-            background-image: url(../img/dist/sprite.svg#icon-tiktok);
             background-size: 42px;
         }
         &--telegram {
-            background-image: url(../img/dist/sprite.svg#icon-telegram);
             background-size: 36px;
         }
         &--dzen {
             background-color: $strong-black-color;
-            background-image: url(../img/dist/sprite.svg#icon-yandex-dzen);
             background-size: 50px;
         }
 
