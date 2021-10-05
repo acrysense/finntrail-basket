@@ -38,7 +38,10 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function smoothScroll(eID) {
         let startY = currentYPosition();
-        let stopY = elmYPosition(eID) - Number(document.querySelector('.header').clientHeight);
+        let stopY = elmYPosition(eID);
+        if (startY > stopY) {
+            stopY = elmYPosition(eID) - Number(document.querySelector('.header').clientHeight);
+        }
         let distance = stopY > startY ? stopY - startY : startY - stopY;
         if (distance < 100) {
             scrollTo(0, stopY); return;
@@ -577,8 +580,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (!item.parentNode.classList.contains('is--open')) {
                     if (document.querySelector('.accordion-cart__item.is--open')) {
-                        let test = document.querySelector('.accordion-cart__item.is--open')
-                        slideUpQna(test.childNodes[test.childNodes.length - 1].previousElementSibling)
+                        let itemOpen = document.querySelector('.accordion-cart__item.is--open')
+                        slideUpQna(itemOpen.childNodes[itemOpen.childNodes.length - 1].previousElementSibling)
                     }
                     slideDownQna(item.nextElementSibling)
                 } else {
@@ -608,6 +611,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // COMMENTs
     const commentViewBtn = document.querySelectorAll('.comment__view')
+    const commentPreviewTrigger = document.querySelector('.comment-preview--trigger')
 
     if (commentViewBtn) {
         commentViewBtn.forEach((item) => {
@@ -626,6 +630,18 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         })
     }
+
+    if (commentPreviewTrigger) {
+        commentPreviewTrigger.addEventListener('click', () => {
+            const accordionCartItemReviews = commentPreviewTrigger.getAttribute('href').slice(1)
+            const parent = document.getElementById(accordionCartItemReviews)
+            const child = parent.querySelector('.accordion-cart__content')
+           
+            parent.classList.add('is--open')
+            slideDownQna(child)
+        })
+    }
+
 
     // RANGE
     const inputSizeField = document.querySelectorAll('.input-size__input');
@@ -932,6 +948,10 @@ document.addEventListener('DOMContentLoaded', function () {
             el: '.swiper-pagination',
             type: 'bullets',
         },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     })
     
     const promoSlider = document.querySelector('.promo .swiper-container')
@@ -1037,13 +1057,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
 
-                if (item.parentNode.classList.contains('specification__list') && item.parentNode.classList.contains('specification__list--open')) {
-                    item.parentNode.classList.remove('specification__list--open')
+                if (item.parentNode.parentNode.classList.contains('specification__list') && item.parentNode.parentNode.classList.contains('specification__list--open')) {
+                    item.parentNode.parentNode.classList.remove('specification__list--open')
                     item.previousElementSibling.classList.remove('specification__gradient--hidden')
                     item.classList.remove('specification__more--bottom')
                     item.innerHTML = 'Развернуть'
-                } else if (item.parentNode.classList.contains('specification__list') && !item.parentNode.classList.contains('specification__list--open')) {
-                    item.parentNode.classList.add('specification__list--open')
+                } else if (item.parentNode.parentNode.classList.contains('specification__list') && !item.parentNode.parentNode.classList.contains('specification__list--open')) {
+                    item.parentNode.parentNode.classList.add('specification__list--open')
                     item.previousElementSibling.classList.add('specification__gradient--hidden')
                     item.classList.add('specification__more--bottom')
                     item.innerHTML = 'Скрыть'
@@ -1066,8 +1086,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
 
-                if (item.parentNode.classList.contains('specification__list') && !item.parentNode.classList.contains('specification__list--open')) {
-                    item.parentNode.classList.add('specification__list--open')
+                if (item.parentNode.parentNode.classList.contains('specification__list') && !item.parentNode.parentNode.classList.contains('specification__list--open')) {
+                    item.parentNode.parentNode.classList.add('specification__list--open')
                     item.classList.add('specification__gradient--hidden')
 
                     if (item.nextElementSibling.classList.contains('specification__more')) {

@@ -530,10 +530,14 @@
     margin-bottom: -12px;
     background: $grey-color;
     &__title {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 600;
         text-transform: uppercase;
         color: $finntrail-red-color;
+
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+        }
     }
     &__prices {
         display: flex;
@@ -542,7 +546,7 @@
     }
     &__price {
         display: block;
-        font-size: 14px;
+        font-size: 16px;
         &--new {
             font-weight: 600;
             color: $finntrail-red-color
@@ -552,11 +556,19 @@
             text-decoration: line-through;
             color: $gray-color;
         }
+
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+        }
     }
     &__text {
         display: block;
         margin-top: 4px;
-        font-size: 12px;
+        font-size: 14px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 12px;
+        }
     }
     &__img {
         position: absolute;
@@ -843,7 +855,7 @@
         justify-content: space-between;
         padding: 16px 0;
         width: 100%;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
         text-align: left;
         color: $primary-color;
@@ -890,6 +902,9 @@
 
         @media screen and (min-width: 1024px) {
             text-transform: uppercase;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
         }
     }
     &__content {
@@ -1999,36 +2014,65 @@
             overflow: hidden;
             width: 100%;
             height: 100%;
-        }
-        .swiper-slide {
-            img {
-                display: block;
-                margin: 0 auto;
-            }
-        }
-        .swiper-pagination {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: 8px 12px 0;
-            height: 3px;
+            .swiper-button-prev,
+            .swiper-button-next {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                width: 100px;
+                height: 100%;
+                background: transparent;
+                border: 0;
+                border-radius: 0;
+                &:focus {
+                    outline: none;
+                }
 
-            @media screen and (min-width: 1024px) {
-                display: none;
+                @media screen and (max-width: 767px) {
+                    width: 50px;
+                }
             }
-        }
-        .swiper-pagination-bullet {
-            position: relative;
-            width: 100%;
-            height: 3px;
-            background: rgba($primary-color, 0.16);
-            transition: background 0.3s;
-        }
-        .swiper-pagination-bullet + .swiper-pagination-bullet {
-            margin-left: 4px;
-        }
-        .swiper-pagination-bullet-active {
-            background: $finntrail-red-color;
+            .swiper-button-prev {
+                left: 0;
+            }
+            .swiper-button-next {
+                right: 0;
+            }
+            .swiper-slide {
+                img {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            .swiper-pagination {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 8px 12px 0;
+                height: 3px;
+    
+                @media screen and (min-width: 1024px) {
+                    display: none;
+                }
+            }
+            .swiper-pagination-bullet {
+                position: relative;
+                width: 100%;
+                height: 3px;
+                background: rgba($primary-color, 0.16);
+                transition: background 0.3s;
+            }
+            .swiper-pagination-bullet + .swiper-pagination-bullet {
+                margin-left: 4px;
+            }
+            .swiper-pagination-bullet-active {
+                background: $finntrail-red-color;
+            }
         }
     }
     &__info {
@@ -2362,6 +2406,29 @@
             padding-bottom: 25px;
             max-height: none;
         }
+
+        @media screen and (min-width: 1200px) {
+            max-height: none;
+        }
+    }
+    &__columns {
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            flex-wrap: wrap;
+            & > .specification__item {
+                width: 49%;
+                &:nth-child(2n) {
+                    margin-left: 2%;
+                }
+            }
+            & > .specification__more,
+            & > .specification__gradient {
+                display: none;
+            }
+        }
+    }
+    &__item + &__columns {
+        margin-top: 12px;
     }
     &__item {
         display: flex;
@@ -2386,6 +2453,8 @@
         font-size: 14px;
         b, strong {
             font-weight: bold;
+        }
+        span, b, strong {
             &::before {
                 content: '';
                 display: inline-block;
@@ -2412,35 +2481,36 @@
     }
 
     &--lg {
+        @media screen and (max-width: 1023px) {
+            .more-products {
+                &__title {
+                    font-size: 20px;
+                }
+                &__item {
+                    max-width: 210px;
+                    min-width: 210px;
+                }
+                &__img {
+                    padding: 0 12px;
+                }
+                &__body {
+                    padding: 8px 12px;
+                }
+                &__name {
+                    font-weight: 600;
+                }
+                &__price {
+                    max-width: 76px;
+                    font-size: 16px;
+                }
+            }
+        }
         @media screen and (max-width: 359px) {
             .more-products {
                 &__item {
                     max-width: 180px;
                     min-width: 180px;
                 }
-            }
-        }
-
-        .more-products {
-            &__title {
-                font-size: 20px;
-            }
-            &__item {
-                max-width: 210px;
-                min-width: 210px;
-            }
-            &__img {
-                padding: 0 12px;
-            }
-            &__body {
-                padding: 8px 12px;
-            }
-            &__name {
-                font-weight: 600;
-            }
-            &__price {
-                max-width: 76px;
-                font-size: 16px;
             }
         }
     }
@@ -2708,7 +2778,7 @@
         text-decoration: none;
     }
     &__wrapper {
-        margin-top: 20px;
+        margin-bottom: 20px;
     }
     &__item + &__item {
         padding-top: 16px;
@@ -2795,16 +2865,23 @@
         margin-top: 8px;
         font-size: 14px;
         font-weight: normal;
+        color: $primary-color;
         border-bottom: 1px dashed $primary-color;
+        &:hover {
+            color: $finntrail-red-color;
+            border-bottom: 1px dashed $finntrail-red-color;
+        }
     }
     &__more {
-        padding: 8px;
-        margin-top: 16px;
-        width: 100%;
+        margin-bottom: 20px;
         font-size: 14px;
-        font-weight: 600;
-        text-align: center;
-        border: 1px solid $primary-color;
+        font-weight: normal;
+        color: $finntrail-red-color;
+        border-bottom: 1px dashed $finntrail-red-color;
+        &:hover {
+            color: $red-color;
+            border-bottom: 1px dashed $red-color;
+        }
     }
 }
 
@@ -2812,11 +2889,14 @@
 .photo-gallery {
     &__title {
         margin: 16px 0;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
 
         @media screen and (min-width: 1024px) {
             text-transform: uppercase;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
         }
     }
     &__wrapper {
