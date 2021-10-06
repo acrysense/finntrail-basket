@@ -868,6 +868,52 @@ svg line {
     }
 }
 
+.hidden-text {
+    position: relative;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &--all {
+        -webkit-line-clamp: initial!important;
+        line-clamp: initial!important;
+    }
+}
+
+.hidden-gradient {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin-top: -45px;
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(to top, rgba($white-color, 1), rgba($white-color, 0));
+    &--hidden {
+        display: none;
+    }
+}
+.hidden-btn {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none!important;
+    color: $finntrail-red-color;
+    border-bottom: 1px dashed $finntrail-red-color;
+    &:hover {
+        color: $finntrail-red-color;
+    }
+    &--bottom {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+    }
+}
+
 // RANGE
 .noUi-target {
     margin-top: -1px;

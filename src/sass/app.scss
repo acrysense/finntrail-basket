@@ -1,3 +1,4 @@
+@import "vendor";
 @import "config"; // Always at the beginning
 @import "breadcrumb";
 @import "header";
@@ -2345,56 +2346,14 @@
         margin-left: 8px;
     }
     &__description {
-        position: relative;
-        display: -webkit-box;
-        text-overflow: ellipsis;
-        display: -moz-box;
-        -moz-box-orient: vertical;
-        display: -webkit-box;
-        box-orient: vertical;
         -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
         line-clamp: 3;
-        overflow: hidden;
         margin-top: 10px;
         font-size: 14px;
-        text-overflow: ellipsis;
-        &--all {
-            -webkit-line-clamp: initial;
-            line-clamp: initial;
-        }
 
         @media screen and (max-width: 1023px) {
             -webkit-line-clamp: 4;
             line-clamp: 4;
-        }
-    }
-    &__gradient {
-        position: relative;
-        z-index: 1;
-        display: block;
-        margin-top: -45px;
-        width: 100%;
-        height: 45px;
-        background: linear-gradient(to top, rgba($white-color, 1), rgba($white-color, 0));
-        &--hidden {
-            display: none;
-        }
-    }
-    &__more {
-        margin-top: 8px;
-        font-size: 14px;
-        font-weight: normal;
-        text-decoration: none!important;
-        color: $finntrail-red-color;
-        border-bottom: 1px dashed $finntrail-red-color;
-        &:hover {
-            color: $finntrail-red-color;
-        }
-        &--bottom {
-            position: absolute;
-            bottom: 0;
-            z-index: 2;
         }
     }
     &__list {
@@ -2421,8 +2380,8 @@
                     margin-left: 2%;
                 }
             }
-            & > .specification__more,
-            & > .specification__gradient {
+            & > .hidden-gradient,
+            & > .hidden-btn {
                 display: none;
             }
         }
@@ -2435,7 +2394,7 @@
         align-items: center;
     }
     &__item + &__item,
-    &__more + &__item {
+    &__hidden-btn + &__item {
         margin-top: 12px;
     }
     &__img {
@@ -4480,6 +4439,10 @@
         margin-top: 16px;
         font-size: 16px;
         font-weight: normal;
+        &--hidden {
+            -webkit-line-clamp: 8;
+            line-clamp: 8;
+        }
     }
     &__gallery {
         margin-top: 28px;

@@ -1032,66 +1032,66 @@ document.addEventListener('DOMContentLoaded', function () {
         initMoreProductsSlider()
     }
 
-    // SPECIFICATIONs
-    const specificationBtn = document.querySelectorAll('.specification__more')
-    const specificationGradientBtn = document.querySelectorAll('.specification__gradient')
+    // HIDDEN ELEMENTS
+    const hiddenBtn = document.querySelectorAll('.hidden-btn')
+    const hiddenGradient = document.querySelectorAll('.hidden-gradient')
 
-    if (specificationBtn) {
-        specificationBtn.forEach(item => {
+    if (hiddenBtn) {
+        hiddenBtn.forEach(item => {
             item.addEventListener('click', (event) => {
                 event.preventDefault()
 
-                if (item.previousElementSibling.previousElementSibling.classList.contains('specification__description') && item.previousElementSibling.previousElementSibling.classList.contains('specification__description--all')) {
-                    item.previousElementSibling.previousElementSibling.classList.remove('specification__description--all')
+                if (item.previousElementSibling.previousElementSibling.classList.contains('hidden-text') && item.previousElementSibling.previousElementSibling.classList.contains('hidden-text--all')) {
+                    item.previousElementSibling.previousElementSibling.classList.remove('hidden-text--all')
                     item.innerHTML = 'Развернуть'
 
-                    if (item.previousElementSibling.classList.contains('specification__gradient--hidden')) {
-                        item.previousElementSibling.classList.remove('specification__gradient--hidden')
+                    if (item.previousElementSibling.classList.contains('hidden-gradient--hidden')) {
+                        item.previousElementSibling.classList.remove('hidden-gradient--hidden')
                     }
-                } else if (item.previousElementSibling.previousElementSibling.classList.contains('specification__description') && !item.previousElementSibling.previousElementSibling.classList.contains('specification__description--all')) {
-                    item.previousElementSibling.previousElementSibling.classList.add('specification__description--all')
+                } else if (item.previousElementSibling.previousElementSibling.classList.contains('hidden-text') && !item.previousElementSibling.previousElementSibling.classList.contains('hidden-text--all')) {
+                    item.previousElementSibling.previousElementSibling.classList.add('hidden-text--all')
                     item.innerHTML = 'Скрыть'
 
-                    if (item.previousElementSibling.classList.contains('specification__gradient')) {
-                        item.previousElementSibling.classList.add('specification__gradient--hidden')
+                    if (item.previousElementSibling.classList.contains('hidden-gradient')) {
+                        item.previousElementSibling.classList.add('hidden-gradient--hidden')
                     }
                 }
 
                 if (item.parentNode.parentNode.classList.contains('specification__list') && item.parentNode.parentNode.classList.contains('specification__list--open')) {
                     item.parentNode.parentNode.classList.remove('specification__list--open')
-                    item.previousElementSibling.classList.remove('specification__gradient--hidden')
-                    item.classList.remove('specification__more--bottom')
+                    item.previousElementSibling.classList.remove('hidden-gradient--hidden')
+                    item.classList.remove('hidden-btn--bottom')
                     item.innerHTML = 'Развернуть'
                 } else if (item.parentNode.parentNode.classList.contains('specification__list') && !item.parentNode.parentNode.classList.contains('specification__list--open')) {
                     item.parentNode.parentNode.classList.add('specification__list--open')
-                    item.previousElementSibling.classList.add('specification__gradient--hidden')
-                    item.classList.add('specification__more--bottom')
+                    item.previousElementSibling.classList.add('hidden-gradient--hidden')
+                    item.classList.add('hidden-btn--bottom')
                     item.innerHTML = 'Скрыть'
                 }
             })
         })
     }
 
-    if (specificationGradientBtn) {
-        specificationGradientBtn.forEach(item => {
+    if (hiddenGradient) {
+        hiddenGradient.forEach(item => {
             item.addEventListener('click', (event) => {
                 event.preventDefault()
 
-                if (item.previousElementSibling.classList.contains('specification__description') && !item.previousElementSibling.classList.contains('specification__description--all')) {
-                    item.previousElementSibling.classList.add('specification__description--all')
-                    item.classList.add('specification__gradient--hidden')
+                if (item.previousElementSibling.classList.contains('hidden-text') && !item.previousElementSibling.classList.contains('hidden-text--all')) {
+                    item.previousElementSibling.classList.add('hidden-text--all')
+                    item.classList.add('hidden-gradient--hidden')
 
-                    if (item.nextElementSibling.classList.contains('specification__more')) {
+                    if (item.nextElementSibling.classList.contains('hidden-btn')) {
                         item.nextElementSibling.innerHTML = 'Скрыть'
                     }
                 }
 
                 if (item.parentNode.parentNode.classList.contains('specification__list') && !item.parentNode.parentNode.classList.contains('specification__list--open')) {
                     item.parentNode.parentNode.classList.add('specification__list--open')
-                    item.classList.add('specification__gradient--hidden')
+                    item.classList.add('hidden-gradient--hidden')
 
-                    if (item.nextElementSibling.classList.contains('specification__more')) {
-                        item.nextElementSibling.classList.add('specification__more--bottom')
+                    if (item.nextElementSibling.classList.contains('hidden-btn')) {
+                        item.nextElementSibling.classList.add('hidden-btn--bottom')
                         item.nextElementSibling.innerHTML = 'Скрыть'
                     }
                 }
