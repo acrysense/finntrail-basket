@@ -398,8 +398,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (productBuyBlock && productFixed) {
-            if (window.pageYOffset >= productBuyBlock.offsetTop) {
+            console.log(window.pageYOffset, document.querySelector('.footer').offsetTop)
+            if (window.pageYOffset >= productBuyBlock.offsetTop && window.pageYOffset <= document.querySelector('.footer').offsetTop) {
                 productFixed.classList.remove('product__fixed--hidden')
+            } else if (window.pageYOffset >= document.querySelector('.footer').offsetTop) {
+                productFixed.classList.add('product__fixed--hidden')
             }
         }
     })

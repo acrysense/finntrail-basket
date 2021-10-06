@@ -60,6 +60,9 @@
         @media screen and (min-width: 1354px) {
             display: flex;
         }
+        @media screen and (max-width: 1023px) {
+            padding-top: 20px;
+        }
     }
     &__group + &__group {
         @media screen and (min-width: 1920px) {
@@ -262,9 +265,6 @@
     &__communication-btn + &__communication-btn {
         @media screen and (min-width: 1024px) {
             margin-top: 12px;
-        }
-        @media screen and (min-width: 768px) and (max-width: 1023px) {
-            margin-left: 8px;
         }
         @media screen and (max-width: 767px) {
             margin-top: 8px;
