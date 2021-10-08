@@ -4439,10 +4439,8 @@
         margin-top: 16px;
         font-size: 16px;
         font-weight: normal;
-        &--hidden {
-            -webkit-line-clamp: 8;
-            line-clamp: 8;
-        }
+        -webkit-line-clamp: 8;
+        line-clamp: 8;
     }
     &__gallery {
         margin-top: 28px;
