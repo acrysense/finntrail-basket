@@ -21,8 +21,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 // IMPORT SECTION
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
-@import 'node_modules/swiper/swiper.scss'; // Swiper
-@import 'node_modules/simplebar/dist/simplebar'; // Simplebar
-@import 'node_modules/nouislider/dist/nouislider'; // Simplebar
-@import 'node_modules/slim-select/dist/slimselect'; // Slim Select
+@import '../libs/bootstrap-reboot'; // Bootstrap Reboot collection
+@import '../libs/swiper.min'; // Swiper
+@import '../libs/simplebar'; // Simplebar
+@import '../libs/nouislider'; // Simplebar
+@import '../libs/slimselect'; // Slim Select
